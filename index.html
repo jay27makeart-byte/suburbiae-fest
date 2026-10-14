@@ -421,20 +421,8 @@ img.a{object-fit:contain;display:block}
   </div>
   <div class="a fleur fleur-run" aria-hidden="true" style="--x:20;--y:1098;--w:984;--h:18.1;--fl:url(assets/sez/fleur-row.svg)"></div>
 </div>
-<section class="abj" id="about" aria-labelledby="abj-h" lang="it">
+<section class="abj" id="about" aria-label="About Suburbiæ" lang="it">
   <div class="abj-in">
-    <header class="abj-mast">
-      <i class="abj-r thick"></i>
-      <p class="abj-strip fit">ABOUT ✶ FOGLIO N°01 ✶ ARENA DE CAROLIS ✶ PARCO FLUVIALE ✶ TERAMO ✶ VOL. III</p>
-      <i class="abj-r thin"></i>
-      <div class="abj-head">
-        <div class="abj-ear l"><p>IN QUESTO FOGLIO</p><ol><li>il festival</li><li>il gatto nero</li><li>la carta del cielo</li></ol></div>
-        <h2 class="abj-t" id="abj-h"><img loading="lazy" decoding="async" class="abj-logo" src="assets/logo-suburbiae.png" alt="Suburbiæ"><span class="abj-sub fit">UNEXPECTED FEST</span></h2>
-        <div class="abj-ear r"><b>N° III</b><span>EDIZIONE</span><p>☾ DAY ONE ✶ DAY TWO</p></div>
-      </div>
-      <i class="abj-r dbl"></i>
-      <p class="abj-kick"><span>FOGLIO 01</span><span>✶ CRONACHE DAL PARCO FLUVIALE ✶</span><span>PREZZO: DAY ONE FREE</span></p>
-    </header>
     <div class="abj-body">
       <div class="abj-col a">
         <figure class="abj-plate">
@@ -505,7 +493,7 @@ img.a{object-fit:contain;display:block}
 .abj-sub{display:block;width:calc(500 * var(--u));margin-top:calc(12 * var(--u));font:700 calc(14 * var(--u))/1 "Bodoni Moda",Didot,serif;color:var(--red)}
 .abj-kick{margin:0;display:flex;justify-content:space-between;padding:calc(7 * var(--u)) 0;border-bottom:1px solid #000;font:700 calc(6.5 * var(--u))/1 var(--mono);letter-spacing:.24em}
 .abj-kick span:nth-child(2){color:var(--red)}
-.abj-body{position:relative;display:grid;grid-template-columns:calc(300 * var(--u)) 1fr calc(262 * var(--u))}
+.abj-body{position:relative;border-top:calc(4 * var(--u)) solid #000;display:grid;grid-template-columns:calc(300 * var(--u)) 1fr calc(262 * var(--u))}
 .abj-col{position:relative;padding:calc(24 * var(--u)) calc(22 * var(--u)) calc(26 * var(--u))}
 .abj-col.a{padding-left:0}
 .abj-col.b{border-left:1px solid #000;border-right:1px solid #000;z-index:4}
@@ -873,6 +861,25 @@ body.mk-lock{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.mk-p,.mk-bg,.mk-pill{transition:none}}
 </style>
 
+<style>
+/* popup generico (pass camping) */
+.pop{position:fixed;inset:0;z-index:270;display:grid;place-items:center;padding:16px}
+.pop[hidden]{display:grid!important;visibility:hidden;pointer-events:none}
+.pop-bg{position:absolute;inset:0;background:rgba(0,0,0,.6);opacity:0;transition:opacity .3s}
+.pop-c{position:relative;width:min(460px,100%);padding:clamp(26px,4vw,40px);background:#000;color:var(--peach);border:1px solid var(--peach);border-radius:12px;transform:translateY(24px) scale(.96);opacity:0;transition:transform .45s cubic-bezier(.3,1.4,.5,1),opacity .3s}
+.pop.on .pop-bg{opacity:1}.pop.on .pop-c{transform:none;opacity:1}
+.pop-x{position:absolute;top:12px;right:12px;width:38px;height:38px;border:1px solid var(--peach);border-radius:50%;color:var(--peach);font:20px/1 var(--roboto);transition:background .2s,color .2s}
+.pop-x:hover{background:var(--peach);color:#000}
+.pop-k{margin:0 0 14px;font:700 12px/1 var(--mono);letter-spacing:.18em}
+.pop-t{margin:0 0 14px;font:400 clamp(48px,8vw,72px)/.9 var(--goth)}
+.pop-t em{color:var(--red)}
+.pop-d{margin:0 0 22px;font:15px/1.55 var(--orbit)}
+.pop-ok{display:flex;justify-content:space-between;align-items:center;width:100%;padding:16px 18px;background:var(--peach);color:#000;border-radius:6px;font:800 16px/1 var(--druk);font-stretch:125%;transition:background .2s}
+.pop-ok:hover{background:var(--red)}
+.cp-ticket[data-pass]{cursor:pointer}
+@media (prefers-reduced-motion:reduce){.pop-bg,.pop-c{transition:none}}
+</style>
+
 <!-- ====================================================== GALLERY -->
 <section class="view" id="v-gallery" data-page="gallery" style="background:#000">
 <div class="gl">
@@ -1079,7 +1086,7 @@ body.mk-lock{overflow:hidden}
       <img loading="lazy" decoding="async" class="bz-sun" src="assets/sun-black.webp" alt="">
     </div>
     <p class="bz-pitch">Se hai qualcosa da mostrare, da vendere o da raccontare, <em>questo è il posto giusto.</em></p>
-    <a class="bz-join" href="#" data-ph="form iscrizione bazar"><span class="bz-join-st" aria-hidden="true">✶</span><b>ISCRIVITI AL BAZAR</b><small>MODULO ONLINE</small><span class="bz-join-ar" aria-hidden="true">→</span></a>
+    <a class="bz-join" href="https://docs.google.com/forms/d/e/1FAIpQLSeKVDAnwVz7G-KZwa-9xqMfsjWAz1Jc-l7iw0wYef6zQVcu9Q/viewform?usp=header" target="_blank" rel="noopener"><span class="bz-join-st" aria-hidden="true">✶</span><b>ISCRIVITI AL BAZAR</b><small>MODULO ONLINE</small><span class="bz-join-ar" aria-hidden="true">→</span></a>
   </div>
 
   <div class="bz-band" aria-hidden="true"><div class="bz-band-in">ESPONI ☾ VENDI ✶ RACCONTA ◉ BE A BLACK CAT ☾ ESPONI ☾ VENDI ✶ RACCONTA ◉ BE A BLACK CAT ☾&nbsp;</div></div>
@@ -1114,7 +1121,7 @@ body.mk-lock{overflow:hidden}
     <div class="bz-col bz-info">
       <svg viewBox="0 0 52 52" class="bz-i" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none" stroke="#000" stroke-width="2"/><rect x="24" y="22" width="4" height="18" fill="#000"/><circle cx="26" cy="15" r="3" fill="#000"/></svg>
       <p>Durante il Festival Rock Suburbiae, accanto al palco si accende un altro cuore pulsante: il <b>Sub-Bazar</b>, uno spazio libero, creativo e pieno di energia.</p>
-      <a class="bz-cta" href="#" data-ph="form iscrizione bazar"><span class="bz-cta-st" aria-hidden="true">✶</span>ISCRIVITI QUI! <span aria-hidden="true">→</span></a>
+      <a class="bz-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSeKVDAnwVz7G-KZwa-9xqMfsjWAz1Jc-l7iw0wYef6zQVcu9Q/viewform?usp=header" target="_blank" rel="noopener"><span class="bz-cta-st" aria-hidden="true">✶</span>ISCRIVITI QUI! <span aria-hidden="true">→</span></a>
       <p class="bz-note">L'iscrizione si fa tramite modulo online.</p>
     </div>
   </div>
@@ -1292,9 +1299,9 @@ body.mk-lock{overflow:hidden}
         <p class="cp-txt">Il camping è pensato per chi vuole vivere il Suburbiæ Fest fino in fondo: due giorni di musica, una notte insieme, il risveglio tra le colline d'Abruzzo.</p>
       </div>
       <div class="cp-hero-r">
-        <div class="cp-ticket" aria-hidden="true"><div class="cp-tk-l"><small>SUBURBIÆ · UNEXPECTED FEST</small><b>PASS CAMPING</b><small>TERAMO · NO DATE · POSTI LIMITATI</small></div><div class="cp-tk-r"><small>N°</small><b class="cp-tk-n">0001</b></div></div>
+        <div class="cp-ticket" data-pass role="button" tabindex="0" aria-label="Pass camping"><div class="cp-tk-l"><small>SUBURBIÆ · UNEXPECTED FEST</small><b>PASS CAMPING</b><small>TERAMO · NO DATE · POSTI LIMITATI</small></div><div class="cp-tk-r"><small>N°</small><b class="cp-tk-n">0001</b></div></div>
         <div class="cp-ctas">
-        <a class="cp-cta" href="#" data-ph="form richiesta pass camping"><span class="cp-cta-st" aria-hidden="true">▲</span>RICHIEDI PASS <span aria-hidden="true">→</span></a>
+        <a class="cp-cta" href="#" data-pass><span class="cp-cta-st" aria-hidden="true">▲</span>RICHIEDI PASS <span aria-hidden="true">→</span></a>
       </div>
         <p class="cp-note">Posti limitati · iscrizione e pass tramite modulo online.</p>
       </div>
@@ -1568,7 +1575,7 @@ body.mk-lock{overflow:hidden}
       <p class="us-kick">CONTEST<br>✶ BAND EMERGENTI<br>✶ PROGETTI SOLISTI</p>
       <p class="us-pitch us-fit" aria-label="Un palco, energia pura e la possibilità di mostrare il tuo sound davanti a pubblico e giuria."><span>Un palco, energia pura e</span><span>la possibilità di mostrare</span><span>il tuo sound <em>davanti a</em></span><span class="hl">pubblico e giuria.</span></p>
     </div>
-    <a class="us-cta us-cta-w" href="#" data-ph="form undersub · google form"><span class="us-cta-st" aria-hidden="true">✶</span>ISCRIVITI QUI <small>GOOGLE FORM</small><span aria-hidden="true">→</span></a>
+    <a class="us-cta us-cta-w" href="https://forms.gle/YciUP9aDVUHTJHTC6" target="_blank" rel="noopener"><span class="us-cta-st" aria-hidden="true">✶</span>ISCRIVITI QUI <small>GOOGLE FORM</small><span aria-hidden="true">→</span></a>
   </div>
 
   <div class="us-band" aria-hidden="true"><div class="us-band-in">ISCRIZIONI APERTE ✶ BAND EMERGENTI ✶ PROGETTI SOLISTI ✶ UN PALCO ✶ UNA GIURIA ✶ ISCRIZIONI APERTE ✶ BAND EMERGENTI ✶ PROGETTI SOLISTI ✶ UN PALCO ✶ UNA GIURIA ✶&nbsp;</div></div>
@@ -1613,7 +1620,7 @@ body.mk-lock{overflow:hidden}
       <p class="us-lab us-stage-lab">IL PREMIO</p>
       <h2 id="us-stage-h" class="us-win">VINCI <span>&amp;</span> SUONA</h2>
       <p class="us-win-s">sul palco del Suburbiæ Fest</p>
-      <a class="us-cta us-cta-c" href="#" data-ph="form undersub · google form"><span class="us-cta-st" aria-hidden="true">✶</span>ISCRIVITI QUI <small>GOOGLE FORM</small><span aria-hidden="true">→</span></a>
+      <a class="us-cta us-cta-c" href="https://forms.gle/YciUP9aDVUHTJHTC6" target="_blank" rel="noopener"><span class="us-cta-st" aria-hidden="true">✶</span>ISCRIVITI QUI <small>GOOGLE FORM</small><span aria-hidden="true">→</span></a>
     </div>
     <div class="us-floor" aria-hidden="true"></div>
   </section>
@@ -2826,6 +2833,19 @@ body.mn-lock{overflow:hidden}
 </div>
 <button type="button" class="mk-pill mk-open" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>CARRELLO <b class="mk-c">0</b><span class="mk-pt"></span><i aria-hidden="true">→</i></button>
 
+
+<!-- ====================================================== POPUP PASS CAMPING -->
+<div class="pop" id="pop-pass" role="dialog" aria-modal="true" aria-labelledby="pop-pass-t" hidden>
+  <div class="pop-bg" data-pop-close></div>
+  <div class="pop-c">
+    <button type="button" class="pop-x" data-pop-close aria-label="Chiudi">×</button>
+    <p class="pop-k">▲ PASS CAMPING ✶ SUBURBIÆ</p>
+    <p class="pop-t" id="pop-pass-t">Non ancora<br><em>aperto.</em></p>
+    <p class="pop-d">Le richieste del pass camping non sono ancora aperte. Torna a trovarci: lo annunceremo qui e sui nostri canali.</p>
+    <button type="button" class="pop-ok" data-pop-close>OK, TORNO PRESTO <span aria-hidden="true">→</span></button>
+  </div>
+</div>
+
 <div id="toast" role="status" aria-live="polite"></div>
 
 <style>
@@ -3187,6 +3207,14 @@ article.a>.ph{grid-column:1 / -1}
   /* --- prestazioni: animazioni in pausa quando la sezione è fuori schermo --- */
   if('IntersectionObserver' in window){var offIO=new IntersectionObserver(function(en){en.forEach(function(e){var t=e.target;t.classList.toggle('is-off',!e.isIntersecting);t.querySelectorAll('svg').forEach(function(sv){if(sv.pauseAnimations&&sv.querySelector('animate,animateTransform,animateMotion')){e.isIntersecting?sv.unpauseAnimations():sv.pauseAnimations()}})})},{rootMargin:'120px 0px'});
     document.querySelectorAll('.view > *, .view > div > *').forEach(function(el){if(el.offsetParent!==undefined)offIO.observe(el)})}
+  /* --- camping: pass non ancora aperto (popup) --- */
+  (function(){var pp=document.getElementById('pop-pass');if(!pp)return;var back=null;
+    function open(e){e.preventDefault();back=document.activeElement;pp.hidden=false;void pp.offsetWidth;pp.classList.add('on');document.body.classList.add('mk-lock');setTimeout(function(){pp.querySelector('.pop-ok').focus()},200)}
+    function close(){if(!pp.classList.contains('on'))return;pp.classList.remove('on');document.body.classList.remove('mk-lock');setTimeout(function(){pp.hidden=true},350);if(back&&back.focus)back.focus()}
+    document.querySelectorAll('[data-pass]').forEach(function(el){el.addEventListener('click',open);el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' ')open(e)})});
+    pp.addEventListener('click',function(e){if(e.target.closest('[data-pop-close]'))close()});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  })();
   /* --- menu --- */
   var mn=document.getElementById('mn'),mnBtn=null;
   (function(){var G=mn.querySelector('.mn-glyphs'),gl=['<circle cx="0" cy="0" r="5"/>','<path d="M3-6a6 6 0 1 0 0 12 5 5 0 1 1 0-12Z" class="fill"/>','<path d="M0-7 2-2 7 0 2 2 0 7-2 2-7 0-2-2Z" class="fill"/>','<path d="M-6 0Q0-6 6 0 0 6-6 0Z"/><circle cx="0" cy="0" r="1.8" class="fill"/>','<path d="M0-6 5 5H-5Z"/>'],h='';
