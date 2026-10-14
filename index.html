@@ -213,6 +213,17 @@ img.a{object-fit:contain;display:block}
 .f-fest{font-family:"Fraunces","Times New Roman",serif;font-weight:300;font-optical-sizing:auto;font-variation-settings:"opsz" 144,"SOFT" 0,"WONK" 0}
 .legal-blk{white-space:normal;text-transform:uppercase}.legal-blk span{display:block;white-space:nowrap;text-align:justify;text-align-last:justify}
 
+/* home: contatto via mail */
+.hm-mail{display:flex;flex-direction:column;gap:calc(8 * var(--u))}
+.hm-mail-go{flex:1;position:relative;display:flex;flex-direction:column;justify-content:center;gap:calc(6 * var(--u));padding:calc(12 * var(--u)) calc(16 * var(--u));background:var(--red);color:#000;transition:background .25s,color .25s}
+.hm-mail-go span{font:calc(9 * var(--u))/1 var(--mono);letter-spacing:.2em}
+.hm-mail-go b{font:400 calc(26 * var(--u))/1 var(--goth)}
+.hm-mail-go i{position:absolute;right:calc(14 * var(--u));top:50%;translate:0 -50%;font:normal calc(30 * var(--u))/1 var(--goth);transition:transform .3s}
+.hm-mail-go:hover{background:#000;color:var(--cream)}
+.hm-mail-go:hover i{transform:translateX(calc(6 * var(--u)))}
+.hm-mail-cp{height:calc(22 * var(--u));border:1px solid #000;font:calc(8 * var(--u))/1 var(--mono);letter-spacing:.16em;transition:background .2s,color .2s}
+.hm-mail-cp:hover{background:#000;color:var(--cream)}
+@media (max-width:680px){.hm-mail-go{min-height:110px;padding:16px}.hm-mail-go span{font-size:11px}.hm-mail-go b{font-size:24px}.hm-mail-go i{font-size:30px}.hm-mail-cp{height:44px;font-size:12px}}
 /* form (standby) */
 .fld{background:var(--red);font:calc(18 * var(--u))/1 var(--roboto);height:calc(20 * var(--u));display:flex;align-items:center;padding-left:calc(6 * var(--u));color:rgba(0,0,0,.55)}
 
@@ -640,10 +651,9 @@ img.a{object-fit:contain;display:block}
   <div class="a bg-k deco" style="--x:522;--y:1710;--w:13;--h:148"></div>
   <div class="a bg-k deco" style="--x:556;--y:1710;--w:13;--h:148"></div>
   <div class="a bg-k deco" style="--x:589;--y:1710;--w:13;--h:148"></div>
-  <div class="a auto" style="--x:649;--y:1710;--w:355;--h:148;display:flex;flex-direction:column;gap:calc(20 * var(--u))">
-    <span class="standby std-m" style="right:0;top:calc(-14 * var(--u))">FORM IN STANDBY · FORMSPREE</span>
-    <div class="fld">Name</div><div class="fld">Email</div><div class="fld">Text</div>
-    <div class="fld" style="background:var(--ink);color:var(--cream);justify-content:center;font:calc(16 * var(--u))/1 var(--orbit);padding:0">CONTACT US!</div>
+  <div class="a auto hm-mail" style="--x:649;--y:1710;--w:355;--h:148">
+    <a class="hm-mail-go" href="mailto:Jay27makeart@gmail.com?subject=Suburbi%C3%A6%20Fest%20%C2%B7%20Info"><span>SCRIVICI UNA MAIL</span><b>Jay27makeart@gmail.com</b><i aria-hidden="true">→</i></a>
+    <button type="button" class="hm-mail-cp" data-copy="Jay27makeart@gmail.com">COPIA L'INDIRIZZO</button>
   </div>
   <p class="a t f-slab legal-blk" style="--x:649;--y:1874;--w:355;--fs:10.5;--lh:14.5"><span>Associazione culturale JAY27 A.P.S + A.S.D.</span><span>Sede legale: via San Luca 27, 64100 Teramo (TE)</span><span>P.IVA 02145450678 — Jay27makeart@gmail.com — Jay27@pec.it</span></p>
   <div class="a bg-k deco" style="--x:20;--y:1934;--w:984;--h:1"></div>
@@ -3215,6 +3225,9 @@ article.a>.ph{grid-column:1 / -1}
     pp.addEventListener('click',function(e){if(e.target.closest('[data-pop-close]'))close()});
     document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
   })();
+  /* --- home: copia indirizzo mail --- */
+  document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){var t=b.dataset.copy,lab=b.textContent;function ok(){b.textContent='COPIATO ✓';setTimeout(function(){b.textContent=lab},1600)}
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,function(){prompt('Copia l\'indirizzo:',t)});else prompt('Copia l\'indirizzo:',t)})});
   /* --- menu --- */
   var mn=document.getElementById('mn'),mnBtn=null;
   (function(){var G=mn.querySelector('.mn-glyphs'),gl=['<circle cx="0" cy="0" r="5"/>','<path d="M3-6a6 6 0 1 0 0 12 5 5 0 1 1 0-12Z" class="fill"/>','<path d="M0-7 2-2 7 0 2 2 0 7-2 2-7 0-2-2Z" class="fill"/>','<path d="M-6 0Q0-6 6 0 0 6-6 0Z"/><circle cx="0" cy="0" r="1.8" class="fill"/>','<path d="M0-6 5 5H-5Z"/>'],h='';
