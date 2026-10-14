@@ -1,7 +1,7 @@
 <!doctype html><html lang="it"><head><meta charset="utf-8"><title>Suburbiæ Fest · Unexpected Fest · Teramo</title><meta name="description" content="Suburbiæ Unexpected Fest: il festival di musica, arte e cultura underground all'Arena De Carolis di Teramo, organizzato da JAY27."><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&family=League+Gothic&family=Archivo:wdth,wght@125,700;125,800;125,900&family=Instrument+Serif:ital@0;1&family=Noto+Serif+Display:wdth,wght@62.5..100,400..600&family=Fraunces:opsz,wght,SOFT,WONK@9..144,200..400,0..100,0..1&family=Orbit&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400&family=Noto+Serif:ital,wdth,wght@0,62.5..100,400..600;1,62.5..100,400&family=Space+Mono&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&family=Archivo:wdth,wght@125,700;125,800;125,900&family=Instrument+Serif:ital@0;1&family=Fraunces:opsz,wght,SOFT,WONK@9..144,200..400,0..100,0..1&family=Orbit&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400&family=Noto+Serif:ital,wdth,wght@0,62.5..100,400..600;1,62.5..100,400&family=Space+Mono&display=swap">
 <style>
 :root{
   --cream:#FFE1A8; --red2:#EA3325; --red:#FF0005; --blood:#B70725; --crimson:#C80000;
@@ -110,8 +110,9 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .c3-name{transition:color .3s}
 .ed-cat:not(.ed3cat){transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .ed-cat:not(.ed3cat):hover{transform:rotate(-6deg) scale(1.05)}
-.fleur-run{background-repeat:repeat-x;background-size:calc(984 * var(--u)) 100%;animation:fleur 28s linear infinite}
-@keyframes fleur{to{background-position:calc(-984 * var(--u)) 0}}
+.fleur-run{overflow:hidden;background:none!important}
+.fleur-run::before{content:"";position:absolute;top:0;bottom:0;left:0;width:200%;background:var(--fl) repeat-x 0 0/50% 100%;animation:fleur 28s linear infinite;will-change:transform}
+@keyframes fleur{to{transform:translateX(-50%)}}
 /* press carousel */
 .press-car{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);display:flex;align-items:center}
 .press-track{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:calc(56 * var(--u));width:max-content;animation:presso 80s linear infinite}
@@ -179,6 +180,7 @@ img.a{object-fit:contain;display:block}
 .hfade:hover{opacity:.25}
 .hfade:active{transform:scale(.95)}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.is-off,.is-off *,.is-off *::before,.is-off *::after{animation-play-state:paused!important}
 
 /* buttons */
 .btn{display:flex;align-items:center;justify-content:center;gap:calc(4 * var(--u));border:1px solid var(--ink);transition:background .25s,color .25s,border-color .25s;cursor:pointer}
@@ -417,7 +419,7 @@ img.a{object-fit:contain;display:block}
     <a class="a card" href="#gallery" style="--x:688;--y:872.6;--w:128.9;--h:185.4"><img src="assets/sez/the-devils.svg" alt="The Devils live, 1ª edizione" loading="lazy"></a>
     <a class="a card" href="#gallery" style="--x:833.2;--y:872.6;--w:128.9;--h:185.4"><img src="assets/sez/bau.svg" alt="BAU live, 1ª edizione" loading="lazy"></a>
   </div>
-  <div class="a fleur fleur-run" aria-hidden="true" style="--x:20;--y:1098;--w:984;--h:18.1;background-image:url(assets/sez/fleur-row.svg)"></div>
+  <div class="a fleur fleur-run" aria-hidden="true" style="--x:20;--y:1098;--w:984;--h:18.1;--fl:url(assets/sez/fleur-row.svg)"></div>
 </div>
 <section class="abj" id="about" aria-labelledby="abj-h" lang="it">
   <div class="abj-in">
@@ -481,7 +483,7 @@ img.a{object-fit:contain;display:block}
 /* about — foglio di giornale esoterico (griglia home: 1024 = larghezza) */
 .abj{--u:calc(100cqw / 1024);background:var(--cream);color:#000}
 .abj-in{position:relative;padding:calc(22 * var(--u)) calc(20 * var(--u)) calc(14 * var(--u));overflow:hidden}
-.abj-in::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27180%27%20height%3D%27180%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20values%3D%270%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20.6%200%27/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23n%29%27/%3E%3C/svg%3E");opacity:.07;mix-blend-mode:multiply;pointer-events:none;z-index:7}
+.abj-in::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27180%27%20height%3D%27180%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20values%3D%270%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20.6%200%27/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23n%29%27/%3E%3C/svg%3E");opacity:.06;pointer-events:none;z-index:7}
 .abj .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .abj-r{display:block;background:#000}
 .abj-r.thick{height:calc(4 * var(--u))}
@@ -529,7 +531,7 @@ img.a{object-fit:contain;display:block}
 .abj-mt{position:absolute;z-index:2;width:calc(74 * var(--u));height:calc(22 * var(--u));background:rgba(236,226,196,.82) url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27180%27%20height%3D%27180%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20values%3D%270%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20.16%200%27/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23n%29%27/%3E%3C/svg%3E");box-shadow:0 1px 2px rgba(0,0,0,.2)}
 .abj-mt.m1{left:calc(-20 * var(--u));top:calc(-8 * var(--u));rotate:-38deg}
 .abj-mt.m2{right:calc(-20 * var(--u));top:calc(-8 * var(--u));rotate:36deg}
-.abj-st{position:absolute;z-index:5;transition:transform .35s cubic-bezier(.3,1.4,.5,1);filter:drop-shadow(calc(3 * var(--u)) 0 0 #fff) drop-shadow(calc(-3 * var(--u)) 0 0 #fff) drop-shadow(0 calc(3 * var(--u)) 0 #fff) drop-shadow(0 calc(-3 * var(--u)) 0 #fff) drop-shadow(0 calc(5 * var(--u)) calc(6 * var(--u)) rgba(0,0,0,.35))}
+.abj-st{position:absolute;z-index:5;border-radius:50%;transition:transform .35s cubic-bezier(.3,1.4,.5,1);box-shadow:0 0 0 calc(3 * var(--u)) #fff,0 calc(5 * var(--u)) calc(6 * var(--u)) calc(3 * var(--u)) rgba(0,0,0,.3)}
 .abj-st:hover{transform:scale(1.08) rotate(-6deg)}
 .abj-st.st-moon{right:calc(-18 * var(--u));bottom:calc(18 * var(--u));width:calc(64 * var(--u));rotate:-14deg}
 .abj-st.st-moon svg{display:block;width:100%}
@@ -561,7 +563,7 @@ img.a{object-fit:contain;display:block}
 .abj-b:hover{background:#000;color:var(--cream)}
 /* tav. II + sommario */
 .abj-chart{margin:0}
-.abj-sky{display:block;width:100%;filter:drop-shadow(calc(5 * var(--u)) calc(5 * var(--u)) 0 var(--red))}
+.abj-sky{display:block;width:100%;border-radius:50%;box-shadow:calc(5 * var(--u)) calc(5 * var(--u)) 0 var(--red)}
 .abj-sky text{font:700 8.6px var(--mono);fill:var(--cream)}
 .abj-pupil{transition:transform .25s ease-out}
 .abj-chart figcaption{margin-top:calc(14 * var(--u))}
@@ -632,7 +634,7 @@ img.a{object-fit:contain;display:block}
   .abj-chart{max-width:320px;margin:0 auto}
   .abj-q p{font-size:44px}.abj-nine{max-width:320px;margin-inline:auto}.abj-nine li span{font-size:8px}
   .abj-tick{font-size:12px;padding:10px 0}
-  .abj-st{filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff)}
+  .abj-st{box-shadow:0 0 0 3px #fff,0 5px 6px 3px rgba(0,0,0,.3)}
 }
 </style>
 <div class="pg" style="--H:813;--oy:1610">
@@ -3064,10 +3066,10 @@ article.a>.ph{grid-column:1 / -1}
     var sec=document.querySelector('.abj');if(!sec)return;
     var w=[].slice.call(sec.querySelectorAll('.abj-d span:not(.abj-cap):not(.sr)')),cat=sec.querySelector('.abj-cat'),pup=sec.querySelector('.abj-pupil'),sky=sec.querySelector('.abj-sky'),rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
     if(rm&&sky&&sky.pauseAnimations)sky.pauseAnimations();
-    function tick(){var r=sec.getBoundingClientRect(),vh=innerHeight,p=Math.max(0,Math.min(1,(vh-r.top)/(vh*0.9)));
-      var n=rm?w.length:Math.round(Math.max(0,Math.min(1,p*1.5-.2))*w.length);w.forEach(function(x,i){x.style.opacity=i<n?1:.14});
-      var k=rm?1:Math.max(0,Math.min(1,p*1.6-.15));if(cat)cat.style.translate='-50% '+((1-k)*45).toFixed(1)+'%'}
-    window.addEventListener('scroll',function(){requestAnimationFrame(tick)},{passive:true});window.addEventListener('resize',tick);window.addEventListener('hashchange',function(){setTimeout(tick,60)});tick();
+    var lastN=-1,lastK=-1;function tick(){if(!sec.offsetParent)return;var r=sec.getBoundingClientRect(),vh=innerHeight;if(r.bottom<0||r.top>vh){return}var p=Math.max(0,Math.min(1,(vh-r.top)/(vh*0.9)));
+      var n=rm?w.length:Math.round(Math.max(0,Math.min(1,p*1.5-.2))*w.length);if(n!==lastN){var a=Math.min(n,lastN<0?0:lastN),b=Math.max(n,lastN<0?w.length:lastN);for(var i=a;i<b;i++)w[i].style.opacity=i<n?1:.14;lastN=n}
+      var k=rm?1:Math.max(0,Math.min(1,p*1.6-.15));k=Math.round(k*200)/200;if(cat&&k!==lastK){cat.style.translate='-50% '+((1-k)*45).toFixed(1)+'%';lastK=k}}
+    var tq=false;window.addEventListener('scroll',function(){if(tq)return;tq=true;requestAnimationFrame(function(){tq=false;tick()})},{passive:true});window.addEventListener('resize',tick);window.addEventListener('hashchange',function(){setTimeout(tick,60)});tick();
     if(pup&&!rm)window.addEventListener('pointermove',function(ev){var b=sky.getBoundingClientRect();if(b.bottom<0||b.top>innerHeight)return;
       var dx=ev.clientX-(b.left+b.width/2),dy=ev.clientY-(b.top+b.height/2),d=Math.hypot(dx,dy)||1,m=Math.min(11,d/30);
       pup.style.transform='translate('+(dx/d*m).toFixed(1)+'px,'+(dy/d*m*.55).toFixed(1)+'px)'},{passive:true});
@@ -3182,6 +3184,9 @@ article.a>.ph{grid-column:1 / -1}
     window.addEventListener('hashchange',function(){if((location.hash||'').replace('#','')!=='merch')close();pillState()});
     render();
   })();
+  /* --- prestazioni: animazioni in pausa quando la sezione è fuori schermo --- */
+  if('IntersectionObserver' in window){var offIO=new IntersectionObserver(function(en){en.forEach(function(e){var t=e.target;t.classList.toggle('is-off',!e.isIntersecting);t.querySelectorAll('svg').forEach(function(sv){if(sv.pauseAnimations&&sv.querySelector('animate,animateTransform,animateMotion')){e.isIntersecting?sv.unpauseAnimations():sv.pauseAnimations()}})})},{rootMargin:'120px 0px'});
+    document.querySelectorAll('.view > *, .view > div > *').forEach(function(el){if(el.offsetParent!==undefined)offIO.observe(el)})}
   /* --- menu --- */
   var mn=document.getElementById('mn'),mnBtn=null;
   (function(){var G=mn.querySelector('.mn-glyphs'),gl=['<circle cx="0" cy="0" r="5"/>','<path d="M3-6a6 6 0 1 0 0 12 5 5 0 1 1 0-12Z" class="fill"/>','<path d="M0-7 2-2 7 0 2 2 0 7-2 2-7 0-2-2Z" class="fill"/>','<path d="M-6 0Q0-6 6 0 0 6-6 0Z"/><circle cx="0" cy="0" r="1.8" class="fill"/>','<path d="M0-6 5 5H-5Z"/>'],h='';
