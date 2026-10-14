@@ -213,6 +213,33 @@ img.a{object-fit:contain;display:block}
 .f-fest{font-family:"Fraunces","Times New Roman",serif;font-weight:300;font-optical-sizing:auto;font-variation-settings:"opsz" 144,"SOFT" 0,"WONK" 0}
 .legal-blk{white-space:normal;text-transform:uppercase}.legal-blk span{display:block;white-space:nowrap;text-align:justify;text-align-last:justify}
 
+/* home hero: concept "Ipnosi" (ingresso, occhi a spirale che girano, battito della stella, segue il mouse) */
+.hx{--px:0;--py:0}
+.hx>*{position:absolute}
+.hx-sunw{inset:0;transform:translate(calc(var(--px) * -6px),calc(var(--py) * -6px));transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.hx-beat{position:absolute;inset:0;animation:hxbeat 4.5s ease-in-out 1.6s infinite}
+.hx-sun{display:block;width:100%;height:100%;object-fit:contain;animation:hxin 1.3s cubic-bezier(.2,.8,.2,1) both,hxspin 40s linear 1.3s infinite}
+@keyframes hxin{from{transform:scale(.35) rotate(-120deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes hxspin{to{transform:rotate(360deg)}}
+@keyframes hxbeat{0%,70%,100%{transform:scale(1)}78%{transform:scale(1.06)}86%{transform:scale(.99)}92%{transform:scale(1.03)}}
+.hx-catw{left:26.2%;top:19.2%;width:47.6%;height:61.6%;transform:translate(calc(var(--px) * 10px),calc(var(--py) * 8px)) rotate(calc(var(--px) * 2deg));transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.hx-cat{position:absolute;inset:0;animation:hxrise 1.1s cubic-bezier(.2,.8,.2,1) .35s both,hxbreathe 6s ease-in-out 1.5s infinite alternate}
+.hx-cat img{display:block;width:100%;height:100%;object-fit:contain}
+@keyframes hxrise{from{transform:translateY(18%) scale(.92);opacity:0}to{transform:none;opacity:1}}
+@keyframes hxbreathe{to{transform:scale(.95)}}
+.hx-eye{position:absolute;translate:-50% -50%;aspect-ratio:1;border-radius:50%}
+.hx-eye svg{display:block;width:100%;height:100%;animation:hxswirl var(--t,5s) linear infinite}
+.hx-eye.l{left:30.3%;top:40.47%;width:19.4%}
+.hx-eye.r{left:69.5%;top:40.78%;width:19.4%}.hx-eye.r svg{animation-direction:reverse}
+.hx-eye.t{left:50.3%;top:36.25%;width:9.6%;--t:2.6s}
+@keyframes hxswirl{to{transform:rotate(360deg)}}
+.hx-glow{position:absolute;inset:-12%;border-radius:50%;background:radial-gradient(circle,rgba(255,0,5,.55),transparent 65%);opacity:0;animation:hxglow 9s ease-in-out 2.5s infinite}
+@keyframes hxglow{0%,80%,100%{opacity:0;transform:scale(.8)}86%{opacity:1;transform:scale(1)}94%{opacity:0;transform:scale(1.15)}}
+.hx-sp{width:5%;aspect-ratio:1;background:#000;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);opacity:0;animation:hxsp 3.6s ease-in-out infinite}
+.hx-sp.s1{left:12%;top:18%;animation-delay:.4s}.hx-sp.s2{right:10%;top:30%;animation-delay:1.6s;width:4%}
+.hx-sp.s3{left:8%;bottom:22%;animation-delay:2.4s;width:3.5%}.hx-sp.s4{right:14%;bottom:12%;animation-delay:3.1s}
+@keyframes hxsp{0%,100%{opacity:0;transform:scale(.3) rotate(0)}40%{opacity:1;transform:scale(1) rotate(45deg)}70%{opacity:0;transform:scale(.4) rotate(90deg)}}
+@media (prefers-reduced-motion:reduce){.hx *{animation:none!important;transition:none!important}.hx-sun,.hx-cat{opacity:1!important}}
 /* home: instagram nella hero */
 .hm-ig{color:#000;overflow:visible}
 .hm-ig svg{width:56%;fill:none;stroke:currentColor;stroke-width:1.8}
@@ -285,7 +312,8 @@ img.a{object-fit:contain;display:block}
   .ed-sec .day-lab{font-size:14px}
   .pressh{color:var(--ink)!important}
   #v-home .c-p.right{color:var(--ink)}
-  .a.jay{width:60%!important}
+  .a.jay{width:140px!important;height:auto!important;aspect-ratio:var(--w) / 44!important}
+  .grp.row p.a.t.fit{letter-spacing:.08em!important;margin-right:0!important}
   .press-car{aspect-ratio:auto!important;height:auto!important;background:#000;padding:14px 0;width:calc(100% + 32px)!important;margin-inline:-16px}
   .press-track li{height:30px}
   .patr{width:auto!important;height:48px!important;aspect-ratio:auto!important}
@@ -326,9 +354,16 @@ img.a{object-fit:contain;display:block}
   </div>
 
   <!-- hero eye + sun -->
-  <div class="a hero3" style="--x:302;--y:80;--w:420;--h:420">
-    <img class="spin30" src="assets/sun-red.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain">
-    <img class="breathe" src="assets/cat-ed3.webp" alt="Gatto Suburbiæ, 3ª edizione" style="position:absolute;left:26.2%;top:19.2%;width:47.6%;height:61.6%;object-fit:contain">
+  <div class="a hero3 hx" style="--x:302;--y:80;--w:420;--h:420">
+    <div class="hx-sunw"><div class="hx-beat"><img class="hx-sun" src="assets/sun-red.webp" alt=""></div></div>
+    <i class="hx-sp s1" aria-hidden="true"></i><i class="hx-sp s2" aria-hidden="true"></i><i class="hx-sp s3" aria-hidden="true"></i><i class="hx-sp s4" aria-hidden="true"></i>
+    <div class="hx-catw"><div class="hx-cat">
+      <img src="assets/cat-ed3.webp" alt="Gatto Suburbiæ, 3ª edizione">
+      <i class="hx-eye l" aria-hidden="true"><span class="hx-glow"></span><svg viewBox="0 0 100 100"><use href="#hx-spiral"/></svg></i>
+      <i class="hx-eye r" aria-hidden="true"><span class="hx-glow"></span><svg viewBox="0 0 100 100"><use href="#hx-spiral"/></svg></i>
+      <i class="hx-eye t" aria-hidden="true"><span class="hx-glow"></span><svg viewBox="0 0 100 100"><use href="#hx-spiral"/></svg></i>
+    </div></div>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="hx-spiral"><circle cx="50" cy="50" r="49" fill="#120804"/><path class="hx-sp-path" fill="none" stroke="#f7c04a" stroke-width="4.4" stroke-linecap="round" d=""/></g></defs></svg>
   </div>
 
   <!-- NEXT FEST ticker -->
@@ -3234,6 +3269,14 @@ article.a>.ph{grid-column:1 / -1}
   /* --- home: copia indirizzo mail --- */
   document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){var t=b.dataset.copy,lab=b.textContent;function ok(){b.textContent='COPIATO ✓';setTimeout(function(){b.textContent=lab},1600)}
     if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,function(){prompt('Copia l\'indirizzo:',t)});else prompt('Copia l\'indirizzo:',t)})});
+  /* --- home hero "Ipnosi": spirale disegnata una volta + gatto che segue il mouse --- */
+  (function(){var h=document.querySelector('.hx');if(!h)return;var d='';for(var i=0;i<=420;i++){var t=i/420*Math.PI*2*4.2,r=1.5+t*1.6;d+=(i?'L':'M')+(50+r*Math.cos(t)).toFixed(1)+' '+(50+r*Math.sin(t)).toFixed(1)}
+    var pth=h.querySelector('.hx-sp-path');if(pth)pth.setAttribute('d',d);
+    if(matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion:reduce)').matches)return;var q=false,x=0,y=0;
+    window.addEventListener('pointermove',function(e){if(!h.offsetParent)return;var b=h.getBoundingClientRect();if(b.bottom<0||b.top>innerHeight)return;
+      x=Math.max(-1,Math.min(1,(e.clientX-(b.left+b.width/2))/b.width));y=Math.max(-1,Math.min(1,(e.clientY-(b.top+b.height/2))/b.height));
+      if(q)return;q=true;requestAnimationFrame(function(){q=false;h.style.setProperty('--px',x.toFixed(3));h.style.setProperty('--py',y.toFixed(3))})},{passive:true});
+  })();
   /* --- menu --- */
   var mn=document.getElementById('mn'),mnBtn=null;
   (function(){var G=mn.querySelector('.mn-glyphs'),gl=['<circle cx="0" cy="0" r="5"/>','<path d="M3-6a6 6 0 1 0 0 12 5 5 0 1 1 0-12Z" class="fill"/>','<path d="M0-7 2-2 7 0 2 2 0 7-2 2-7 0-2-2Z" class="fill"/>','<path d="M-6 0Q0-6 6 0 0 6-6 0Z"/><circle cx="0" cy="0" r="1.8" class="fill"/>','<path d="M0-6 5 5H-5Z"/>'],h='';
