@@ -715,6 +715,16 @@ img.a{object-fit:contain;display:block}
   .abj-q p{font-size:44px}.abj-nine{max-width:320px;margin-inline:auto}.abj-nine li span{font-size:8px}
   .abj-tick{font-size:12px;padding:10px 0}
   .abj-st{box-shadow:0 0 0 3px #fff,0 5px 6px 3px rgba(0,0,0,.3)}
+  /* telefono: niente citazione e niente 9 occhi; adesivo a filo del titolo, sulla stessa altezza */
+  .abj-q,.abj-nine{display:none!important}
+  .fit1{line-height:1.1!important}
+  .abj-col.b{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;position:relative}
+  .abj-col.b>*{grid-column:1 / -1}
+  .abj-col.b>.abj-hl{grid-column:1;grid-row:2;font-size:min(60px,15.5vw);white-space:nowrap}
+  .abj-col.b>.abj-st.st-eye{grid-column:2;grid-row:2;position:relative;right:auto;top:auto;align-self:center;justify-self:end;width:min(104px,26vw);margin-top:14px}
+  .abj-col.b .abj-btns{grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:8px}
+  .abj-col.b .abj-b{min-width:0;padding:0 10px;letter-spacing:.06em}
+  .abj-b.jay{font-size:clamp(16px,5vw,20px)}
 }
 </style>
 <div class="pg" style="--H:813;--oy:1610">
@@ -726,7 +736,7 @@ img.a{object-fit:contain;display:block}
 
   <!-- CONTACT -->
   <div class="a bg-k auto" style="--x:20;--y:1710;--w:482;--h:148;display:grid;place-items:center;padding-block:calc(20 * var(--u))">
-    <p class="t f-goth c-c blink" style="--fs:50;--lh:50;font-weight:400;--mfs:26">Vuoi parlare con noi?</p>
+    <p class="t f-goth c-c blink fit1" style="--fs:50;--lh:50;font-weight:400;--mfs:26">Vuoi parlare con noi?</p>
   </div>
   <div class="a bg-k deco" style="--x:522;--y:1710;--w:13;--h:148"></div>
   <div class="a bg-k deco" style="--x:556;--y:1710;--w:13;--h:148"></div>
@@ -3234,6 +3244,9 @@ article.a>.ph{grid-column:1 / -1}
     svg.setAttribute('viewBox','0 0 '+W.toFixed(2)+' 44');svg.style.setProperty('--w',W.toFixed(2));
     var lab=svg.parentNode.parentNode.querySelector('p.a.t');if(lab){lab.style.setProperty('--w',W.toFixed(2));lab.classList.add('fit');fitLegal()}}
   (document.fonts?document.fonts.ready:Promise.resolve()).then(fitJay);
+  /* --- telefono: scritte su una riga sola, grandi quanto il loro riquadro --- */
+  function fit1(){var m=matchMedia('(max-width:680px)').matches;document.querySelectorAll('.fit1').forEach(function(t){t.style.fontSize='';t.style.whiteSpace='';if(!m)return;var b=t.parentNode,cs=getComputedStyle(b),W=b.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);if(W<=0)return;t.style.whiteSpace='nowrap';t.style.fontSize='100px';var w=t.scrollWidth;if(w)t.style.fontSize=(100*W/w*.96)+'px'})}
+  (document.fonts?document.fonts.ready:Promise.resolve()).then(fit1);window.addEventListener('resize',fit1);window.addEventListener('hashchange',function(){setTimeout(fit1,30)});
   /* --- undersub: titolo a tutta riga --- */
   function fitUs(){document.querySelectorAll('.us-title').forEach(function(t){var W=t.parentNode.clientWidth;if(!W)return;t.style.fontSize='100px';var w=t.scrollWidth;if(w)t.style.fontSize=(100*W/w*.99)+'px'});document.querySelectorAll('.us-fit').forEach(function(p){var L=p.querySelectorAll(':scope>span');L.forEach(function(l){l.style.fontSize='10px'});var W=p.clientWidth;if(!W)return;L.forEach(function(l){l.style.fontSize='100px';var w=l.getBoundingClientRect().width;if(w)l.style.fontSize=(100*W/w*.998)+'px'})})}
   (document.fonts?document.fonts.ready:Promise.resolve()).then(fitUs);window.addEventListener('resize',fitUs);window.addEventListener('hashchange',function(){setTimeout(fitUs,30)});
@@ -3325,7 +3338,9 @@ article.a>.ph{grid-column:1 / -1}
     mn.querySelectorAll('.mn-list a').forEach(function(a,k){
       function on(){hint.querySelector('b').textContent=a.dataset.k;hint.querySelector('i').textContent=a.dataset.s;G.querySelectorAll('g').forEach(function(g){g.classList.toggle('hl',+g.dataset.k===k)})}
       a.addEventListener('mouseenter',on);a.addEventListener('focus',on);
-      a.addEventListener('click',function(){closeMenu(true)});
+      a.addEventListener('click',function(e){closeMenu(true);
+        /* stesso indirizzo (es. #about due volte): niente hashchange, quindi scorro io */
+        var t=a.dataset.scroll;if(t&&location.hash===a.getAttribute('href')){e.preventDefault();var el=document.getElementById(t);if(el)setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},60)}});
     });
     mn.querySelector('.mn-list').addEventListener('mouseleave',function(){hint.querySelector('b').textContent='✶';hint.querySelector('i').textContent='scegli una porta';G.querySelectorAll('g').forEach(function(g){g.classList.remove('hl')})});
   })();
@@ -3358,7 +3373,7 @@ article.a>.ph{grid-column:1 / -1}
     document.querySelectorAll('.pg.open').forEach(function(p){p.classList.remove('open')});
     document.body.style.background=getComputedStyle(document.getElementById('v-'+h)).backgroundColor!=='rgba(0, 0, 0, 0)'?getComputedStyle(document.getElementById('v-'+h)).backgroundColor:'var(--cream)';
     if(h==='gallery'){var pe=pendingEd;pendingEd=null;if(pe){scrollTarget=null;setTimeout(function(){galGo(pe)},40)}setTimeout(function(){window.galPar&&window.galPar()},60)}
-    if(scrollTarget){var el=document.getElementById(scrollTarget);scrollTarget=null;if(el)setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'center'})},30)}
+    if(scrollTarget){var el=document.getElementById(scrollTarget);scrollTarget=null;if(el)setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},30)}
     else window.scrollTo(0,0);
   }
   window.addEventListener('hashchange',route);
