@@ -199,8 +199,8 @@ img.a{object-fit:contain;display:block}
 .menu .pill{height:calc(28 * var(--u));padding:0 calc(11 * var(--u));white-space:nowrap}
 .pg.open .menu{transform:none;pointer-events:auto}
 .mbtn{background:var(--cream);border:1px solid var(--ink);display:grid;place-items:center;transition:transform .5s ease-in-out,background .25s}
-.mbtn:hover{background:var(--ink)} .mbtn:hover span{background:var(--cream)}
-.mbtn span{display:block;width:calc(8 * var(--u));height:calc(8 * var(--u));background:var(--ink)}
+.mbtn:hover{background:var(--ink)} .mbtn:hover span{color:var(--cream)}
+.mbtn span{--lw:max(1.5px,calc(1.6 * var(--u)));display:block;width:calc(14 * var(--u));height:calc(10 * var(--u));color:var(--ink);background:linear-gradient(currentColor 0 0) top/100% var(--lw) no-repeat,linear-gradient(currentColor 0 0) center/100% var(--lw) no-repeat,linear-gradient(currentColor 0 0) bottom/100% var(--lw) no-repeat}
 .pg.open .mbtn{transform:rotate(180deg)}
 .logo{font:900 calc(27 * var(--u))/1 var(--druk);font-stretch:125%;letter-spacing:calc(1 * var(--u));color:transparent;-webkit-text-stroke:calc(.9 * var(--u)) var(--ink);white-space:nowrap}
 
@@ -290,7 +290,7 @@ img.a{object-fit:contain;display:block}
   .mhead .logo-img{width:190px!important;height:21px!important;aspect-ratio:auto!important;margin-right:auto}
   .gal-logo{width:150px}
   .mhead .mbtn{width:40px;height:40px;flex:0 0 auto}
-  .mhead .mbtn span{width:10px;height:10px}
+  .mhead .mbtn span{width:18px;height:13px;--lw:2px}
   .tickwrap{overflow:hidden;width:calc(100% + 32px);margin-inline:-16px;aspect-ratio:auto!important;height:auto!important}
   .tick1,.tick2{animation-duration:30s}
   .hm-marq{line-height:1.5!important;animation-duration:30s}
@@ -732,7 +732,7 @@ img.a{object-fit:contain;display:block}
   <div class="mhead">
         <a class="a btn keepw" href="#home" style="--x:934;--y:19;--w:30;--h:42;background:var(--ink);color:var(--cream)" aria-label="Home"><svg viewBox="0 0 10 10" style="width:40%"><path d="M1 5 5 1l4 4v4H6V6H4v3H1Z" fill="currentColor"/></svg></a>
     <button type="button" class="a btn keepw mk-open mk-ico" style="--x:894;--y:19;--w:30;--h:42;background:var(--ink);color:var(--cream)" aria-label="Apri il carrello"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><b class="mk-c">0</b></button>
-    <button class="a mbtn keepw" data-menu style="--x:974;--y:19;--w:30;--h:42;background:var(--ink)" aria-label="Apri menu" aria-expanded="false"><span style="background:var(--cream)"></span></button>
+    <button class="a mbtn keepw" data-menu style="--x:974;--y:19;--w:30;--h:42;background:var(--ink)" aria-label="Apri menu" aria-expanded="false"><span style="color:var(--cream)"></span></button>
   </div>
 
   <!-- merch: testata negozio (il carrello vero è nel pannello #mk) -->
