@@ -245,7 +245,8 @@ img.a{object-fit:contain;display:block}
 .hx>*{position:absolute}
 .hx-sunw{inset:0;transform:translate(calc(var(--px) * -6px),calc(var(--py) * -6px));transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .hx-beat{position:absolute;inset:0;animation:hxbeat 4.5s ease-in-out 1.6s infinite}
-.hx-sun{display:block;width:100%;height:100%;object-fit:contain;animation:hxin 1.3s cubic-bezier(.2,.8,.2,1) both,hxspin 40s linear 1.3s infinite}
+.hx-sun{display:block;width:100%;height:100%;object-fit:contain;animation:hxin 1.3s cubic-bezier(.2,.8,.2,1) both,hxrot 6s linear 1.3s infinite}
+@keyframes hxrot{to{rotate:360deg}}
 @keyframes hxin{from{transform:scale(.35) rotate(-120deg);opacity:0}to{transform:none;opacity:1}}
 @keyframes hxspin{to{transform:rotate(360deg)}}
 @keyframes hxbeat{0%,70%,100%{transform:scale(1)}78%{transform:scale(1.06)}86%{transform:scale(.99)}92%{transform:scale(1.03)}}
