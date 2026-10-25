@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Æ-Zine · la fanzine del Suburbiæ Fest · subcultura, band e design</title><meta name="description" content="Æ-Zine è la fanzine del Suburbiæ Unexpected Fest di Teramo: subcultura, band emergenti e il design che ci sta dietro. Esce a microzine, si legge qui."><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://suburbiaefest.com/magazine/"><meta name="theme-color" content="#070606"><meta name="author" content="JAY27 A.P.S + A.S.D."><meta property="og:type" content="website"><meta property="og:site_name" content="Suburbiæ Unexpected Fest"><meta property="og:locale" content="it_IT"><meta property="og:title" content="Æ-Zine · la fanzine del Suburbiæ Fest · subcultura, band e design"><meta property="og:description" content="Æ-Zine è la fanzine del Suburbiæ Unexpected Fest di Teramo: subcultura, band emergenti e il design che ci sta dietro. Esce a microzine, si legge qui."><meta property="og:url" content="https://suburbiaefest.com/magazine/"><meta property="og:image" content="https://suburbiaefest.com/assets/og-suburbiae.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Space+Mono:wght@400;700&family=Instrument+Serif:ital@0;1&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#070606;--bone:#efe6d2;--cream:#FFE1A8;--red:#FF0005;--blood:#b70725;--m:clamp(16px,3vw,40px);--gap:12px;--serif:'Instrument Serif',serif;--sans:'Archivo',sans-serif;--mono:'Space Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ink);color:var(--bone);font-family:var(--sans);font-size:16px;line-height:24px;overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a,button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-decoration:none}
+.wrap{width:min(100%,1360px);margin:0 auto;padding:0 var(--m)}
+.mono{font-family:var(--mono);font-size:11px;line-height:16px;text-transform:uppercase;letter-spacing:.06em}
+.cond{font-family:var(--sans);font-stretch:62%;font-weight:900;text-transform:uppercase;line-height:.84;letter-spacing:-.005em}
+.sg{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:5;vertical-align:-.12em;overflow:visible}
+/* grana: fissa su tutto, anche sotto i pop-up */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:900;mix-blend-mode:screen;opacity:.34;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 .95  0 0 0 0 .85  0 0 0 11 -6.4'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E")}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:899;opacity:.9;
+  background:radial-gradient(ellipse at 50% 40%,transparent 55%,rgba(0,0,0,.55))}
+/* ---------- barra ---------- */
+.nav{position:relative;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(239,230,210,.35)}
+.nav .lg{font-family:var(--serif);font-size:30px;line-height:1;text-transform:none}
+.nav nav{display:flex;gap:22px}
+.nav a:hover,.nav button:hover{color:var(--red)}
+.nav .r{display:flex;gap:10px;align-items:center}
+.btn-o{border:1.5px solid var(--bone);padding:5px 12px}
+.btn-o:hover{background:var(--red);border-color:var(--red);color:#fff!important}
+/* ---------- HERO ---------- */
+.hero{position:relative;container-type:inline-size;aspect-ratio:100/80;margin-top:4px}
+.hero>*{position:absolute}
+.h-tick{left:0;right:0;top:.4cqw;display:flex;justify-content:space-between;align-items:center}
+.moons{display:flex;gap:6px;align-items:center}
+.moons i{width:12px;height:12px;border-radius:50%;border:1.5px solid var(--bone);position:relative;overflow:hidden;display:block}
+.moons i::after{content:"";position:absolute;inset:0;background:var(--bone);transform:translateX(var(--p))}
+.h-mast{left:0;top:3cqw;width:100cqw;overflow:visible}
+.h-mast text{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase}
+.h-moon{left:-9cqw;top:20cqw;width:62cqw;z-index:0;opacity:.9}
+.h-photo{left:4cqw;top:29cqw;width:42cqw;height:34cqw;transform:rotate(-3deg);z-index:2;background:#000;
+  clip-path:polygon(0 2%,6% 0,14% 1.5%,25% 0,38% 1.8%,52% 0,66% 1.5%,80% 0,92% 1.6%,100% 0,99% 20%,100% 42%,98.5% 63%,100% 83%,99% 100%,88% 98.4%,74% 100%,60% 98.2%,45% 100%,30% 98.4%,16% 100%,5% 98.6%,0 100%,1.2% 78%,0 56%,1.4% 34%,0 15%)}
+.h-photo img{filter:grayscale(1) contrast(1.4) brightness(.95);transition:filter .5s}
+.h-photo:hover img{filter:grayscale(0) contrast(1.1)}
+.h-ph-w{left:4cqw;top:29cqw;width:42cqw;height:34cqw;z-index:2;transform:rotate(-3deg);cursor:pointer}
+.tape{z-index:5;width:11cqw;height:3cqw;background:linear-gradient(180deg,rgba(255,240,205,.78),rgba(240,225,185,.7));clip-path:polygon(2% 0,98% 0,100% 18%,97% 34%,100% 50%,97% 66%,100% 82%,98% 100%,2% 100%,0 82%,3% 66%,0 50%,3% 34%,0 18%)}
+.h-mark{left:19cqw;top:35cqw;width:15cqw;z-index:6;overflow:visible;pointer-events:none}
+.h-mark path{fill:none;stroke:var(--red);stroke-width:4;stroke-linecap:round;filter:url(#ink)}
+.h-mk-t{left:33cqw;top:31cqw;z-index:6;font-family:var(--serif);font-style:italic;color:var(--red);font-size:3.2cqw;line-height:1;transform:rotate(-8deg)}
+.h-cap{left:7cqw;top:62.5cqw;max-width:36cqw;z-index:6;background:var(--cream);color:var(--ink);padding:.8cqw 1.4cqw;transform:rotate(1.4deg);font-family:var(--mono);font-size:max(10px,1.05cqw);line-height:1.35;text-transform:uppercase;letter-spacing:.05em;box-shadow:.5cqw .6cqw 0 rgba(0,0,0,.6);
+  clip-path:polygon(0 4%,10% 0,28% 5%,52% 0,76% 4%,100% 0,99% 52%,100% 100%,80% 96%,56% 100%,30% 95%,10% 100%,0 96%,1% 50%)}
+.h-cap b{font-family:var(--sans);font-stretch:62%;font-weight:900;font-size:1.9cqw;display:block;line-height:1}
+.h-cat{left:39cqw;top:50cqw;width:13cqw;z-index:7;transform:rotate(11deg);filter:drop-shadow(.35cqw 0 0 #fbf8f2) drop-shadow(-.35cqw 0 0 #fbf8f2) drop-shadow(0 .35cqw 0 #fbf8f2) drop-shadow(0 -.35cqw 0 #fbf8f2) drop-shadow(.4cqw .7cqw .4cqw rgba(0,0,0,.6))}
+.h-cat img{height:auto}
+.h-sig{right:3cqw;top:24cqw;width:9cqw;color:var(--red);z-index:1}
+.h-con{left:48cqw;top:24cqw;width:52cqw;height:40cqw;z-index:0;overflow:visible}
+.pils{left:52cqw;top:28cqw;width:46cqw;z-index:3}
+.pil{display:grid;grid-template-columns:auto 1fr auto;align-items:center;column-gap:1.4cqw;border-top:2px solid var(--bone);padding:1.4cqw 0 1.2cqw}
+.pil:last-child{border-bottom:2px solid var(--bone)}
+.pil .rn{font-family:var(--serif);font-size:2cqw;line-height:1;align-self:start;padding-top:.5cqw}
+.pil .w{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:8.2cqw;line-height:.84;color:transparent;-webkit-text-stroke:max(1.5px,.16cqw) var(--bone);transition:.2s;white-space:nowrap}
+.pil.p1 .w{color:var(--red);-webkit-text-stroke:0}
+.pil:hover .w{color:var(--red);-webkit-text-stroke:0;letter-spacing:.01em}
+.pil.p1:hover .w{color:var(--bone)}
+.pil .ds{font-family:var(--mono);font-size:max(9.5px,.82cqw);line-height:1.35;text-transform:uppercase;letter-spacing:.05em;text-align:right;max-width:13cqw}
+.pil .ds b{display:block;font-family:var(--serif);font-weight:400;font-size:2.4cqw;line-height:.9;letter-spacing:0;color:var(--cream)}
+.h-man{left:58cqw;top:65.5cqw;width:28cqw;z-index:3;font-family:var(--mono);font-size:max(9.5px,.84cqw);line-height:1.5;text-transform:uppercase;letter-spacing:.04em;opacity:.85}
+.h-fl{right:3cqw;top:66cqw;width:10cqw;z-index:3;color:var(--bone)}
+.h-band{left:-2cqw;right:-2cqw;bottom:3cqw;height:5cqw;background:var(--cream);color:var(--ink);transform:rotate(-1.3deg);overflow:hidden;white-space:nowrap;z-index:8;display:flex;align-items:center;box-shadow:0 .5cqw 0 rgba(0,0,0,.6)}
+.h-band div{display:inline-block;animation:tk 30s linear infinite;font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:3.6cqw;line-height:1}
+.h-band em{font-style:normal;color:var(--red);margin:0 .4em}
+@keyframes tk{to{transform:translateX(-50%)}}
+/* ---------- RICERCA ---------- */
+.sbar{position:sticky;top:0;z-index:40;background:rgba(7,6,6,.94);backdrop-filter:blur(6px);border-top:1px solid var(--bone);border-bottom:1px solid var(--bone);margin-top:2px}
+.srow{display:flex;align-items:center;gap:20px;padding:10px 0 6px}
+.sin{flex:1;display:flex;align-items:center;gap:12px;border-bottom:3px solid var(--bone);padding-bottom:4px;transition:border-color .2s}
+.sin:focus-within{border-color:var(--red)}
+.sin svg{width:30px;height:30px;stroke:var(--bone);fill:none;stroke-width:3;flex:none}
+.sin input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--bone);font-family:var(--sans);font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:clamp(26px,3.6vw,48px);line-height:1}
+.sin input::placeholder{color:rgba(239,230,210,.38)}
+.cnt{white-space:nowrap;color:var(--cream)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;padding:4px 0 10px;align-items:center}
+.chips button{border:1.5px solid var(--bone);padding:3px 11px 2px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;transition:.15s;display:inline-flex;gap:6px;align-items:center}
+.chips button:hover{background:var(--red);border-color:var(--red);color:#fff}
+.chips button.on{background:var(--bone);color:var(--ink)}
+.chips .tg{border-color:rgba(239,230,210,.4);color:rgba(239,230,210,.75)}
+.chips .sp{width:1px;height:20px;background:rgba(239,230,210,.35);margin:0 6px}
+/* ---------- MOSAICO ---------- */
+.sec{padding-top:40px;scroll-margin-top:120px}
+.sec h2{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(46px,8vw,110px);line-height:.8;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;border-bottom:1px solid var(--bone);padding-bottom:10px;margin-bottom:var(--gap)}
+.sec h2 span{font-family:var(--serif);font-weight:400;font-style:italic;font-stretch:100%;text-transform:none;color:var(--red);font-size:.6em}
+.mw{container-type:inline-size;position:relative}
+.mos{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);grid-auto-rows:calc((100cqw - 11*var(--gap))/12)}
+.tl{position:relative;overflow:hidden;background:#100e0e;border:1px solid rgba(239,230,210,.5);color:var(--bone);cursor:pointer;transition:opacity .35s,border-color .2s;isolation:isolate}
+.tl.dim{opacity:.13;pointer-events:none}
+.tl:hover{border-color:var(--red)}
+.tl .ph{position:absolute;inset:0}
+.tl .ph img{filter:grayscale(1) contrast(1.35) brightness(.92);transition:transform .7s,filter .5s}
+.tl:hover .ph img{transform:scale(1.05);filter:grayscale(0) contrast(1.1)}
+.tl::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(transparent 40%,rgba(0,0,0,.9));pointer-events:none}
+.tl.nog::after{display:none}
+.tl .ct{position:absolute;left:0;top:0;z-index:3;background:var(--bone);color:var(--ink);padding:3px 8px 2px;font-family:var(--mono);font-size:10px;line-height:14px;text-transform:uppercase;letter-spacing:.06em;display:flex;gap:6px;align-items:center}
+.tl .ct.sub{background:var(--red);color:#fff}
+.tl .rm{position:absolute;right:8px;top:8px;z-index:3;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--bone);display:grid;place-items:center;font-family:var(--serif);font-size:14px;background:rgba(0,0,0,.45)}
+.tl .nm{position:absolute;left:12px;right:12px;bottom:10px;z-index:3;font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;line-height:.88;font-size:clamp(24px,2.7vw,40px)}
+.tl .nm small{display:block;font-family:var(--mono);font-weight:400;font-stretch:100%;font-size:10px;line-height:14px;letter-spacing:.05em;color:var(--cream);margin-top:6px}
+.tl.w2 .nm{font-size:clamp(19px,2vw,28px)}.tl.w2 .nm small{display:none}
+.tl.hero .nm{font-size:clamp(60px,9vw,140px);left:18px;bottom:16px;line-height:.8}
+.tl.hero .st{position:absolute;left:18px;top:46px;z-index:3;font-family:var(--serif);font-style:italic;font-size:clamp(18px,2vw,28px);line-height:1.1;max-width:30ch;color:var(--cream)}
+.tl .cr{position:absolute;right:8px;bottom:6px;z-index:3;font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.05em;opacity:.7}
+.tl.w2 .cr,.tl.hero .cr{display:none}
+.tl.solid{padding:16px;display:flex;flex-direction:column;justify-content:space-between;cursor:default}
+.tl.red{background:var(--red);border-color:var(--red);color:#fff}
+.tl.q q{font-family:var(--serif);font-size:clamp(22px,2.7vw,40px);line-height:1;quotes:none}
+.tl.gal{cursor:pointer}
+.tl.gal .ph{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.tl.gal .ph div{position:relative;overflow:hidden}
+.tl.gal .gb{position:absolute;right:12px;bottom:12px;z-index:3;background:var(--red);color:#fff;padding:6px 14px}
+.tl.call{background:var(--blood);border-color:var(--blood)}
+.tl.call .big{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(30px,4.5vw,66px);line-height:.84}
+.tl.call .big em{font-style:normal;color:var(--cream)}
+.tl.call .bt{align-self:flex-start;background:var(--cream);color:var(--ink);padding:9px 16px;position:relative;z-index:3}
+.tl.call img{position:absolute;right:2%;bottom:-8%;width:24%;height:auto;opacity:.95;filter:drop-shadow(0 0 0 #000)}
+/* forme esoteriche che rompono la griglia */
+.sig{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:6;overflow:visible}
+.sig *{vector-effect:non-scaling-stroke}
+/* ---------- ARCHIVIO ---------- */
+.row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);align-items:center;border-top:1px solid rgba(239,230,210,.45);padding:12px 0;cursor:pointer;transition:background .15s}
+.row:last-child{border-bottom:1px solid rgba(239,230,210,.45)}
+.row .n{grid-column:1;font-family:var(--mono);font-size:11px}
+.row .c{grid-column:2/4}
+.row h4{grid-column:4/9;font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(26px,3.2vw,44px);line-height:.88}
+.row .tgs{grid-column:9/12;color:rgba(239,230,210,.7)}
+.row .m{grid-column:12;text-align:right}
+.row:hover{background:var(--red);color:#fff}
+.row:hover .tgs{color:#fff}
+.row.hide{display:none}
+.cc{display:inline-flex;gap:6px;align-items:center;border:1.5px solid currentColor;padding:2px 9px 1px}
+.empty{padding:40px 0;font-family:var(--serif);font-size:40px;display:none}
+/* ---------- MICROZINE ---------- */
+.mz{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap)}
+.zc{grid-column:span 3;position:relative}
+.zc .cv{position:relative;aspect-ratio:3/4.2;border:1px solid var(--bone);background:#100e0e;overflow:hidden;transition:transform .3s}
+.zc:hover .cv{transform:rotate(-2deg) translateY(-6px);border-color:var(--red)}
+.zc .cv::before{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:1px dashed rgba(239,230,210,.35);z-index:3}
+.zc .cv .ph{position:absolute;inset:0}
+.zc .cv .ph img{filter:grayscale(1) contrast(1.4)}
+.zc .cv .t{position:absolute;left:10px;top:8px;right:10px;z-index:3;font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(34px,4vw,56px);line-height:.82}
+.zc .cv .t em{font-style:normal;color:var(--red)}
+.zc .cv::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(0,0,0,.85));z-index:1}
+.zc .cv .fo{position:absolute;left:10px;right:10px;bottom:8px;z-index:3;display:flex;justify-content:space-between}
+.zc.soon .cv{border-style:dashed}.zc.soon .cv .ph{display:none}
+.zc.soon .cv .t{position:absolute;top:50%;translate:0 -50%;color:rgba(239,230,210,.45)}
+.zc p{margin-top:10px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.zc p b{font-family:var(--serif);font-weight:400;text-transform:none;font-size:24px;letter-spacing:0;display:block;line-height:1;color:var(--cream)}
+.zc .sf{display:inline-block;margin-top:8px}
+/* ---------- CHI SIAMO / UNISCITI ---------- */
+.tl.txt{padding:clamp(14px,2.2cqw,28px);display:flex;flex-direction:column;justify-content:space-between;cursor:default}
+.tl.txt::after{display:none}
+.chi-h{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(54px,9.4vw,140px);line-height:.8}
+.chi-h em{font-style:normal;color:var(--red)}
+.chi-t{font-family:var(--serif);font-size:clamp(20px,2.3vw,32px);line-height:1.06;max-width:36ch;color:var(--cream)}
+.chi-f{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);border-top:1px solid var(--bone);padding-top:10px}
+.chi-f b{display:block;font-family:var(--serif);font-weight:400;font-size:20px;line-height:1;text-transform:none;letter-spacing:0;color:var(--cream);margin-top:3px}
+.tl.who{background:#0d0b0b}
+.tl.who .ph img{filter:none;object-fit:cover;transform:scale(1.08)}
+.tl.who:hover .ph img{transform:scale(1.14);filter:none}
+.tl.who::after{background:linear-gradient(transparent 55%,rgba(0,0,0,.9))}
+.tl.who .sgl{position:absolute;right:-6%;top:-4%;width:62%;opacity:.16;stroke:var(--bone);stroke-width:2;fill:none}
+.tl.who .nm{font-size:clamp(24px,2.6vw,38px);color:var(--bone)}
+.tl.who .nm small{color:var(--red)}
+.tl.open{border:2px dashed var(--red);background:transparent;display:flex;flex-direction:column;justify-content:space-between;padding:16px;cursor:pointer;color:var(--bone)}
+.tl.open::after{display:none}
+.tl.open b{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(34px,4.2vw,62px);line-height:.84;color:var(--red)}
+.tl.open:hover{background:var(--red);color:#fff}.tl.open:hover b{color:#fff}
+.tl.join{background:var(--red);border-color:var(--red);color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2.4cqw,32px);padding:clamp(14px,2.2cqw,28px);cursor:default}
+.tl.join::after{display:none}
+.tl.join .l{display:flex;flex-direction:column;justify-content:space-between}
+.tl.join h3{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(46px,8.4vw,128px);line-height:.8;color:var(--ink)}
+.tl.join h3 em{font-style:normal;color:#fff}
+.tl.join .l p{font-family:var(--serif);font-size:clamp(18px,1.9vw,26px);line-height:1.05;max-width:26ch}
+.roles{display:grid;align-content:space-between}
+.roles a{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:10px;border-top:2px solid var(--ink);padding:clamp(6px,.9cqw,12px) 0;transition:.15s}
+.roles a:last-child{border-bottom:2px solid var(--ink)}
+.roles a b{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(26px,3.4vw,48px);line-height:.88}
+.roles a .mono{color:var(--ink)}
+.roles a:hover{background:var(--ink);color:var(--cream);padding-left:10px}.roles a:hover .mono{color:var(--cream)}
+.tl.join .stk{position:absolute;left:41%;bottom:5%;width:9%;height:auto;z-index:4;transform:rotate(12deg);filter:drop-shadow(.35cqw 0 0 #fbf8f2) drop-shadow(-.35cqw 0 0 #fbf8f2) drop-shadow(0 .35cqw 0 #fbf8f2) drop-shadow(0 -.35cqw 0 #fbf8f2) drop-shadow(.4cqw .7cqw .4cqw rgba(0,0,0,.5));pointer-events:none}
+.chi-h.big{font-size:7cqw;line-height:.82}
+.chi-h.sm{font-size:11cqw;line-height:.78}
+.chi-p{font-family:var(--sans);font-size:max(14px,1.3cqw);line-height:1.5;max-width:60ch}
+.chi-p p{margin-bottom:.8em}.chi-p b{font-weight:800;color:var(--cream)}
+.tl.red .chi-p b{color:var(--ink)}.tl.red .mono{color:#fff}
+.chi-q{font-family:var(--serif);font-style:italic;font-size:3.2cqw;line-height:1;color:var(--ink);align-self:flex-start;background:var(--cream);padding:.4cqw 1.2cqw .5cqw;transform:rotate(-2deg)}
+.tl .stk2{position:absolute;right:3%;bottom:4%;width:13%;height:auto;transform:rotate(10deg);filter:drop-shadow(.3cqw 0 0 #fbf8f2) drop-shadow(-.3cqw 0 0 #fbf8f2) drop-shadow(0 .3cqw 0 #fbf8f2) drop-shadow(0 -.3cqw 0 #fbf8f2) drop-shadow(.3cqw .6cqw .3cqw rgba(0,0,0,.5))}
+.tl.mq{background:var(--cream);border-color:var(--cream);color:var(--ink);cursor:default;display:flex;align-items:center;overflow:hidden;transform:rotate(-.7deg)}
+.tl.mq::after{display:none}
+.tl.mq div{white-space:nowrap;animation:tk 34s linear infinite;font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:5.6cqw;line-height:1}
+.tl.mq em{font-style:normal;color:var(--red);margin:0 .35em}
+.mailbtn{display:grid;grid-template-columns:1fr auto;align-items:center;gap:0 12px;background:var(--ink);color:var(--cream);padding:12px 16px;transition:.2s;align-self:flex-start;max-width:100%}
+.mailbtn .mono{grid-column:1/-1;color:var(--red)}
+.mailbtn b{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(22px,2.6cqw,38px);line-height:.95;overflow-wrap:anywhere}
+.mailbtn i{font-style:normal;font-family:var(--sans);font-weight:900;font-size:clamp(22px,2.6cqw,38px)}
+.mailbtn:hover{background:#fff;color:var(--ink)}.mailbtn:hover .mono{color:var(--red)}
+.wip{border:2px dashed var(--bone);padding:clamp(28px,6vw,90px) 0;text-align:center;overflow:hidden}
+.wip span{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(64px,10.6vw,150px);line-height:.82;letter-spacing:-.005em;color:var(--red);display:block;padding:0 12px}
+/* tessere "?" */
+.tl.unk{background:#0b0909;border:1px dashed rgba(239,230,210,.55);cursor:default;display:flex;align-items:center;justify-content:center}
+.tl.unk:hover{border-color:rgba(239,230,210,.55)}
+.tl.unk .qm{font-family:var(--sans);font-weight:900;font-stretch:62%;font-size:20cqw;line-height:.8;color:var(--red);text-shadow:.7cqw .6cqw 0 rgba(255,225,168,.18)}
+.tl.unk .pr{position:absolute;left:0;right:0;bottom:10px;text-align:center;opacity:.6}
+.tl.call.solid{cursor:pointer;transition:filter .2s}.tl.call.solid:hover{filter:brightness(1.12)}.tl.call.solid .bt{transition:.2s}.tl.call.solid:hover .bt{background:#fff}
+.row.last{cursor:default;border-style:dashed}.row.last:hover{background:none;color:inherit}
+.rd .tx p.todo{font-family:var(--mono);font-size:12px;line-height:18px;text-transform:uppercase;color:var(--red);border:1px dashed var(--red);padding:10px 12px}
+.rd .tx p.src{font-family:var(--mono);font-size:11px;line-height:17px;text-transform:uppercase;opacity:.6;margin-top:30px}
+/* pop-up delle tre forme */
+.fm{position:fixed;inset:0;z-index:305;background:var(--ink);overflow-y:auto;transform:translateY(100%);transition:transform .5s cubic-bezier(.7,0,.2,1);visibility:hidden}
+.fm.on{transform:none;visibility:visible}
+.fmt{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(239,230,210,.35);position:sticky;top:0;background:var(--ink);z-index:4}
+.fmg{display:grid;grid-template-columns:5fr 7fr;column-gap:var(--gap);padding:34px 0 80px;align-items:start}
+.fml{position:sticky;top:78px;display:grid;gap:6px}
+.fmcon{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.fw{position:relative;display:grid;grid-template-columns:auto 1fr;align-items:baseline;column-gap:14px;text-align:left;border-top:1px solid rgba(239,230,210,.45);padding:10px 0 6px;z-index:1}
+.fw i{font-family:var(--serif);font-style:normal;font-size:22px}
+.fw span{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(50px,7.6vw,108px);line-height:.84;color:transparent;-webkit-text-stroke:max(1.5px,.14vw) var(--bone);transition:.2s;white-space:nowrap}
+.fw:hover span{color:var(--bone);-webkit-text-stroke:0}
+.fw.on span{color:var(--red);-webkit-text-stroke:0}
+.fml>p{margin-top:14px;opacity:.7}
+.fmr{max-width:760px}
+.fmr h2{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(46px,6.4vw,92px);line-height:.84;margin:12px 0 18px}
+.fmr .lead{font-family:var(--serif);font-style:italic;font-size:clamp(26px,3vw,40px);line-height:1.05;color:var(--cream);max-width:26ch;margin-bottom:22px}
+.fmr p{font-size:18px;line-height:29px;margin-bottom:20px;max-width:62ch}
+.pf{border-left:4px solid rgba(239,230,210,.25);padding-left:16px;margin:0 0 20px;opacity:.55;transition:.3s}
+.pf b{display:block;font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:28px;line-height:1;margin-bottom:6px}
+.pf p{margin-bottom:0}
+.pf.act{border-left-color:var(--red);opacity:1}.pf.act b{color:var(--red)}
+.fmr .fmn{opacity:.5;margin-top:26px}
+.fmgo{display:inline-block;margin-top:6px}
+@media(max-width:760px){.fmg{grid-template-columns:1fr}.fml{position:static}.fw span{font-size:15vw}.fmr h2{font-size:16vw}.tl.unk .qm{font-size:30vw}}
+/* ===== ADESIVI: etichette = scotch di carta con pennarello; il "?" = adesivo grande rosso ===== */
+:root{--sd:drop-shadow(3px 4px 0 #040303);--wr:'Sedgwick Ave Display','Permanent Marker',cursive;--tp:linear-gradient(180deg,rgba(255,238,196,.97),rgba(243,219,166,.97));--fib:repeating-linear-gradient(90deg,rgba(60,40,10,.07) 0 1px,transparent 1px 5px)}
+.tl{overflow:hidden}
+.tl .ct,.tl .rm,.tl .pr,.tl .gb{background:var(--fib),var(--tp);color:var(--red);border:0;border-radius:0;font-family:var(--wr);font-weight:400;text-transform:none;letter-spacing:.02em;text-shadow:none;box-shadow:none;filter:none;
+  transform:rotate(var(--r,0deg));transition:transform .25s cubic-bezier(.3,1.6,.5,1);
+  clip-path:polygon(0 0,100% 0,97.5% 20%,100% 40%,97.5% 60%,100% 80%,97.5% 100%,0 100%,2.5% 80%,0 60%,2.5% 40%,0 20%)}
+.tl:hover .ct,.tl:hover .rm,.tl:hover .gb{transform:rotate(calc(var(--r,0deg)*-.7))}
+.tl .ct{left:10px;top:12px;--r:-2.5deg;padding:3px 18px 1px;min-height:0;display:inline-block;font-size:18px;line-height:1.2;z-index:6}
+.tl:nth-child(even) .ct{--r:2deg}
+.tl .ct::after,.tl .ct .sgb{display:none}
+.tl .rm{right:10px;top:12px;--r:5deg;width:auto;height:auto;min-width:34px;display:inline-block;text-align:center;padding:3px 12px 1px;font-size:16px;line-height:1.2;z-index:6;isolation:auto;color:var(--ink)}
+.tl .rm::before{display:none}
+.tl:nth-child(3n) .rm{--r:-4deg}
+.tl .cr{right:12px;top:52px;bottom:auto;--r:0deg;opacity:.85;background:none;color:var(--cream);padding:0;font-family:var(--mono);font-weight:400;font-size:9px;text-shadow:1px 1px 0 #000;z-index:6;filter:none;transform:none}
+.tl.w2 .cr{display:none}
+.tl.hero .cr{display:block;right:12px;top:52px;bottom:auto}
+.tl.gal .gb{--r:-3deg;right:14px;bottom:14px;padding:3px 18px 1px;font-size:18px;z-index:6}
+/* "?" grande come prima, rosso con bordo panna e ombra dura; tenuto su da uno scotch */
+.tl.unk{flex-direction:column;gap:0}
+.tl.unk .qm{display:block;width:60%;aspect-ratio:1;font-size:0;line-height:0;--r:-8deg;filter:var(--sd);transform:rotate(var(--r));margin-top:-6%}
+.tl.unk .qm svg{display:block;width:100%;height:100%;overflow:visible}
+.tl.unk::before{content:"";position:absolute;left:50%;top:6%;width:26%;height:7%;margin-left:-13%;background:var(--fib),var(--tp);transform:rotate(-7deg);z-index:7;opacity:.95;
+  clip-path:polygon(0 0,100% 0,96% 25%,100% 50%,96% 75%,100% 100%,0 100%,4% 75%,0 50%,4% 25%)}
+.tl.unk .pr{--r:2deg;bottom:14px;left:0;right:0;margin:auto;width:max-content;font-size:17px;line-height:1.2;padding:3px 18px 1px;z-index:6}
+.tl:not(.stuck) :is(.ct,.rm,.pr,.qm,.gb){opacity:0}
+@keyframes slap{from{opacity:0;transform:rotate(var(--r,0deg)) scale(1.7)}60%{opacity:1}to{opacity:1;transform:rotate(var(--r,0deg)) scale(1)}}
+.tl.stuck :is(.ct,.rm,.pr,.qm,.gb){animation:slap .45s cubic-bezier(.3,1.5,.5,1) backwards}
+.tl.stuck .rm{animation-delay:.08s}.tl.stuck .qm{animation-delay:.16s}.tl.stuck .pr{animation-delay:.3s}.tl.stuck .gb{animation-delay:.38s}
+@media(prefers-reduced-motion:reduce){.tl:not(.stuck) :is(.ct,.rm,.pr,.qm,.gb){opacity:1}.tl.stuck :is(.ct,.rm,.pr,.qm,.gb){animation:none}}
+@media(max-width:760px){.tl .cr{display:none}.tl.unk .qm{width:56%}}
+footer{margin-top:80px;border-top:1px solid var(--bone);padding:22px 0 90px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* griglia visibile */
+#ov{position:fixed;inset:0;pointer-events:none;z-index:950;display:none}#ov.on{display:block}
+#ov .g{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap);height:100%}#ov i{background:rgba(0,200,255,.14)}
+#tg{position:fixed;left:12px;bottom:12px;z-index:960;background:var(--bone);color:var(--ink);padding:8px 12px;font-family:var(--mono);font-size:11px;text-transform:uppercase}
+/* ---------- LETTORE ---------- */
+.rd{position:fixed;inset:0;z-index:300;display:grid;grid-template-columns:5fr 7fr;background:var(--ink);transform:translateY(100%);transition:transform .5s cubic-bezier(.7,0,.2,1);visibility:hidden}
+.rd.on{transform:none;visibility:visible}
+.rd .L{position:relative;border-right:1px solid var(--bone)}
+.rd .L img{position:absolute;inset:0;filter:grayscale(1) contrast(1.3)}
+.rd .L::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.8))}
+.rd .L .rm{position:absolute;left:20px;bottom:18px;z-index:2;font-family:var(--serif);font-size:clamp(70px,10vw,150px);line-height:.8}
+.rd .L .cr{position:absolute;right:14px;bottom:10px;z-index:2;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.06em}
+.rd .R{overflow-y:auto}
+.rd .top{position:sticky;top:0;z-index:4;display:flex;justify-content:space-between;align-items:center;padding:14px clamp(18px,3vw,44px);background:var(--ink);border-bottom:1px solid var(--bone)}
+.rd .in{padding:30px clamp(18px,3vw,44px) 50px;max-width:820px}
+.rd h1{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(56px,8.4vw,128px);line-height:.82;color:var(--red);margin:14px 0 18px}
+.rd .st{font-family:var(--serif);font-style:italic;font-size:clamp(24px,2.8vw,36px);line-height:1.08;margin-bottom:14px;max-width:30ch;color:var(--cream)}
+.rd .by{border-top:1px solid var(--bone);border-bottom:1px solid var(--bone);padding:8px 0;margin:18px 0 26px}
+.rd .tx p{font-size:19px;line-height:30px;margin-bottom:22px;max-width:62ch}
+.rd .tx h5{font-family:var(--sans);font-stretch:112%;font-weight:800;font-size:16px;text-transform:uppercase;margin:30px 0 8px}
+.rd .tx h5::before{content:"✶  ";color:var(--red)}
+.rd .pq{font-family:var(--serif);font-size:clamp(32px,4vw,52px);line-height:.98;border-top:6px solid var(--red);padding:16px 0;margin:30px 0;color:var(--red)}
+.rd .nv{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-top:40px}
+.rd .nv button{border:1.5px solid var(--bone);padding:12px 14px;text-align:left;transition:.2s}
+.rd .nv button:last-child{text-align:right}
+.rd .nv button:hover{background:var(--red);border-color:var(--red)}
+.rd .nv b{display:block;font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:28px;line-height:.9;margin-top:4px}
+.lb{position:fixed;inset:0;z-index:310;background:#050404;display:grid;grid-template-columns:9fr 3fr;gap:var(--gap);padding:var(--gap);opacity:0;visibility:hidden;transition:opacity .3s}
+.lb.on{opacity:1;visibility:visible}
+.lb .mn{display:flex;flex-direction:column;gap:var(--gap);min-height:0}
+.lb .big{position:relative;flex:1;min-height:0;border:1px solid var(--bone)}
+.lb .big img{object-fit:contain;position:absolute;inset:0}
+.lb .ths{display:grid;grid-template-columns:repeat(12,1fr);gap:8px;height:64px}
+.lb .ths div{position:relative;opacity:.4;cursor:pointer;border:1px solid transparent}.lb .ths div img{filter:grayscale(1)}
+.lb .ths div.on{opacity:1;border-color:var(--red)}
+.lb .sd{border:1px solid var(--bone);padding:16px;display:flex;flex-direction:column}
+.lb .sd h2{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(50px,6vw,90px);line-height:.82;color:var(--red);margin:10px 0 18px}
+.lb dl{display:grid;gap:12px}.lb dt{opacity:.55}
+.lb .ar{margin-top:auto;display:flex;gap:8px}
+.lb .ar button{flex:1;border:1.5px solid var(--bone);padding:12px}.lb .ar button:hover{background:var(--red);border-color:var(--red)}
+.mnu{position:fixed;inset:0;z-index:320;background:var(--ink);padding:16px var(--m) 24px;display:flex;flex-direction:column;transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.2,1);visibility:hidden}
+.mnu.on{transform:none;visibility:visible}
+.mnu .it{display:grid;grid-template-columns:60px 1fr auto;align-items:baseline;border-top:1px solid var(--bone);padding:2px 0;cursor:pointer}
+.mnu .it h4{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(50px,9vh,120px);line-height:.9;transition:.2s}
+.mnu .it:hover h4{color:var(--red);padding-left:16px}
+.mnu .it:last-child{border-bottom:1px solid var(--bone)}
+@media(max-width:900px){.zc{grid-column:span 6}}
+@media(max-width:760px){
+  .nav nav{display:none}
+  .hero{aspect-ratio:auto;display:flex;flex-direction:column;gap:14px;padding-bottom:30px}
+  .hero>*{position:relative!important;left:auto!important;top:auto!important;right:auto!important;bottom:auto!important;width:auto!important;transform:none!important;margin:0}
+  .h-moon,.h-sig,.h-con,.h-mark,.h-mk-t,.h-ph-w,.h-fl,.tape{display:none!important}
+  .h-mast{width:100%!important}
+  .h-photo{aspect-ratio:4/3;height:auto!important;width:100%!important}
+  .h-cap{align-self:flex-start;font-size:10px}
+  .h-cat{width:90px!important;align-self:flex-end;margin-top:-50px!important}
+  .pil .w{font-size:17vw}.pil .rn{font-size:16px}.pil .ds{font-size:9.5px;max-width:30vw}.pil .ds b{font-size:18px}
+  .h-man{font-size:10px}
+  .h-band{height:34px;transform:rotate(-1.2deg)!important;margin:0 -16px!important;width:auto!important}.h-band div{font-size:26px}
+  .sbar{position:static}.srow{flex-wrap:wrap}.cnt{width:100%}.chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.chips button{white-space:nowrap}
+  .pil{grid-template-columns:auto 1fr}.pil .ds{display:none}.hero{overflow:hidden}
+  .mos{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto}
+  .tl{grid-column:span 1!important;grid-row:auto!important;aspect-ratio:1}
+  .tl.hero,.tl.gal,.tl.call{grid-column:1/-1!important}.tl.hero{aspect-ratio:4/5}.tl.gal{aspect-ratio:2/1}.tl.call{aspect-ratio:auto;min-height:260px}
+  .tl.w2 .nm small,.tl .cr{display:none}.sig{display:none}
+  .row .c,.row .tgs,.row .m{display:none}.row h4{grid-column:2/-1}
+  .zc{grid-column:span 6}
+  .tl.mq{aspect-ratio:auto!important;height:52px}.tl.mq div{font-size:34px}.chi-h.big{font-size:17vw}.chi-h.sm{font-size:24vw}.chi-p{font-size:15px}.chi-q{font-size:28px}.tl .stk2{width:26%}.mailbtn b{font-size:19px;overflow-wrap:normal}.roles a b{font-size:30px}
+  .tl.txt,.tl.join{grid-column:1/-1!important;aspect-ratio:auto!important}.tl.txt{min-height:360px;gap:18px}.tl.join{grid-template-columns:1fr;row-gap:20px}.tl.join .stk{display:none}
+  .chi-f{grid-template-columns:1fr}.tl.who .nm small{display:block}
+  .rd{grid-template-columns:1fr;grid-template-rows:34vh 1fr}.rd .L .rm{font-size:60px}
+  .lb{grid-template-columns:1fr}.lb .sd{display:none}.lb .ths{grid-template-columns:repeat(6,1fr)}
+}
+@media(prefers-reduced-motion:reduce){.h-band div{animation:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="ink" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="3" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <filter id="worn" x="-2%" y="-2%" width="104%" height="104%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="11" result="t"/><feColorMatrix in="t" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -7 4.9" result="holes"/><feComposite in="SourceGraphic" in2="holes" operator="in"/></filter>
+    <symbol id="sg-sub" viewBox="0 0 100 100"><path d="M50 7L94 90H6Z" stroke-linejoin="round"/><path d="M26 66Q50 44 74 66Q50 88 26 66Z"/><circle cx="50" cy="66" r="7" fill="currentColor"/></symbol>
+    <symbol id="sg-band" viewBox="0 0 100 100"><path d="M50 4L59 36L90 22L68 48L96 62L62 62L64 96L50 70L36 96L38 62L4 62L32 48L10 22L41 36Z" stroke-linejoin="round"/></symbol>
+    <symbol id="sg-des" viewBox="0 0 100 100"><circle cx="50" cy="50" r="42"/><path d="M50 8V92M8 50H92"/><path d="M50 22L78 50L50 78L22 50Z"/></symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <div class="nav mono"><a class="lg" href="#" style="font-family:var(--serif);font-size:28px;text-transform:none;letter-spacing:0">Æ-zine</a>
+    <nav><a data-pick="sub">Subcultura</a><a data-pick="band">Band</a><a data-pick="des">Design</a><a href="#mz">Microzine</a><a href="#chi">Chi siamo</a></nav>
+    <div class="r"><a class="btn-o" href="/">← Sito</a><button class="btn-o" id="gosearch">Cerca ⌕</button><button class="btn-o" id="mbtn">Menu ≡</button></div></div>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="h-tick mono"><span>N°01 ✶ in arrivo ✶ Teramo</span><span class="moons"><i style="--p:-100%"></i><i style="--p:-50%"></i><i style="--p:0%"></i><i style="--p:50%"></i><i style="--p:100%"></i></span><span>Offerta libera ✶ si leggerà, si piegherà, si passerà</span></div>
+
+    <svg class="h-moon" viewBox="-60 -60 120 120" aria-hidden="true" fill="none" stroke="#efe6d2">
+      <circle r="56" stroke-width=".5" stroke-dasharray=".5 2.6"/><circle r="49" stroke-width=".35"/><circle r="40" stroke-width=".25" stroke-dasharray="1 2"/>
+      <path d="M0-34A34 34 0 1 0 0 34A25 34 0 1 1 0-34Z" fill="#efe6d2" stroke="none" opacity=".16"/>
+      <g stroke-width=".35"><path d="M-60 0H-44M44 0H60M0-60V-44M0 44V60"/></g>
+      <g fill="#efe6d2" stroke="none"><circle cx="-47" cy="-30" r="1"/><circle cx="52" cy="14" r="1.2"/><circle cx="-18" cy="52" r=".8"/></g>
+    </svg>
+
+    <svg class="h-mast" viewBox="0 0 1000 250" role="img" aria-label="Æ-Zine">
+      <g filter="url(#worn)"><text x="7" y="241" font-size="330" textLength="1000" lengthAdjust="spacingAndGlyphs" fill="#FF0005">Æ-ZINE</text>
+      <text x="0" y="235" font-size="330" textLength="1000" lengthAdjust="spacingAndGlyphs" fill="#efe6d2">Æ-ZINE</text></g>
+    </svg>
+
+    <svg class="h-con" viewBox="0 0 520 400" aria-hidden="true" fill="none" stroke="#FF0005" stroke-width="1.2" preserveAspectRatio="none">
+      <path d="M20 360L130 230L260 280L380 130L500 40" stroke-dasharray="4 5"/><path d="M130 230L190 80L380 130" stroke-dasharray="2 4"/>
+      <g fill="#efe6d2" stroke="none"><circle cx="20" cy="360" r="3.5"/><circle cx="130" cy="230" r="3.5"/><circle cx="260" cy="280" r="3.5"/><circle cx="380" cy="130" r="3.5"/><circle cx="190" cy="80" r="3"/><circle cx="500" cy="40" r="3.5"/></g>
+    </svg>
+    <svg class="h-sig" viewBox="0 0 100 100" stroke-width="3"><use href="#sg-sub"/></svg>
+
+    
+    <div class="h-photo"><img src="/assets/gal/ed3/live-a14.jpg" alt="" style="object-position:50% 35%"></div>
+    <div class="tape" style="left:3cqw;top:29.5cqw;transform:rotate(-34deg)"></div>
+    <div class="tape" style="left:38cqw;top:60cqw;transform:rotate(-28deg)"></div>
+    <svg class="h-mark" viewBox="0 0 100 80" aria-hidden="true"><path d="M10 40C6 12 70 2 92 22C112 42 80 74 40 70C12 66 4 50 22 30"/></svg>
+    <span class="h-mk-t">questi!</span>
+
+    <div class="pils">
+      <a class="pil p1" data-form="sub"><span class="rn">I</span><span class="w">Subcultura</span><span class="ds"><b>06</b>skate, punk, tatuaggi,<br>cassette, scena</span></a>
+      <a class="pil" data-form="band"><span class="rn">II</span><span class="w">Band</span><span class="ds"><b>06</b>quelle che<br>salgono sul palco</span></a>
+      <a class="pil" data-form="des"><span class="rn">III</span><span class="w">Design</span><span class="ds"><b>06</b>quello dietro<br>la subcultura</span></a>
+    </div>
+    <p class="h-man">Una fanzine che parla di subculture, di band e del design che ci sta dietro: locandine, loghi, magliette, lettering. Si fa a Teramo, esce a microzine, si legge qui.</p>
+    <svg class="h-fl" viewBox="-50 -50 100 100" fill="none" stroke="currentColor" stroke-width="1.2"><circle r="46" stroke-dasharray="1 3"/><path d="M0-42L10-10L42 0L10 10L0 42L-10 10L-42 0L-10-10Z" stroke-linejoin="round"/><circle r="4" fill="currentColor"/></svg>
+
+    <div class="h-band"><div id="hb"></div></div>
+  </header>
+</div>
+
+<!-- ============ RICERCA ============ -->
+<div class="sbar" id="sbar"><div class="wrap">
+  <div class="srow"><label class="sin"><svg viewBox="0 0 30 30"><circle cx="12" cy="12" r="8"/><path d="M18 18L27 27"/></svg><input id="q" placeholder="Cerca negli articoli: skate, tatuaggi, locandine…" autocomplete="off" spellcheck="false"></label><span class="cnt mono" id="cnt"></span></div>
+  <div class="chips" id="chips"></div>
+</div></div>
+
+<!-- ============ MOSAICO ============ -->
+<div class="wrap sec" id="mosec">
+  <h2>In evidenza <span>numero 01</span></h2>
+  <div class="mw"><div class="mos" id="mos"></div>
+    <svg class="sig" viewBox="0 0 1000 1000" preserveAspectRatio="none" fill="none" aria-hidden="true">
+      <g stroke="#efe6d2"><circle cx="470" cy="410" r="290" stroke-width="1" stroke-dasharray="1.5 7" opacity=".8"/><circle cx="470" cy="410" r="276" stroke-width="1" opacity=".5"/></g>
+      <g stroke="#FF0005" stroke-width="1.4"><path d="M60 150L330 520L610 330L880 700" stroke-dasharray="6 6"/><path d="M330 520L240 900" stroke-dasharray="3 6"/></g>
+      <g fill="#efe6d2" stroke="none"><circle cx="60" cy="150" r="4"/><circle cx="330" cy="520" r="4"/><circle cx="610" cy="330" r="4"/><circle cx="880" cy="700" r="4"/><circle cx="240" cy="900" r="4"/></g>
+      <g transform="translate(815 590) scale(1.6)" stroke="#FF0005" stroke-width="2"><use href="#sg-sub" width="100" height="100" x="-50" y="-50" style="stroke:#FF0005;stroke-width:3"/></g>
+      <g transform="translate(130 790)" stroke="#efe6d2" stroke-width="1.1"><path d="M0-46L9-12L46 0L9 12L0 46L-9 12L-46 0L-9-12Z" stroke-linejoin="round"/><circle r="52" stroke-dasharray="1 4"/></g>
+      <g stroke="#efe6d2" stroke-width="1"><path d="M920 90H950M935 75V105"/><circle cx="935" cy="90" r="14"/></g>
+    </svg>
+  </div>
+</div>
+
+<!-- ============ ARCHIVIO ============ -->
+<div class="wrap sec" id="arch">
+  <h2>Tutti gli articoli <span>cerca, filtra, leggi</span></h2>
+  <div id="list"></div>
+  <p class="empty" id="empty">Niente da questa parte. Prova con un'altra parola.</p>
+</div>
+
+<!-- ============ MICROZINE ============ -->
+<div class="wrap sec" id="mz">
+  <h2>Microzine</h2>
+  <div class="wip"><span>Work in progress</span></div>
+</div>
+<div class="wrap sec" id="chi">
+  <h2>Chi siamo <span>dal basso, da Teramo</span></h2>
+  <div class="mw"><div class="mos">
+    <div class="tl txt" style="grid-column:1/8;grid-row:1/5">
+      <span class="mono">01 ✶ Manifesto ✶ JAY27 ✶ Teramo, Abruzzo</span>
+      <div class="chi-h big">Facciamo le cose <em>che a Teramo mancavano.</em></div>
+      <p class="chi-t">Così è nato il Suburbiæ Fest. E da lì tutto il resto: contest, mercati, mostre, concerti. Sempre dal basso, sempre qui.</p>
+    </div>
+    <article class="tl" style="grid-column:8/13;grid-row:1/5;cursor:default"><div class="ph"><img src="/assets/gal/ed3/live-a19.jpg" alt="" loading="lazy" style="object-position:50% 40%"></div><span class="ct c-sub"><i class="sgb"><svg class="sg" viewBox="0 0 100 100"><use href="#sg-sub"/></svg></i>La redazione</span><h3 class="nm" style="font-size:clamp(26px,3vw,46px)">Noi,<br>sotto il palco</h3></article>
+    <div class="tl txt" style="grid-column:1/7;grid-row:5/9">
+      <span class="mono">02 ✶ Chi c'è dietro ✶ JAY27 · associazione culturale A.P.S. + A.S.D.</span>
+      <div class="chi-h sm">JAY<em>27</em></div>
+      <div class="chi-p"><p>JAY27 è un'associazione di promozione sociale e sportiva dilettantistica con sede a Teramo. Non abbiamo uno sponsor alle spalle né un format da copiare: abbiamo un'idea fissa, portare in Abruzzo quello che di solito si va a cercare altrove.</p>
+      <p>Siamo un gruppo di persone che non sa stare ferma: c'è chi suona, chi disegna, chi fotografa, chi monta palchi e chi fa sport. Ci tiene insieme una regola semplice: <b>se una cosa non c'è, la costruiamo.</b></p></div>
+    </div>
+    <div class="tl txt red" style="grid-column:7/13;grid-row:5/9;border-color:var(--red)">
+      <span class="mono">03 ✶ Il festival ✶ Suburbiæ Unexpected Fest</span>
+      <div class="chi-h sm" style="color:var(--ink)">Suburbiæ</div>
+      <div class="chi-p"><p>Suburbiæ nasce a Teramo da un'idea dell'associazione JAY27. Il festival unisce sonorità intense, atmosfere oscure e linguaggi contemporanei: live music, immaginario visivo e territorio dialogano in modo diretto e non convenzionale, con l'Abruzzo sullo sfondo.</p></div>
+      <div class="chi-q">Nove vite, zero paura.</div>
+      <img class="stk2" src="/assets/cat-ed3.webp" alt="">
+    </div>
+    <div class="tl mq nog" style="grid-column:1/13;grid-row:9/10"><div id="mqc"></div></div>
+    <div class="tl who" style="grid-column:1/4;grid-row:10/13;cursor:default"><div class="ph"><img src="/assets/magazine/gatto-28-tigrato.webp" alt="" loading="lazy" style="object-position:50% 4%"></div><span class="rm">I</span><h3 class="nm">Direzione<br>testi</h3></div>
+    <div class="tl who" style="grid-column:4/7;grid-row:10/13;cursor:default"><div class="ph"><img src="/assets/magazine/gatto-28-nero.webp" alt="" loading="lazy" style="object-position:50% 4%"></div><span class="rm">II</span><h3 class="nm">Band<br>interviste</h3></div>
+    <div class="tl who" style="grid-column:7/10;grid-row:10/13;cursor:default"><div class="ph"><img src="/assets/magazine/gatto-tigre.webp" alt="" loading="lazy" style="object-position:50% 6%"></div><span class="rm">III</span><h3 class="nm">Grafica<br>design</h3></div>
+    <a class="tl open" href="mailto:jay27makeart@gmail.com?subject=%C3%86-Zine%20%E2%80%94%20il%20prossimo%20sono%20io" style="grid-column:10/13;grid-row:10/13"><span class="mono">Posto libero</span><b>Il prossimo<br>sei tu</b><span class="mono">Scrivici →</span></a>
+    <div class="tl join" id="unisciti" style="grid-column:1/13;grid-row:13/17">
+      <div class="l"><span class="mono" style="color:#fff">Scrivici ✶ unisciti a noi ✶ make art</span><h3>Unisciti<br><em>a noi</em></h3><p>Se una cosa non c'è, la costruiamo. Costruiamola insieme.</p>
+        <a class="mailbtn" href="mailto:jay27makeart@gmail.com?subject=%C3%86-Zine%20%E2%80%94%20ciao"><span class="mono">Scrivici</span><b>jay27makeart@gmail.com</b><i>→</i></a></div>
+      <div class="roles">
+        <a href="mailto:jay27makeart@gmail.com?subject=%C3%86-Zine%20%E2%80%94%20scrivo%20un%20pezzo"><span class="mono">01</span><b>Scrivo un pezzo</b><span class="mono">→</span></a>
+        <a href="mailto:jay27makeart@gmail.com?subject=%C3%86-Zine%20%E2%80%94%20mando%20foto"><span class="mono">02</span><b>Faccio foto</b><span class="mono">→</span></a>
+        <a href="mailto:jay27makeart@gmail.com?subject=%C3%86-Zine%20%E2%80%94%20disegno"><span class="mono">03</span><b>Disegno</b><span class="mono">→</span></a>
+        <a href="mailto:jay27makeart@gmail.com?subject=%C3%86-Zine%20%E2%80%94%20la%20mia%20band"><span class="mono">04</span><b>Ho una band</b><span class="mono">→</span></a>
+      </div>
+      <img class="stk" src="/assets/cat-ed3.webp" alt="">
+    </div>
+  </div></div>
+</div>
+<footer><div class="wrap mono"><span>Æ-Zine ✶ fanzine del Suburbiæ Unexpected Fest</span><span>JAY27 A.P.S. ✶ suburbiaefest.com</span></div></footer>
+
+<!-- le tre forme -->
+<div class="fm" id="fm" aria-hidden="true" data-a="sub"><div class="wrap">
+  <div class="fmt mono"><span>Æ-Zine ✶ l'idea ✶ tre forme</span><button class="btn-o" id="fmx">Chiudi ✕</button></div>
+  <div class="fmg">
+    <div class="fml">
+      <svg class="fmcon" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M90 14L46 50L84 88M46 50L10 50" fill="none" stroke="#FF0005" stroke-width="1.2" stroke-dasharray="3 4" vector-effect="non-scaling-stroke"/><g fill="#efe6d2"><circle cx="90" cy="14" r="1.1"/><circle cx="46" cy="50" r="1.1"/><circle cx="84" cy="88" r="1.1"/></g></svg>
+      <button class="fw" data-f="sub"><i>I</i><span>Subcultura</span></button>
+      <button class="fw" data-f="band"><i>II</i><span>Band</span></button>
+      <button class="fw" data-f="des"><i>III</i><span>Design</span></button>
+      <p class="mono">Tre forme. Una sola scena.</p>
+    </div>
+    <div class="fmr">
+      <span class="mono" style="color:var(--red)">L'idea ✶ perché una zine</span>
+      <h2>Tre forme. Il punto è dove si toccano.</h2>
+      <p class="lead">Una subcultura non nasce in un museo. Nasce in un garage, sotto un ponte, su un banco di mercatino.</p>
+      <p>Æ-Zine parla di tre cose: subcultura, band, design. Prese una per una sono categorie. Messe insieme sono una scena. Il punto non è raccontarle a compartimenti: è guardare dove si sovrappongono.</p>
+      <div class="pf" data-f="sub"><b>I — Subcultura</b><p>È il terreno. Lo skate sotto casa, i tatuaggi, le cassette passate di mano, le regole non scritte del pit. Roba che non ha ufficio stampa e non ne vuole uno.</p></div>
+      <div class="pf" data-f="band"><b>II — Band</b><p>È il suono. Chi sale sul palco, da dove arriva, cosa l'ha portato fin lì. Prima del disco c'è sempre una saletta, un furgone, un amico con la macchina fotografica.</p></div>
+      <div class="pf" data-f="des"><b>III — Design</b><p>È quello che si vede e si porta addosso: la locandina attaccata a un palo, il logo sulla maglietta, il lettering di una copertina. È la pelle della scena, e spesso la fa qualcuno che nessuno nomina. Noi lo nominiamo.</p></div>
+      <p>Ci interessa quello che succede quando le tre forme si incrociano: la tatuatrice che disegna la locandina di un concerto, la band che stampa da sé i propri adesivi, il fotografo che finisce a fare il grafico. Lì c'è la storia, e di solito nessuno l'ha ancora scritta.</p>
+      <p>Si fa dal basso, a Teramo, dentro il Suburbiæ Unexpected Fest. Esce a microzine, si legge qui, si passa a chi non c'era. Se una cosa non c'è, la costruiamo.</p>
+      
+      <a class="btn-o fmgo mono" id="fmgo">Vai agli articoli →</a>
+    </div>
+  </div></div></div>
+<!-- lettore -->
+<div class="rd" id="rd" aria-hidden="true">
+  <div class="L"><img id="rimg" src="" alt=""><span class="rm" id="rrm"></span></div>
+  <div class="R"><div class="top mono"><span id="rno"></span><button class="btn-o" id="rx">Chiudi ✕</button></div>
+    <div class="in"><span class="cc mono" id="rcat"></span><h1 id="rt"></h1><p class="st" id="rst"></p>
+      <div class="by mono"><span id="rmin"></span> min ✶ Æ-Zine N°01</div>
+      <div class="tx" id="rtx"></div>
+      <div class="nv"><button id="rp"><span class="mono">← Prima</span><b id="rpt"></b></button><button id="rn"><span class="mono">Dopo →</span><b id="rnt"></b></button></div></div></div>
+</div>
+<div class="lb" id="lb" aria-hidden="true">
+  <div class="mn"><div class="big"><img id="lbi" src="" alt=""></div><div class="ths" id="lbt"></div></div>
+  <div class="sd"><div class="mono" style="display:flex;justify-content:space-between"><span id="lbn"></span><button class="btn-o" id="lbx">Chiudi ✕</button></div><h2>Gallery</h2>
+    <dl class="mono"><div><dt>Evento</dt>Suburbiæ Fest, 3ª edizione</div><div><dt>Luogo</dt>Arena De Carolis, Teramo</div><div><dt>Totale</dt>131 foto</div></dl>
+    <div class="ar"><button id="lbp">←</button><button id="lbnx">→</button></div></div>
+</div>
+<div class="mnu" id="mnu"><div class="mono" style="display:flex;justify-content:space-between;margin-bottom:14px"><span>Æ-Zine ✶ N°01</span><button class="btn-o" id="mx">Chiudi ✕</button></div>
+  <div>
+    <div class="it" data-go="chi"><span class="mono">I</span><h4>About Suburbiæ Fest</h4><span class="mono">↓</span></div>
+    <a class="it" href="/"><span class="mono">II</span><h4>Suburbiæ Fest</h4><span class="mono">sito →</span></a>
+    <a class="it" href="/jay27/"><span class="mono">III</span><h4>JAY27</h4><span class="mono">sito →</span></a>
+  </div></div>
+
+<script>
+const A='/assets/';const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const RM=['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII'];
+const CAT={sub:['Subcultura','sg-sub'],band:['Band','sg-band'],des:['Design','sg-des']};
+const sg=c=>`<svg class="sg" viewBox="0 0 100 100"><use href="#${CAT[c][1]}"/></svg>`;
+/* id, cat, titolo, sommario, immagine, posizione, minuti, tag */
+const AR=[
+ ['s1','sub','Teramo skate-punk: la scena che c\'è','Chi c\'è, dove si trova, cosa suona.','gal/ed3/live-a14.jpg','50% 35%',9,'skate punk scena teramo'],
+ ['s2','sub','Diario dal Parco Fluviale','Una serata, vista dal basso.','gal/ed3/live-a12.jpg','50% 40%',6,'live parco diario'],
+ ['s3','sub','Tatuaggi dal Bazar','Inside Tattoo, Donna Mayla e vent\'anni di inchiostro a due passi dal mare.','gal/ed3/live-a20.jpg','50% 40%',6,'tatuaggi bazar inside tattoo mayla alba adriatica old school'],
+ ['s4','sub','Cassette, fanzine e fotocopie','La scena che si passa a mano.','gal/ed3/live-a17.jpg','50% 40%',6,'cassette fanzine fotocopie'],
+ ['s5','sub','Il pogo spiegato a mia nonna','Regole non scritte del pit.','gal/ed3/live-a19.jpg','50% 40%',4,'pogo pit live'],
+ ['s6','sub','Sotto il ponte, in skate','Quattro spot di Teramo.','gal/ed3/live-a05.jpg','50% 40%',5,'skate spot teramo'],
+ ['b1','band','Atom Lux','Dall\'Undersub al palco grande.','ed3/atom-lux.jpg','50% 30%',8,'undersub intervista'],
+ ['b2','band','Inerdzia','Titolo dell\'intervista.','ed3/inerdzia.jpg','50% 30%',7,'intervista punk'],
+ ['b3','band','Rupe','Titolo dell\'intervista.','ed3/rupe.jpg','50% 40%',6,'intervista montagna'],
+ ['b4','band','Mud','Titolo dell\'intervista.','ed3/mud.jpg','50% 40%',5,'intervista live'],
+ ['b5','band','Alsaint','Titolo dell\'intervista.','ed3/alsaint.jpg','50% 40%',5,'intervista'],
+ ['b6','band','Cyborg Zero','Titolo dell\'intervista.','ed3/cyborg-zero.jpg','50% 40%',6,'intervista day one'],
+ ['d1','des','Chi disegna il merch','Gatti neri, scheletri e lune.','merch-nine-lives.jpg','58% 45%',5,'merch stampa gatti logo'],
+ ['d2','des','Le locandine della scena','Dal foglio al muro.','gal/ed3/live-a09.jpg','50% 40%',6,'locandine poster lettering'],
+ ['d3','des','Il logo, da capo','Come si ridisegna un marchio.','merch-black-and-white.jpg','55% 45%',4,'logo marchio'],
+ ['d4','des','Dal tavolo alla maglietta','Serigrafia in cinque passi.','merch-tshirt-front.jpg','50% 50%',5,'serigrafia maglietta merch'],
+ ['d5','des','Gatti neri: un\'iconografia','Perché sempre il gatto.','merch-soul.jpg','55% 45%',4,'gatti iconografia'],
+ ['d6','des','Lettering da cassetta','Titoli a mano per copertine.','gal/ed3/live-a01.jpg','50% 40%',4,'lettering cassette tipografia']
+];
+const BY=Object.fromEntries(AR.map((a,i)=>[a[0],i]));
+/* articoli che esistono davvero: gli altri sono "?" in attesa di materiale */
+const READY=new Set(['s3']);
+const ORD=AR.filter(a=>READY.has(a[0]));
+const ART={
+ s3:{st:'Inside Tattoo, Donna Mayla e più di vent\'anni di inchiostro a due passi dal mare.',body:`
+  <p>Si chiama Inside Tattoo Shop, sta ad Alba Adriatica, in provincia di Teramo, a ottocento metri dal mare, e ha aperto il 26 aprile 2004. Dietro c'è Donna Mayla.</p>
+  <h5>Da Teramo a Bologna e ritorno</h5>
+  <p>È nata a Teramo, ha fatto il Liceo Artistico qui e poi l'Accademia di Belle Arti a Bologna. Parte dal corpo come tela: il body painting, che racconta essere diventato un lavoro vero. Tra le cose che ricorda, il corpo di Biagio Antonacci dipinto per la copertina di «Mi fai stare bene».</p>
+  <p>Poi il tatuaggio. Il suo stile è il traditional, l'old school: linea nera spessa, colori pieni, soggetti che non hanno bisogno di spiegazioni. Nel 1998 apre Body Bag con Thomas Isler, uno studio di tatuaggi e piercing. Nel 2004 torna in Abruzzo e apre Inside.</p>
+  <div class="pq">Il tatuaggio è l'esempio più pulito di quello che cerchiamo.</div>
+  <h5>Uno studio, tanti stili</h5>
+  <p>Duecento metri quadri, cinque box, artisti residenti con mani diverse: new school, blackwork, iperrealismo, fineline. Dentro c'è anche Rock'n'Ink, un progetto di chitarre decorate da decine di tatuatori, portato in giro per le convention italiane dal 2016. Mayla insegna pure: lavora con la scuola Best Ideas, in Abruzzo.</p>
+  <h5>Perché ne parliamo qui</h5>
+  <p>Perché il tatuaggio è subcultura, è design e ha un nome che da vent'anni tiene insieme le due cose. Tre forme, un solo posto dove si toccano: è la ragione per cui questa zine esiste.</p>
+  <p class="src">Fonti: interviste a Donna Mayla su Tattoo Italia e sito di Inside Tattoo.</p>`}
+};
+const P=[];
+/* mosaico: colonne, righe, tipo, id */
+const T=[['1/7','1/7','art','s1','hero'],['7/10','1/4','art','d1'],['10/13','1/4','art','b1'],['7/10','4/7','q'],['10/13','4/7','art','s3'],['1/4','7/10','art','d2'],['4/7','7/10','art','b3'],['7/13','7/10','gal'],['1/7','10/13','call'],['7/10','10/13','art','s2'],['10/13','10/13','art','b4']];
+const GAL=['live-a02','live-a07','live-a16','live-a19','live-a12','live-a10','live-a03','live-b03','live-a05','live-a13','live-a17','live-a20'];
+const BURST=(()=>{const p=[];for(let i=0;i<24;i++){const a=i/24*Math.PI*2,r=i%2?36:47;p.push((r*Math.cos(a)).toFixed(1)+','+(r*Math.sin(a)).toFixed(1))}return `<svg viewBox="-50 -50 100 100"><polygon points="${p.join(' ')}" fill="#FF0005" stroke="#FFE1A8" stroke-width="3.2" stroke-linejoin="round"/><text y="23" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="74" fill="#FFE1A8" style="font-stretch:62%">?</text></svg>`})();
+let ri=0;
+$('#mos').innerHTML=T.map(([c,r,k,id,cls])=>{const st=`grid-column:${c};grid-row:${r}`;
+ if(k==='art'){const a=AR[BY[id]];if(!READY.has(id))return `<div class="tl unk nog" data-c="${a[1]}" data-id="${id}" style="${st}"><span class="ct c-${a[1]}"><i class="sgb">${sg(a[1])}</i>${CAT[a[1]][0]}</span><span class="rm">${RM[ri++]}</span><span class="qm">${BURST}</span><span class="mono pr">Prossimamente</span></div>`;return `<article class="tl ${cls||''}" data-c="${a[1]}" data-id="${id}" data-open="${id}" style="${st}"><div class="ph"><img src="${A+a[4]}" alt="" loading="lazy" style="object-position:${a[5]}"></div><span class="ct c-${a[1]}"><i class="sgb">${sg(a[1])}</i>${CAT[a[1]][0]}</span><span class="rm">${RM[ri++]}</span>${cls==='hero'?`<p class="st">${a[3]}</p>`:''}<h3 class="nm">${a[2].replace(/: .*/,'')}<small>${CAT[a[1]][0]} ✶ ${a[6]} min</small></h3></article>`}
+ if(k==='q')return `<div class="tl red solid q nog" style="${st}"><span class="mono">${RM[ri++]} ✶ frase del numero</span><q>Be a black cat.</q><span class="mono">— Suburbiæ Fest</span></div>`;
+ if(k==='gal')return `<a class="tl gal" href="/gallery/" style="${st}"><div class="ph">${[0,1,2].map(i=>`<div><img src="${A}gal/ed3/${GAL[i]}.jpg" alt="" loading="lazy"></div>`).join('')}</div><span class="ct c-gal"><i class="sgb"><svg class="sg" viewBox="0 0 100 100"><use href="#sg-band"/></svg></i>Gallery</span><span class="rm">${RM[ri++]}</span><h3 class="nm" style="font-size:clamp(40px,5.6vw,84px)">Gallery<small>3ª edizione ✶ 131 foto ✶ Arena De Carolis</small></h3><span class="gb mono">Gallery Suburbiæ →</span></a>`;
+ if(k==='call')return `<a class="tl call solid nog" href="mailto:jay27makeart@gmail.com?subject=%C3%86-Zine%20%E2%80%94%20ciao" style="${st}"><span class="mono">${RM[ri++]} ✶ scrivici</span><div class="big">Hai una band?<br><em>Disegni? Scatti?</em><br>Scrivi un pezzo?</div><span class="bt mono">Scrivici →</span><img src="${A}cat-ed1.webp" alt=""></a>`}).join('');
+/* archivio */
+$('#list').innerHTML=ORD.map((a,i)=>`<div class="row" data-id="${a[0]}" data-open="${a[0]}"><span class="n">${String(i+1).padStart(2,'0')}</span><span class="c"><span class="cc mono">${sg(a[1])}${CAT[a[1]][0]}</span></span><h4>${a[2]}</h4><span class="tgs mono">${a[7].split(' ').slice(0,3).map(t=>'#'+t).join(' ')}</span><span class="m mono">${a[6]} min</span></div>`).join('')+`<div class="row last"><span class="n">··</span><span class="c"><span class="cc mono">?</span></span><h4 style="opacity:.4">? ? ? Altri articoli in arrivo</h4><span class="tgs mono"></span><span class="m mono"></span></div>`;
+/* filtri + ricerca */
+let fc='all',fq='';
+const TAGS=['skate','punk','tatuaggi','cassette','locandine','logo','intervista'];
+$('#chips').innerHTML=`<button data-c="all" class="on">Tutto</button>`+['sub','band','des'].map(c=>`<button data-c="${c}">${sg(c)} ${CAT[c][0]}</button>`).join('')+`<span class="sp"></span>`+TAGS.map(t=>`<button class="tg" data-t="${t}">#${t}</button>`).join('');
+function apply(){const q=fq.trim().toLowerCase();let n=0;
+  const ok=a=>(fc==='all'||a[1]===fc)&&(!q||(a[2]+' '+a[3]+' '+a[7]+' '+CAT[a[1]][0]).toLowerCase().includes(q));
+  $$('#mos .tl').forEach(t=>{const a=AR[BY[t.dataset.id]];let m;if(!a)m=(fc==='all'&&!q);else if(!READY.has(a[0]))m=!q&&(fc==='all'||a[1]===fc);else m=ok(a);t.classList.toggle('dim',!m)});
+  $$('#list .row').forEach(r=>{if(r.classList.contains('last')){r.classList.toggle('hide',!!q);return}const m=ok(AR[BY[r.dataset.id]]);r.classList.toggle('hide',!m);if(m)n++});
+  $('#cnt').textContent=n+(n===1?' articolo':' articoli');$('#empty').style.display=n?'none':'block';
+  $$('#chips [data-c]').forEach(b=>b.classList.toggle('on',b.dataset.c===fc))}
+$('#q').oninput=e=>{fq=e.target.value;apply()};
+$$('#chips [data-c]').forEach(b=>b.onclick=()=>{fc=b.dataset.c;apply()});
+$$('#chips [data-t]').forEach(b=>b.onclick=()=>{$('#q').value=b.dataset.t;fq=b.dataset.t;apply()});
+$$('[data-pick]').forEach(e=>e.onclick=()=>{fc=e.dataset.pick;closeAll();apply();document.getElementById('mosec').scrollIntoView()});
+$('#gosearch').onclick=()=>{$('#sbar').scrollIntoView();$('#q').focus()};
+apply();
+/* striscia nastro */
+const hb='<span>Subcultura</span><em>✶</em><span>Band</span><em>✶</em><span>Design</span><em>✶</em><span>Skate punk</span><em>✶</em><span>Fatto a Teramo</span><em>✶</em><span>N°01 in arrivo</span><em>✶</em>';$('#hb').innerHTML=hb+hb;
+const MQ='<span>Make art</span><em>✶</em><span>JAY27</span><em>✶</em><span>Teramo</span><em>✶</em><span>Abruzzo</span><em>✶</em><span>Dal basso</span><em>✶</em><span>Be a black cat</span><em>✶</em><span>Nine lives, zero fear</span><em>✶</em>';$('#mqc').innerHTML=MQ+MQ;
+/* lettore */
+const rd=$('#rd');let cur=0;
+function openArt(id){const a=AR[BY[id]];cur=ORD.indexOf(a);const x=ART[id]||{};
+  $('#rimg').src=A+a[4];$('#rimg').style.objectPosition=a[5];$('#rrm').textContent=RM[cur%12];$('#rno').textContent=`${String(cur+1).padStart(2,'0')} / ${String(ORD.length).padStart(2,'0')} ✶ Æ-Zine N°01`;
+  $('#rcat').innerHTML=sg(a[1])+' '+CAT[a[1]][0];$('#rt').textContent=a[2];$('#rst').textContent=x.st||a[3];$('#rmin').textContent=a[6];
+  $('#rtx').innerHTML=x.body||'';
+  $('#rpt').textContent=ORD[(cur+ORD.length-1)%ORD.length][2];$('#rnt').textContent=ORD[(cur+1)%ORD.length][2];
+  document.querySelector('#rd .nv').style.display=ORD.length>1?'':'none';
+  rd.classList.add('on');rd.setAttribute('aria-hidden','false');rd.querySelector('.R').scrollTop=0;document.body.style.overflow='hidden'}
+const step=d=>openArt(ORD[(cur+d+ORD.length)%ORD.length][0]);$('#rp').onclick=()=>step(-1);$('#rn').onclick=()=>step(1);
+const closeAll=()=>{[rd,$('#lb'),$('#mnu'),$('#fm')].forEach(e=>{e.classList.remove('on');e.setAttribute('aria-hidden','true')});document.body.style.overflow=''};
+$('#rx').onclick=closeAll;
+/* adesivi: si attaccano quando la tessera entra in vista */
+(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('stuck');io.unobserve(e.target)}}),{threshold:.2});$$('.tl').forEach(t=>io.observe(t))})();
+/* tre forme */
+const fm=$('#fm');
+function setF(f){fm.dataset.a=f;$$('#fm .fw').forEach(b=>b.classList.toggle('on',b.dataset.f===f));$$('#fm .pf').forEach(p=>p.classList.toggle('act',p.dataset.f===f));$('#fmgo').textContent='Vai agli articoli: '+CAT[f][0]+' →';fm.querySelector('.pf.act').scrollIntoView({block:'center',behavior:fm.classList.contains('on')?'smooth':'auto'})}
+function openFm(f){closeAll();fm.classList.add('on');fm.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';fm.scrollTop=0;setF(f)}
+$$('[data-form]').forEach(e=>e.onclick=()=>openFm(e.dataset.form));
+$$('#fm .fw').forEach(b=>b.onclick=()=>setF(b.dataset.f));
+$('#fmx').onclick=closeAll;
+$('#fmgo').onclick=()=>{fc=fm.dataset.a;closeAll();apply();document.getElementById('mosec').scrollIntoView()};
+/* gallery */
+const lb=$('#lb');let gi=0;
+$('#lbt').innerHTML=GAL.map((g,i)=>`<div data-i="${i}"><img src="${A}gal/ed3/${g}.jpg" alt=""></div>`).join('');
+function showG(i){gi=(i+GAL.length)%GAL.length;$('#lbi').src=A+'gal/ed3/'+GAL[gi]+'.jpg';$('#lbn').textContent=`${String(gi+1).padStart(2,'0')} / 131`;$$('#lbt div').forEach((d,j)=>d.classList.toggle('on',j===gi))}
+function openG(){closeAll();showG(0);lb.classList.add('on');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+$$('#lbt div').forEach(d=>d.onclick=()=>showG(+d.dataset.i));$('#lbp').onclick=()=>showG(gi-1);$('#lbnx').onclick=()=>showG(gi+1);$('#lbx').onclick=closeAll;
+$('#mbtn').onclick=()=>{$('#mnu').classList.add('on');$('#mnu').setAttribute('aria-hidden','false');document.body.style.overflow='hidden'};$('#mx').onclick=closeAll;
+$$('#mnu [data-go]').forEach(e=>e.onclick=()=>{closeAll();document.getElementById(e.dataset.go).scrollIntoView()});
+document.addEventListener('click',e=>{const t=e.target.closest('[data-open],[data-gal]');if(!t||t.closest('#mnu')&&!t.dataset.gal)return;if(t.dataset.open)openArt(t.dataset.open);else openG()});
+addEventListener('keydown',e=>{
+  if(e.target.id==='q'){if(e.key==='Escape')e.target.blur();return}
+  if(e.key==='Escape')closeAll();
+  if(rd.classList.contains('on')){if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1)}
+  else if(lb.classList.contains('on')){if(e.key==='ArrowRight')showG(gi+1);if(e.key==='ArrowLeft')showG(gi-1)}
+  else if(e.key==='/'){e.preventDefault();$('#gosearch').click()}
+});
+</script>
+</body>
+</html>

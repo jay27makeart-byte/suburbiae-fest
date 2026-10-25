@@ -271,6 +271,12 @@ img.a{object-fit:contain;display:block}
 /* home: instagram nella hero */
 .hm-ig{color:#000;overflow:visible}
 .hm-ig svg{width:56%;fill:none;stroke:currentColor;stroke-width:1.8}
+.hm-zine{display:block;overflow:visible;transition:transform .35s cubic-bezier(.3,1.6,.5,1),filter .25s;filter:drop-shadow(0 calc(3 * var(--u)) 0 rgba(0,0,0,.35))}
+.hm-zine svg{display:block;width:100%;height:100%;overflow:visible}
+.hm-zine .zn-ring{transform-origin:60px 60px;animation:spin 26s linear infinite}
+.hm-zine:hover{transform:rotate(-7deg) scale(1.07)}
+@media (max-width:680px){.mhead .hm-zine{display:block!important;width:46px!important;height:46px!important;aspect-ratio:auto!important;flex:0 0 auto;filter:none}.mhead .hm-zine .zn-ring{animation:none}}
+@media (prefers-reduced-motion:reduce){.hm-zine .zn-ring{animation:none}}
 .hm-ig-l{position:absolute;left:calc(100% + 10 * var(--u));top:50%;translate:0 -50%;white-space:nowrap;font:calc(8 * var(--u))/1 var(--mono);letter-spacing:.12em;color:#000;opacity:0;transition:opacity .25s,translate .25s}
 .hm-ig:hover{background:#000!important;color:var(--red)}
 .hm-ig:hover .hm-ig-l{opacity:1;translate:4px -50%}
@@ -380,6 +386,7 @@ img.a{object-fit:contain;display:block}
   <div class="mhead">
     <a class="a logo-img" href="/" style="--x:20;--y:39;--w:203.7;--h:22" aria-label="Suburbiæ home"><img src="/assets/logo-suburbiae.png" alt="Suburbiæ"></a>
   <a class="a btn hm-ig" href="https://www.instagram.com/suburbiae_unexpected_fest/" target="_blank" rel="noopener" style="--x:20;--y:428;--w:35;--h:35;border-radius:50%;background:var(--red)" aria-label="Instagram di Suburbiæ"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.9" cy="7.1" r=".9" fill="currentColor" stroke="none"/></svg><span class="hm-ig-l">@suburbiae_unexpected_fest</span></a>
+    <a class="a hm-zine" href="/magazine/" style="--x:904;--y:363;--w:100;--h:100;border-radius:50%" aria-label="Æ-zine"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="59" fill="#070606"/><circle cx="60" cy="60" r="55" fill="none" stroke="#FFE1A8" stroke-width="1.6"/><g style="font-family:Archivo,sans-serif;font-weight:900;font-stretch:62%"><text x="12.2" y="80.6" font-size="60" textLength="100" lengthAdjust="spacingAndGlyphs" fill="#FF0005">Æ-ZINE</text><text x="10" y="78" font-size="60" textLength="100" lengthAdjust="spacingAndGlyphs" fill="#FFE1A8">Æ-ZINE</text></g><g transform="translate(60 25.5)"><path d="M0-6L1.6-1.6L6 0L1.6 1.6L0 6L-1.6 1.6L-6 0L-1.6-1.6Z" fill="#FF0005"/></g><g transform="translate(60 100.5)"><path d="M0-6L1.6-1.6L6 0L1.6 1.6L0 6L-1.6 1.6L-6 0L-1.6-1.6Z" fill="#FF0005"/></g></svg></a>
     <button class="a mbtn" data-menu style="--x:974;--y:19;--w:30;--h:42" aria-label="Apri menu" aria-expanded="false"><span></span></button>
   </div>
 
@@ -2854,6 +2861,7 @@ a.fq-card{border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red)}
       <li style="--i:7"><a href="/faq/" data-k="VIII" data-s="Come arrivare"><span class="mn-n">VIII</span><span class="mn-t">Info & FAQ</span><span class="mn-s">Come arrivare</span><span class="mn-g" aria-hidden="true">✶</span></a></li>
       <li style="--i:8"><a href="/partnership/" data-k="IX" data-s="Unisciti"><span class="mn-n">IX</span><span class="mn-t">Partnership</span><span class="mn-s">Unisciti</span><span class="mn-g" aria-hidden="true">✶</span></a></li>
       <li style="--i:9"><a href="/jay27/" data-k="X" data-s="Chi siamo"><span class="mn-n">X</span><span class="mn-t">JAY27</span><span class="mn-s">Chi siamo</span><span class="mn-g" aria-hidden="true">✶</span></a></li>
+      <li style="--i:10"><a href="/magazine/" data-k="XI" data-s="La fanzine"><span class="mn-n">XI</span><span class="mn-t">Æ-zine</span><span class="mn-s">La fanzine</span><span class="mn-g" aria-hidden="true">✶</span></a></li>
     </ol>
   </div>
   <div class="mn-marq" aria-hidden="true"><div class="mn-marq-in">BE A BLACK CAT ✶ NINE LIVES ✶ ZERO FEAR ✶ BE A BLACK CAT ✶ NINE LIVES ✶ ZERO FEAR ✶ BE A BLACK CAT ✶ NINE LIVES ✶ ZERO FEAR ✶&nbsp;</div></div>
