@@ -55,16 +55,17 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:899;o
 .h-sig{right:3cqw;top:24cqw;width:9cqw;color:var(--red);z-index:1}
 .h-con{left:48cqw;top:24cqw;width:52cqw;height:40cqw;z-index:0;overflow:visible}
 .pils{left:52cqw;top:28cqw;width:46cqw;z-index:3}
-.pil{display:grid;grid-template-columns:auto 1fr auto;align-items:center;column-gap:1.4cqw;border-top:2px solid var(--bone);padding:1.4cqw 0 1.2cqw}
+.pil{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;align-items:start;column-gap:1.4cqw;border-top:2px solid var(--bone);padding:1cqw 0 .8cqw}
 .pil:last-child{border-bottom:2px solid var(--bone)}
 .pil .rn{font-family:var(--serif);font-size:2cqw;line-height:1;align-self:start;padding-top:.5cqw}
 .pil .w{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:8.2cqw;line-height:.84;color:transparent;-webkit-text-stroke:max(1.5px,.16cqw) var(--bone);transition:.2s;white-space:nowrap}
 .pil.p1 .w{color:var(--red);-webkit-text-stroke:0}
 .pil:hover .w{color:var(--red);-webkit-text-stroke:0;letter-spacing:.01em}
 .pil.p1:hover .w{color:var(--bone)}
-.pil .ds{font-family:var(--mono);font-size:max(9.5px,.82cqw);line-height:1.35;text-transform:uppercase;letter-spacing:.05em;text-align:right;max-width:13cqw}
-.pil .ds b{display:block;font-family:var(--serif);font-weight:400;font-size:2.4cqw;line-height:.9;letter-spacing:0;color:var(--cream)}
-.h-man{left:58cqw;top:65.5cqw;width:28cqw;z-index:3;font-family:var(--mono);font-size:max(9.5px,.84cqw);line-height:1.5;text-transform:uppercase;letter-spacing:.04em;opacity:.85}
+.pil .ds{grid-column:2;display:flex;flex-direction:row-reverse;justify-content:space-between;align-items:baseline;gap:1.4cqw;margin-top:.7cqw;font-family:var(--mono);font-size:max(9.5px,.82cqw);line-height:1.2;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+.pil .ds br{display:none}
+.pil .ds b{display:block;font-family:var(--serif);font-weight:400;font-size:2.4cqw;line-height:.8;letter-spacing:0;color:var(--cream)}
+.h-man{left:58cqw;top:64.2cqw;width:28cqw;z-index:3;font-family:var(--mono);font-size:max(9.5px,.84cqw);line-height:1.5;text-transform:uppercase;letter-spacing:.04em;opacity:.85}
 .h-fl{right:3cqw;top:66cqw;width:10cqw;z-index:3;color:var(--bone)}
 .h-band{left:-2cqw;right:-2cqw;bottom:3cqw;height:5cqw;background:var(--cream);color:var(--ink);transform:rotate(-1.3deg);overflow:hidden;white-space:nowrap;z-index:8;display:flex;align-items:center;box-shadow:0 .5cqw 0 rgba(0,0,0,.6)}
 .h-band div{display:inline-block;animation:tk 30s linear infinite;font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:3.6cqw;line-height:1}
@@ -331,11 +332,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .h-photo{aspect-ratio:4/3;height:auto!important;width:100%!important}
   .h-cap{align-self:flex-start;font-size:10px}
   .h-cat{width:90px!important;align-self:flex-end;margin-top:-50px!important}
-  .pil .w{font-size:17vw}.pil .rn{font-size:16px}.pil .ds{font-size:9.5px;max-width:30vw}.pil .ds b{font-size:18px}
+  .pil .w{font-size:17vw}.pil .rn{font-size:16px}.pil .ds{font-size:9.5px}.pil .ds b{font-size:18px}
   .h-man{font-size:10px}
   .h-band{height:34px;transform:rotate(-1.2deg)!important;margin:0 -16px!important;width:auto!important}.h-band div{font-size:26px}
   .sbar{position:static}.srow{flex-wrap:wrap}.cnt{width:100%}.chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.chips button{white-space:nowrap}
-  .pil{grid-template-columns:auto 1fr}.pil .ds{display:none}.hero{overflow:hidden}
+  .pil{grid-template-columns:auto 1fr}.hero{overflow:hidden}
   .mos{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto}
   .tl{grid-column:span 1!important;grid-row:auto!important;aspect-ratio:1}
   .tl.hero,.tl.gal,.tl.call{grid-column:1/-1!important}.tl.hero{aspect-ratio:4/5}.tl.gal{aspect-ratio:2/1}.tl.call{aspect-ratio:auto;min-height:260px}
@@ -397,9 +398,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <span class="h-mk-t">questi!</span>
 
     <div class="pils">
-      <a class="pil p1" data-form="sub"><span class="rn">I</span><span class="w">Subcultura</span><span class="ds"><b>06</b>skate, punk, tatuaggi,<br>cassette, scena</span></a>
-      <a class="pil" data-form="band"><span class="rn">II</span><span class="w">Band</span><span class="ds"><b>06</b>quelle che<br>salgono sul palco</span></a>
-      <a class="pil" data-form="des"><span class="rn">III</span><span class="w">Design</span><span class="ds"><b>06</b>quello dietro<br>la subcultura</span></a>
+      <a class="pil p1" data-form="sub"><span class="rn">I</span><span class="w">Subcultura</span><span class="ds"><b>06</b>skate, punk, tatuaggi, cassette, scena</span></a>
+      <a class="pil" data-form="band"><span class="rn">II</span><span class="w">Band</span><span class="ds"><b>06</b>quelle che salgono sul palco</span></a>
+      <a class="pil" data-form="des"><span class="rn">III</span><span class="w">Design</span><span class="ds"><b>06</b>quello dietro la subcultura</span></a>
     </div>
     <p class="h-man">Una fanzine che parla di subculture, di band e del design che ci sta dietro: locandine, loghi, magliette, lettering. Si fa a Teramo, esce a microzine, si legge qui.</p>
     <svg class="h-fl" viewBox="-50 -50 100 100" fill="none" stroke="currentColor" stroke-width="1.2"><circle r="46" stroke-dasharray="1 3"/><path d="M0-42L10-10L42 0L10 10L0 42L-10 10L-42 0L-10-10Z" stroke-linejoin="round"/><circle r="4" fill="currentColor"/></svg>
