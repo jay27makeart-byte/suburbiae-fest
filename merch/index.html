@@ -2620,6 +2620,21 @@ a.fq-card{border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red)}
 
   <div class="jy-marq" aria-hidden="true"><div class="jy-marq-in">MAKE ART ✶ JAY27 ✶ TERAMO ✶ ABRUZZO ✶ DAL BASSO ✶ MAKE ART ✶ JAY27 ✶ TERAMO ✶ ABRUZZO ✶ DAL BASSO ✶&nbsp;</div></div>
 
+  <section class="jy-com" aria-labelledby="jy-com-h">
+    <header class="jy-com-h"><span class="jy-com-dot" aria-hidden="true"></span><h2 id="jy-com-h">COMUNICAZIONI SOCI</h2><span class="jy-com-st" aria-hidden="true">✶</span></header>
+    <article class="jy-com-it" data-until="2026-11-04">
+      <div class="jy-com-d"><b>3</b><span>NOV</span><small>ORE 21:30</small></div>
+      <div class="jy-com-t">
+        <p>Si avvisano tutti i gentili soci che il giorno 3 nov, alle ore 21:30, l'associazione JAY27 terrà una riunione aperta a tutti i membri.</p>
+        <p>L'incontro rappresenta un importante momento di confronto, condivisione e aggiornamento sulle attività in corso e sui prossimi progetti dell'associazione. La partecipazione di ciascuno è fondamentale per la vita e la crescita della nostra comunità.</p>
+      </div>
+      <dl class="jy-com-i">
+        <div><dt>Quando</dt><dd>Questa sera alle ore 21:30</dd></div>
+        <div><dt>Dove</dt><dd>Sede dell'Associazione, in Via Camillo Bruschelli, 44 – 64100 Teramo (TE)</dd></div>
+      </dl>
+    </article>
+  </section>
+
   <section class="jy-sec" aria-labelledby="jy-who-h">
     <header class="jy-sec-h"><span class="jy-sec-n">01</span><h2 id="jy-who-h">Chi siamo</h2><span class="jy-lab">MANIFESTO</span></header>
     <div class="jy-who">
@@ -2795,6 +2810,26 @@ a.fq-card{border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red)}
 .jy-legal dd{margin:0;font:clamp(14px,1.1vw,16px)/1.4 var(--orbit)}
 .jy-marq{overflow:hidden;border-bottom:1px solid #fff;border-top:1px solid #fff;padding:12px 0;margin-inline:calc(-1 * clamp(16px,2vw,28px))}
 .jy-marq-in{display:inline-block;white-space:nowrap;font:400 clamp(30px,3.6vw,56px)/1 var(--goth);font-style:italic;animation:bzm 34s linear infinite}
+.jy-com{margin-inline:calc(-1 * clamp(16px,2vw,28px));background:#fff;color:#000;border-bottom:1px solid #fff}
+.jy-com-h{display:flex;align-items:center;gap:12px;padding:10px clamp(16px,2vw,28px);border-bottom:1px solid #000}
+.jy-com-h h2{margin:0;font:700 clamp(11px,.9vw,13px)/1 var(--mono);letter-spacing:.2em}
+.jy-com-dot{width:9px;height:9px;border-radius:50%;background:var(--red);animation:blink 1s ease-in-out infinite alternate}
+.jy-com-st{margin-left:auto;display:inline-block;animation:spin 4s linear infinite}
+.jy-com-it{display:grid;grid-template-columns:auto 1.4fr 1fr;align-items:stretch}
+.jy-com-it+.jy-com-it{border-top:1px solid #000}
+.jy-com-d{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px clamp(16px,2.4vw,40px);border-right:1px solid #000;text-align:center}
+.jy-com-d b{font:400 clamp(64px,7vw,110px)/.8 var(--goth)}
+.jy-com-d span{font:400 italic clamp(22px,2vw,32px)/1 var(--goth)}
+.jy-com-d small{margin-top:10px;font:700 11px/1 var(--mono);letter-spacing:.14em}
+.jy-com-t{padding:18px clamp(16px,2.4vw,40px)}
+.jy-com-t p{margin:0 0 10px;font:clamp(14px,1.1vw,17px)/1.5 var(--orbit);max-width:60ch}
+.jy-com-t p:last-child{margin:0}
+.jy-com-i{margin:0;border-left:1px solid #000;display:flex;flex-direction:column}
+.jy-com-i>div{flex:1;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:14px clamp(16px,2.4vw,40px)}
+.jy-com-i>div+div{border-top:1px solid #000}
+.jy-com-i dt{font:clamp(10px,.8vw,12px)/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+.jy-com-i dd{margin:0;font:400 clamp(18px,1.6vw,24px)/1.15 var(--goth)}
+@media (max-width:760px){.jy-com-it{grid-template-columns:1fr}.jy-com-d{flex-direction:row;align-items:baseline;justify-content:flex-start;gap:10px;border-right:0;border-bottom:1px solid #000;padding:14px 16px}.jy-com-d small{margin:0 0 0 auto}.jy-com-t{padding:14px 16px}.jy-com-i{border-left:0;border-top:1px solid #000}.jy-com-i>div{padding:12px 16px}}
 .jy-back{display:block;margin:16px 0 28px;padding:10px;border:1px solid #fff;border-radius:5px;text-align:center;font:clamp(13px,1vw,15px)/1 var(--roboto);letter-spacing:.1em;transition:background .25s,color .25s}
 .jy-back:hover{background:#fff;color:#000}
 @media (max-width:760px){
@@ -3264,6 +3299,8 @@ article.a>.ph{grid-column:1 / -1}
     window.addEventListener('pointerup',function(){if(!down)return;down=false;if(moved){t.classList.remove('drag');var st=step();t.scrollTo({left:Math.round(t.scrollLeft/st)*st})}});
     t.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
   });
+  /* --- jay27: comunicazioni soci, ognuna sparisce da sola dal giorno data-until (tutto il blocco se non ne resta nessuna) --- */
+  (function(){var t=new Date(),k=t.getFullYear()+'-'+('0'+(t.getMonth()+1)).slice(-2)+'-'+('0'+t.getDate()).slice(-2),b=document.querySelector('.jy-com');if(!b)return;b.querySelectorAll('[data-until]').forEach(function(a){if(k>=a.dataset.until)a.remove()});if(!b.querySelector('.jy-com-it'))b.hidden=true})();
   /* --- jay27: tap per far girare la scritta (touch) --- */
   document.querySelectorAll('.jy-title').forEach(function(t){t.addEventListener('click',function(){t.classList.toggle('on')})});
   /* --- home: JAY27 alto e allineato come i loghi del patrocinio (588→632), PATROCINIO giustificato sulla sua larghezza --- */
