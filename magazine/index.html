@@ -217,6 +217,10 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:899;o
 .rd .tx figure img{display:block;width:100%;height:auto;border:1px solid rgba(255,225,168,.25)}
 .rd .tx figcaption{font-family:var(--mono);font-size:11px;line-height:16px;text-transform:uppercase;opacity:.6;margin-top:8px}
 .rd .tx p.by{font-family:var(--mono);font-size:12px;line-height:18px;text-transform:uppercase;color:var(--red);margin-bottom:26px}
+.rd .L img{transition:opacity .35s}
+.rd .L.col img{filter:none}
+.rd .L .cr{max-width:60%;text-align:right;line-height:1.5}
+.rd .L .cr b{display:block;font-family:var(--sans);font-weight:900;font-stretch:62%;font-size:clamp(26px,3vw,44px);line-height:.9;color:var(--cream);letter-spacing:0}
 .rd .tx p.src{font-family:var(--mono);font-size:11px;line-height:17px;text-transform:uppercase;opacity:.6;margin-top:30px}
 /* pop-up delle tre forme */
 .fm{position:fixed;inset:0;z-index:305;background:var(--ink);overflow-y:auto;transform:translateY(100%);transition:transform .5s cubic-bezier(.7,0,.2,1);visibility:hidden}
@@ -514,7 +518,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div></div></div>
 <!-- lettore -->
 <div class="rd" id="rd" aria-hidden="true">
-  <div class="L"><img id="rimg" src="" alt=""><span class="rm" id="rrm"></span></div>
+  <div class="L"><img id="rimg" src="" alt=""><span class="rm" id="rrm"></span><span class="cr" id="rcr"></span></div>
   <div class="R"><div class="top mono"><span id="rno"></span><button class="btn-o" id="rx">Chiudi ✕</button></div>
     <div class="in"><span class="cc mono" id="rcat"></span><h1 id="rt"></h1><p class="st" id="rst"></p>
       <div class="by mono"><span id="rmin"></span> min ✶ Æ-Zine N°01</div>
@@ -547,7 +551,7 @@ const AR=[
  ['s4','sub','Cassette, fanzine e fotocopie','La scena che si passa a mano.','gal/ed3/live-a17.webp','50% 40%',6,'cassette fanzine fotocopie'],
  ['s5','sub','Il pogo spiegato a mia nonna','Regole non scritte del pit.','gal/ed3/live-a19.webp','50% 40%',4,'pogo pit live'],
  ['s6','sub','Sotto il ponte, in skate','Quattro spot di Teramo.','gal/ed3/live-a05.webp','50% 40%',5,'skate spot teramo'],
- ['s7','sub','Post-punk dall\'Est: da Minsk a Bishkek','Dai Kino ai Vtoroi Ka: quarant\'anni di chitarre fredde, cantate in russo.','magazine/est-vtoroi-ka.webp','50% 22%',9,'post-punk est russia bielorussia kirghizistan vtoroi ka molchat doma shortparis kino'],
+ ['s7','sub','Post-punk dall\'Est: da Minsk a Bishkek','Caldaie, TikTok, divise e maiali: il post-punk dall\'Est raccontato da capo.','magazine/est-vtoroi-ka.webp','50% 22%',9,'post-punk est russia bielorussia kirghizistan vtoroi ka molchat doma shortparis kino'],
  ['b1','band','Atom Lux','Dall\'Undersub al palco grande.','ed3/atom-lux.jpg','50% 30%',8,'undersub intervista'],
  ['b2','band','Inerdzia','Titolo dell\'intervista.','ed3/inerdzia.jpg','50% 30%',7,'intervista punk'],
  ['b3','band','Rupe','Titolo dell\'intervista.','ed3/rupe.jpg','50% 40%',6,'intervista montagna'],
@@ -566,26 +570,31 @@ const BY=Object.fromEntries(AR.map((a,i)=>[a[0],i]));
 const READY=new Set(['s7','s3']);
 const ORD=AR.filter(a=>READY.has(a[0]));
 const ART={
- s7:{st:'Dai Kino ai Vtoroi Ka: quarant\'anni di chitarre fredde, cantate in russo.',body:`
+ s7:{st:'Da una caldaia di Leningrado a una Mercedes col grugno di maiale: quarant\'anni di chitarre fredde cantate in russo.',col:1,cover:'Vtoroi Ka',body:`
   <p class="by">Articolo e artwork: Lorenzo Di Gioacchino</p>
-  <p>Chi ha passato un po' di tempo su TikTok nel 2020 probabilmente ha sentito «Sudno» dei Molchat Doma senza sapere chi fossero: chitarra fredda, drum machine, una voce bassa in russo. Dietro quel pezzo c'è una scena che va da Minsk a San Pietroburgo e arriva fino a Bishkek, in Kirghizistan. Che non è Europa, ma la lingua e le radici sono le stesse.</p>
-  <h5>Prima vennero i Kino</h5>
-  <figure><img src="/assets/magazine/est-kino.webp" alt="Kino, artwork di Lorenzo Di Gioacchino" loading="lazy" width="1086" height="1448"><figcaption>Kino ✶ artwork: Lorenzo Di Gioacchino</figcaption></figure>
-  <p>Le radici stanno a Leningrado. I Kino nascono lì nel 1981, guidati da Viktor Tsoi, che scrive musica e testi di quasi tutte le canzoni. Nello stesso anno in città nasce il Leningrad Rock Club, il primo posto dove si poteva suonare rock legalmente, con il Komsomol e il KGB a controllare. I Kino ci salgono sul palco dalla primavera del 1982. Tsoi muore in un incidente d'auto in Lettonia il 15 agosto 1990. Da allora è il nome che quasi tutti, da quelle parti, citano tra le influenze.</p>
-  <h5>Minsk: Molchat Doma</h5>
-  <figure><img src="/assets/magazine/est-molchat-doma.webp" alt="Molchat Doma, artwork di Lorenzo Di Gioacchino" loading="lazy" width="1086" height="1448"><figcaption>Molchat Doma ✶ artwork: Lorenzo Di Gioacchino</figcaption></figure>
-  <p>I Molchat Doma sono di Minsk, in Bielorussia, e si formano nel 2017: Egor Shkutko canta, Roman Komogortsev suona chitarra e synth, Pavel Kozlov il basso. La batteria è una drum machine. Il primo disco, «S krysh nashikh domov», se lo pubblicano da soli nel 2017; poi lo ristampa l'etichetta tedesca Detriti, che nel 2018 fa uscire anche «Etazhi». Lì dentro c'è «Sudno (Boris Ryzhy)», il pezzo che nel 2020 gira su TikTok e arriva al secondo posto della Viral 50 mondiale di Spotify. A gennaio di quell'anno firmano con l'americana Sacred Bones, che pubblica «Monument» (2020) e «Belaya Polosa» (2024). Sempre in russo.</p>
-  <h5>San Pietroburgo: Shortparis</h5>
-  <figure><img src="/assets/magazine/est-shortparis.webp" alt="Shortparis, artwork di Lorenzo Di Gioacchino" loading="lazy" width="1086" height="1448"><figcaption>Shortparis ✶ artwork: Lorenzo Di Gioacchino</figcaption></figure>
-  <p>Gli Shortparis si formano nel 2011 a San Pietroburgo, ma Nikolai Komyagin, Alexander Ionin e Pavel Lesnikov si erano conosciuti prima, a Novokuznetsk, in Siberia, la città da cui vengono. In discografia: «Docheri» (2013), «Paskha» (2017), «Tak zakalyalas stal» (2019), «Yablonny sad» (2021). A febbraio 2026 Komyagin muore all'improvviso, a 39 anni. Il 9 ottobre esce «Iliada», il primo disco senza di lui. Meduza scrive che parla di morte, silenzio e dubbio.</p>
-  <h5>Bishkek: Vtoroi Ka</h5>
-  <p>Vtoroi Ka si scrive Второй Ка e vuol dire più o meno "seconda K": è la sezione della classe in cui Ilya Semenov e Sultan Botobaev si sono conosciuti, a scuola, ad Asanbay, quartiere nel sud di Bishkek. Partono dal rap, con il mixtape «Iz okna» a fine 2017. Poi passano al post-punk: «Den' zavisimosti» ("Dependence Day", 2020), «Serial», e «Svinaya poputka» ("Piggy Ride", 2024), il disco che li fa conoscere fuori. Il pezzo più ascoltato resta «Teni ot palm», del 2022.</p>
-  <p>Cantano in russo, ma nel russo che si parla in Kirghizistan, e nei testi ci sono gangster, gente in fuga, piccoli affari, sempre qualcuno in movimento. Novastan li definisce autoironici e "inconfondibilmente kirghisi". Con l'EP «PO GUBE», a marzo 2025, si spostano verso la dance. A ottobre dello stesso anno parte il primo tour europeo: Istanbul, Belgrado, Budapest, Vienna, Praga, due date a Berlino, Amburgo, Parigi, Bruxelles e l'Iceland Airwaves a Reykjavík il 7 novembre.</p>
-  <div class="pq">«Se i Vtoroi Ka fossero comparsi nel 1994, sarebbe stata una rivoluzione musicale.»</div>
-  <p>Lo ha scritto il critico Oleg Karmunin.</p>
-  <h5>Perché ne parliamo qui</h5>
-  <p>Perché sono band partite dal loro quartiere, che cantano nella loro lingua e sono arrivate lontano lo stesso. È quello che proviamo a fare anche a Teramo.</p>
-  <p class="src">Fonti: Wikipedia (Kino, Leningrad Rock Club, Molchat Doma, Shortparis, Второй Ка), Meduza, Novastan, Kaltblut Magazine.<br>Articolo e artwork: Lorenzo Di Gioacchino.</p>`},
+  <p>Mettiamola così: se nel 2020 hai aperto TikTok almeno una volta, un pezzo dei Molchat Doma l'hai sentito. Gente che balla, che cucina, che si trucca, e sotto una voce bassa che canta in russo su una drum machine. Quello che quasi nessuno sapeva è che dietro c'era una storia lunga quarant'anni, partita da una caldaia di Leningrado e arrivata fino a Bishkek. Proviamo a raccontarla dall'inizio.</p>
+  <h5 data-img="magazine/est-kino.webp" data-lab="Kino">Leningrado: la caldaia</h5>
+  <p>L'inizio è Leningrado, 1981, e si chiama Kino. Il cantante è Viktor Tsoi, che per campare fa il fuochista: butta carbone in una caldaia, la Kamchatka, in via Blokhina. In Unione Sovietica i musicisti non guadagnavano niente da dischi e biglietti, quindi un altro lavoro ce l'avevano tutti. Turno in caldaia e poi sul palco: più punk di così è difficile. Oggi quella caldaia è un club, e anche un museo.</p>
+  <p>Il palco era quello del Leningrad Rock Club, aperto nel 1981: il primo posto della città dove il rock era legale. Legale nel senso che in sala c'erano il Komsomol e il KGB a controllare. Lì, al festival del 1986, i Kino suonano per la prima volta «Khochu peremen», "voglio cambiamenti". Tsoi, in un'intervista del 1988, ci teneva a dire che non era una canzone di protesta. Non gli ha dato retta nessuno: da allora l'hanno usata tutti, da una parte e dall'altra. Nell'agosto 2020, a Minsk, due tecnici del suono la fanno partire durante un evento del governo. Gli staccano la corrente e si prendono dieci giorni di carcere a testa. Dieci giorni per una canzone.</p>
+  <p>Tsoi muore il 15 agosto 1990, in un incidente d'auto in Lettonia. A Mosca, sull'Arbat, c'è ancora il muro coperto dalle scritte dei fan. Nel 2006 l'hanno ridipinto e i fan l'hanno riscritto da capo.</p>
+  <h5 data-img="magazine/est-molchat-doma.webp" data-lab="Molchat Doma">Minsk: le case tacciono</h5>
+  <p>Trent'anni dopo, a Minsk, nascono i Molchat Doma. Il nome vuol dire "le case tacciono". Sono in tre e non hanno un batterista: c'è una drum machine e basta. Il pezzo di TikTok è «Sudno», e qui la cosa si fa seria, perché il testo è una poesia di Boris Ryzhy, poeta di Ekaterinburg morto nel 2001 a ventisei anni. "Sudno" è la padella da ospedale, e la poesia parla, a quanto pare, di un ricovero in psichiatria. Nel 2020 finisce sotto circa 150 mila video e arriva seconda nella Viral 50 mondiale di Spotify. Pavel Kozlov, il bassista, al New York Times l'ha detta giusta: gente che fa cose sciocche su testi così esistenziali.</p>
+  <p>La parte che ci piace di più però viene prima di TikTok. Un ragazzo compra «Etazhi» in vinile, lo digitalizza e lo carica su YouTube. L'algoritmo se ne innamora e loro si ritrovano con 25 mila ascolti nuovi al giorno, per un disco fatto in camera su un portatile vecchio. È la scena che si passa a mano, solo che nel 2019 la mano è un algoritmo.</p>
+  <p>Nel 2020 li mette sotto contratto Sacred Bones, l'etichetta di Brooklyn. Oggi due di loro vivono a Los Angeles, dove hanno registrato «Belaya Polosa» (2024). Durante le proteste in Bielorussia sono finiti in una compilation per le vittime della repressione. Di politica parlano poco, ma Roman Komogortsev l'ha messa così: «Non significa che non ci riguardi».</p>
+  <h5 data-img="magazine/est-shortparis.webp" data-lab="Shortparis">San Pietroburgo: la messa in scena</h5>
+  <p>Gli Shortparis un concerto non lo suonano, lo mettono in scena. Vengono da Novokuznetsk, in Siberia, e si sono spostati a San Pietroburgo. Hanno suonato in un villaggio del nord insieme al coro del posto, in una palestra, a Bali con un'orchestra gamelan.</p>
+  <p>Nel dicembre 2018 esce il video di «Strashno», girato in un campo sportivo accanto a una scuola e pensato sulla strage di Beslan e su quella del college di Kerch. Durante le riprese un passante chiama la polizia perché crede che sia un attentato, e uno studio cinematografico ritira l'attrezzatura. Il loro commento: «Ci hanno chiamati islamisti e nazisti allo stesso tempo». Detto da loro suona quasi come un complimento.</p>
+  <p>Nel 2022 si schierano contro l'invasione dell'Ucraina. In Russia gli cancellano i concerti e loro decidono di restare lo stesso: Nikolai Komyagin, il cantante, diceva che il lutto del paese andava vissuto insieme. A febbraio 2026 Komyagin muore, a 39 anni. Il 9 ottobre esce «Iliada», quattordici pezzi con dentro la sua voce. Gli altri l'hanno finito con fiati e tastiere suonate al posto dei synth. Parla di morte e di silenzio.</p>
+  <h5 data-img="magazine/est-vtoroi-ka.webp" data-lab="Vtoroi Ka">Bishkek: arrivano i govnyuki</h5>
+  <p>E poi ci sono loro, i nostri preferiti. Vtoroi Ka vengono da Bishkek, in Kirghizistan: Europa no, ma la lingua è quella. Il nome è la loro classe a scuola, la seconda K. Ilya e Sultan erano compagni di classe nel quartiere di Asanbay e hanno cominciato col rap, beat fatti in casa e video su YouTube. Ancora oggi scrivono, registrano e mixano tutto da soli. Sultan racconta che correvano uno a casa dell'altro: «Abitiamo vicini».</p>
+  <p>Un videoblogger che li prendeva in giro li ha chiamati govnyuki, cioè stronzetti. Loro se lo sono tenuto e ci hanno fatto un pezzo, «Vstrechayte govnyukov», "ecco gli stronzetti". Mossa punk vera. Sultan: «La gente conosce la vibe dei govnyuki, ma la capisce a modo suo».</p>
+  <p>Il disco che li ha fatti conoscere fuori è «Svinaya poputka» (2024): undici pezzi in mezz'ora. In copertina c'è una Mercedes W140, quella che lì chiamano "kaban", cinghiale, con un grugno di maiale al posto della stella. Per Sultan è l'immagine di un mezzo che ti porta lontano da tutto. The Flow l'ha messo primo tra i 50 dischi dell'anno. Dentro ci sono gli anni Novanta, i banditi, un'aria "alla Tarantino e Guy Ritchie", parole di Ilya. E c'è Bishkek, che secondo lui «non è una città così grande: l'abbiamo già consumata tutta».</p>
+  <p>Infatti sono venuti a consumare la nostra. Nell'ottobre 2025 fanno il primo tour europeo: Istanbul, Belgrado, Budapest, Vienna, Praga, Berlino, Parigi, fino all'Iceland Airwaves di Reykjavík il 7 novembre. Un recensore che era lì ha parlato di un set "euforicamente sgangherato". Per una band è il complimento più bello che ci sia.</p>
+  <div class="pq">«L'abbiamo già consumata tutta.»</div>
+  <p class="src" style="margin-top:-18px;opacity:.8">Ilya, Vtoroi Ka, su Bishkek</p>
+  <h5>E noi?</h5>
+  <p>Noi la vediamo così. Una caldaia, una cameretta, un quartiere, una classe di scuola: si parte sempre da un posto piccolo, e si canta nella lingua di casa. Gli altri, prima o poi, si adeguano. A Teramo ci stiamo lavorando.</p>
+  <p class="src">Fonti: Meduza, Novastan, The Flow, The Moscow Times, The New York Times, Novaya Gazeta, NME, Belsat, RFE/RL, nialler9, Wikipedia. Le citazioni sono tradotte dal russo e dall'inglese.<br>Articolo e artwork: Lorenzo Di Gioacchino.</p>`},
  s3:{st:'Inside Tattoo, Donna Mayla e più di vent\'anni di inchiostro a due passi dal mare.',body:`
   <p>Si chiama Inside Tattoo Shop, sta ad Alba Adriatica, in provincia di Teramo, a ottocento metri dal mare, e ha aperto il 26 aprile 2004. Dietro c'è Donna Mayla.</p>
   <h5>Da Teramo a Bologna e ritorno</h5>
@@ -633,12 +642,18 @@ const MQ='<span>Make art</span><em>✶</em><span>JAY27</span><em>✶</em><span>T
 /* lettore */
 const rd=$('#rd');let cur=0;
 function openArt(id){const a=AR[BY[id]];cur=ORD.indexOf(a);const x=ART[id]||{};
-  $('#rimg').src=A+a[4];$('#rimg').style.objectPosition=a[5];$('#rrm').textContent=RM[cur%12];$('#rno').textContent=`${String(cur+1).padStart(2,'0')} / ${String(ORD.length).padStart(2,'0')} ✶ Æ-Zine N°01`;
+  sideNow='';$('#rimg').style.opacity=1;$('#rimg').style.objectPosition=a[5];$('#rrm').textContent=RM[cur%12];$('#rno').textContent=`${String(cur+1).padStart(2,'0')} / ${String(ORD.length).padStart(2,'0')} ✶ Æ-Zine N°01`;
   $('#rcat').innerHTML=sg(a[1])+' '+CAT[a[1]][0];$('#rt').textContent=a[2];$('#rst').textContent=x.st||a[3];$('#rmin').textContent=a[6];
   $('#rtx').innerHTML=x.body||'';
+  $('#rd .L').classList.toggle('col',!!x.col);setSide(a[4],x.cover||'');
+  $$('#rtx [data-img]').forEach(h=>{const i=new Image();i.src=A+h.dataset.img});
   $('#rpt').textContent=ORD[(cur+ORD.length-1)%ORD.length][2];$('#rnt').textContent=ORD[(cur+1)%ORD.length][2];
   document.querySelector('#rd .nv').style.display=ORD.length>1?'':'none';
   rd.classList.add('on');rd.setAttribute('aria-hidden','false');rd.querySelector('.R').scrollTop=0;document.body.style.overflow='hidden'}
+/* immagine laterale che segue la sezione */
+let sideNow='';
+function setSide(src,lab){const im=$('#rimg');$('#rcr').innerHTML=lab?`<b>${lab}</b>artwork: Lorenzo Di Gioacchino`:'';if(sideNow===src)return;const first=!sideNow;sideNow=src;if(first){im.src=A+src;return}im.style.opacity=0;setTimeout(()=>{im.src=A+src;im.onload=()=>{im.style.opacity=1}},300)}
+(()=>{const R=document.querySelector('#rd .R');let tk=0;R.addEventListener('scroll',()=>{if(tk)return;tk=requestAnimationFrame(()=>{tk=0;const a=AR[BY[ORD[cur][0]]],x=ART[a[0]]||{};const hs=$$('#rtx [data-img]');if(!hs.length)return;const lim=R.getBoundingClientRect().top+R.clientHeight*.45;let s=a[4],l=x.cover||'';hs.forEach(h=>{if(h.getBoundingClientRect().top<lim){s=h.dataset.img;l=h.dataset.lab}});setSide(s,l)})},{passive:true})})();
 const step=d=>openArt(ORD[(cur+d+ORD.length)%ORD.length][0]);$('#rp').onclick=()=>step(-1);$('#rn').onclick=()=>step(1);
 const closeAll=()=>{[rd,$('#lb'),$('#mnu'),$('#fm')].forEach(e=>{e.classList.remove('on');e.setAttribute('aria-hidden','true')});document.body.style.overflow=''};
 $('#rx').onclick=closeAll;
