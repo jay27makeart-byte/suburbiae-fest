@@ -765,67 +765,134 @@ img.a{object-fit:contain;display:block}
 </div>
 </section>
 
-<!-- ====================================================== MERCH -->
-<section class="view" id="v-merch" data-page="merch" style="background:var(--red)">
-<div class="pg" style="--H:1508;background:var(--red)">
-  <div class="a bg-k deco" style="--x:20;--y:8;--w:984;--h:1"></div>
-  <div class="a bg-k deco" style="--x:20;--y:16;--w:984;--h:1"></div>
-  <div class="a bg-k deco" style="--x:20;--y:19;--w:984;--h:9"></div>
-  <div class="mhead">
-        <a class="a btn keepw" href="/" style="--x:934;--y:19;--w:30;--h:42;background:var(--ink);color:var(--cream)" aria-label="Home"><svg viewBox="0 0 10 10" style="width:40%"><path d="M1 5 5 1l4 4v4H6V6H4v3H1Z" fill="currentColor"/></svg></a>
-    <button type="button" class="a btn keepw mk-open mk-ico" style="--x:894;--y:19;--w:30;--h:42;background:var(--ink);color:var(--cream)" aria-label="Apri il carrello"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><b class="mk-c">0</b></button>
-    <button class="a mbtn keepw" data-menu style="--x:974;--y:19;--w:30;--h:42;background:var(--ink)" aria-label="Apri menu" aria-expanded="false"><span style="color:var(--cream)"></span></button>
-  </div>
+<!-- ====================================================== MERCH (catalogo delle tavole, 2026-11-11) -->
+<section class="view" id="v-merch" data-page="merch" style="background:#000">
+<div class="mx">
+  <header class="mx-bar">
+    <a class="mx-logo" href="/" aria-label="Suburbiæ, torna alla home"><img src="/assets/logo-suburbiae.png" alt="Suburbiæ" width="426" height="46"></a>
+    <nav class="mx-nav" aria-label="Merch"><button type="button" data-mx-go="mx-idx">Indice</button><button type="button" data-mx-go="mx-t1">Tavole</button><button type="button" data-mx-go="mx-note">Come ordinare</button></nav>
+    <button type="button" class="mx-bolla mk-open" aria-label="Apri la bolla d'ordine"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Bolla d'ordine</span><b class="mk-c">0</b></button>
+    <button class="mbtn mx-menu" data-menu aria-label="Apri menu" aria-expanded="false"><span></span></button>
+  </header>
 
-  <!-- merch: testata negozio (il carrello vero è nel pannello #mk) -->
-  <div class="a bg-k mk-top" style="--x:20;--y:67;--w:984;--h:194;color:var(--cream);display:grid;grid-template-columns:1.15fr 1.45fr 1fr;gap:calc(24 * var(--u));padding:calc(18 * var(--u)) calc(20 * var(--u));font:calc(8 * var(--u))/1.45 var(--orbit)">
-    <div class="mk-top-l"><p class="f-druk c-r" style="margin:0;font-size:calc(30 * var(--u));line-height:.95">OFFICIAL<br>MERCH</p><p style="margin:calc(10 * var(--u)) 0 0;color:var(--red)">Scegli, aggiungi al carrello e invia l'ordine: ti ricontattiamo noi per pagamento e consegna.</p></div>
-    <ol class="mk-steps"><li><b>01</b><span>SCEGLI</span><small>stampe A3 e t-shirt</small></li><li><b>02</b><span>AGGIUNGI</span><small>al carrello, anche più pezzi</small></li><li><b>03</b><span>INVIA L'ORDINE</span><small>niente pagamento online</small></li></ol>
-    <div class="mk-top-r">
-      <span class="btn" style="background:var(--red);color:var(--ink);border-radius:3px;padding:calc(5 * var(--u));border-color:var(--red);font-size:calc(7 * var(--u))">SPEDIZIONI NON INCLUSE</span>
-      <span class="btn" style="background:var(--red);color:var(--ink);border-radius:3px;padding:calc(5 * var(--u));border-color:var(--red);font-size:calc(7 * var(--u))">LA CORNICE NON È INCLUSA</span>
-      <button type="button" class="mk-open mk-big">CARRELLO <b class="mk-c">0</b><span aria-hidden="true">→</span></button>
+  <div class="mx-mast">
+    <div class="mx-r5"></div>
+    <div class="mx-fit"><span>Merch ufficiale</span><span>✶</span><span>Stampe A3 &amp; T-shirt</span><span>✶</span><span>Unexpected Fest</span><span>✶</span><span>Teramo</span><span>✶</span><span>JAY27 A.P.S.</span></div>
+    <div class="mx-r2"></div>
+    <div class="mx-main">
+      <aside class="mx-ear">
+        <h3>Come si ordina</h3>
+        <ol><li><b>I</b>Scegli</li><li><b>II</b>Aggiungi</li><li><b>III</b>Invia l'ordine</li></ol>
+        <span class="mx-dim">Niente pagamento online</span>
+      </aside>
+      <div class="mx-ttl">
+        <div class="mx-seal" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="mxring" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><circle cx="100" cy="100" r="96" fill="none" stroke="#FF0005" stroke-width="1.5"/><circle cx="100" cy="100" r="62" fill="#000" stroke="#FF0005"/><text font-family="Space Mono, monospace" font-size="13.5" letter-spacing="3.2" fill="#FFE1A8"><textPath href="#mxring">OFFICIAL MERCH ✶ BE A BLACK CAT ✶ SUBURBIÆ ✶ </textPath></text></svg><img src="/assets/cat-ed3.webp" alt="" width="505" height="640"></div>
+        <h1>MERCH</h1>
+        <p class="mx-sub">le Tavole <i>del</i> Gatto Nero</p>
+      </div>
+      <aside class="mx-ear mx-ear-r">
+        <h3>Tavole in catalogo</h3>
+        <div class="mx-num">05<small> +1</small></div>
+        <span>4 stampe A3 · 1 t-shirt · 1 in arrivo</span>
+      </aside>
     </div>
+    <div class="mx-r2"></div>
+    <div class="mx-lead"><p>Scegli, aggiungi al carrello e invia l'ordine: ti ricontattiamo noi per pagamento e consegna.</p><span>Spedizione non inclusa · La cornice non è inclusa</span></div>
   </div>
 
-  <!-- products -->
-  <div class="grp">
-    <article class="a mc" data-id="TSHIRT SECONDA EDIZIONE" data-name="T-shirt 2a Edizione" data-price="10" data-img="/assets/merch-tshirt-front.webp" data-size="yes" style="--x:20;--y:296;--w:281;--h:392">
-      <div class="ph" style="height:calc(280 * var(--u));position:relative"><img src="/assets/merch-tshirt-front.webp" alt="T-shirt 2a Edizione (carosello)" loading="lazy" data-car="/assets/merch-tshirt-front.webp|/assets/merch-tshirt-back.webp">
-        <button class="car" data-dir="-1" aria-label="Foto precedente" style="left:calc(8 * var(--u))">‹</button><button class="car" data-dir="1" aria-label="Foto successiva" style="right:calc(8 * var(--u))">›</button>
-        <span class="badge" style="right:calc(14 * var(--u));top:calc(14 * var(--u))">LAST<br>SIZE</span></div>
-      <p class="pn">2a Edizione</p><div class="pr"><span>T-SHIRT</span><b>10 EU</b></div>
-      <div class="mc-buy"><label class="mc-tg"><select aria-label="Taglia"><option>XS</option><option>S</option><option selected>M</option><option>L</option><option>XL</option><option>XXL</option></select></label><button type="button" class="mc-add" aria-label="Aggiungi al carrello">AGGIUNGI <span aria-hidden="true">+</span></button></div>
-    </article>
-    <article class="a mc" data-id="SOUL" data-name="Soul · stampa A3" data-price="25" data-img="/assets/merch-soul.webp" style="--x:371;--y:296;--w:282;--h:392">
-      <div class="ph" style="height:calc(280 * var(--u));position:relative"><img src="/assets/merch-soul.webp" alt="Stampa A3 Soul" loading="lazy"><span class="badge" style="right:calc(14 * var(--u));top:calc(14 * var(--u))">100<br>COPIE</span><span style="position:absolute;bottom:calc(8 * var(--u));width:100%;text-align:center;font:calc(9 * var(--u)) var(--orbit);color:var(--red);letter-spacing:.2em">LIMITED EDITION!</span></div>
-      <p class="pn">SOUL</p><div class="pr"><span>STAMPA A3</span><b>25 EU</b></div>
-      <div class="mc-buy"><button type="button" class="mc-add" aria-label="Aggiungi al carrello">AGGIUNGI <span aria-hidden="true">+</span></button></div>
-    </article>
-    <article class="a mc" data-id="BLACK AND WHITE" data-name="Black and White · stampa A3" data-price="10" data-img="/assets/merch-black-and-white.webp" style="--x:722;--y:296;--w:282;--h:392">
-      <div class="ph" style="height:calc(280 * var(--u))"><img src="/assets/merch-black-and-white.webp" alt="Stampa A3 Black and White" loading="lazy"></div>
-      <p class="pn">BLACK AND WHITE</p><div class="pr"><span>STAMPA A3</span><b>10 EU</b></div>
-      <div class="mc-buy"><button type="button" class="mc-add" aria-label="Aggiungi al carrello">AGGIUNGI <span aria-hidden="true">+</span></button></div>
-    </article>
-    <article class="a mc" data-id="NINE LIVES ZERO FEAR." data-name="Nine Lives. Zero Fear. · stampa A3" data-price="10" data-img="/assets/merch-nine-lives.webp" style="--x:196;--y:711;--w:281;--h:392">
-      <div class="ph" style="height:calc(280 * var(--u))"><img src="/assets/merch-nine-lives.webp" alt="Stampa A3 Nine Lives. Zero Fear." loading="lazy"></div>
-      <p class="pn">NINE LIVES. ZERO FEAR.</p><div class="pr"><span>STAMPA A3</span><b>10 EU</b></div>
-      <div class="mc-buy"><button type="button" class="mc-add" aria-label="Aggiungi al carrello">AGGIUNGI <span aria-hidden="true">+</span></button></div>
-    </article>
-    <article class="a mc" data-id="MIDNIGHT SOUL" data-name="Midnight Soul · stampa A3" data-price="10" data-img="/assets/merch-midnight-soul.webp" style="--x:547;--y:711;--w:282;--h:392">
-      <div class="ph" style="height:calc(280 * var(--u))"><img src="/assets/merch-midnight-soul.webp" alt="Stampa A3 Midnight Soul" loading="lazy"></div>
-      <p class="pn">MIDNIGHT SOUL</p><div class="pr"><span>STAMPA A3</span><b>10 EU</b></div>
-      <div class="mc-buy"><button type="button" class="mc-add" aria-label="Aggiungi al carrello">AGGIUNGI <span aria-hidden="true">+</span></button></div>
-    </article>
-  </div>
+  <section class="mx-idx" id="mx-idx" aria-labelledby="mx-idx-h">
+    <header class="mx-sec-h"><span class="mx-n">00</span><h2 id="mx-idx-h">Indice delle tavole</h2><span class="mx-lab">scegli una tavola</span></header>
+    <ul class="mx-list"><li><button type="button" data-mx-go="mx-t1" data-img="/assets/merch-tshirt-front.webp"><span class="mx-rn">TAV. I</span><span class="mx-nm">2a Edizione</span><span class="mx-dots" aria-hidden="true"></span><span class="mx-ty">T-shirt</span><span class="mx-pz">10 €</span></button></li><li><button type="button" data-mx-go="mx-t2" data-img="/assets/merch-soul.webp"><span class="mx-rn">TAV. II</span><span class="mx-nm">Soul</span><span class="mx-dots" aria-hidden="true"></span><span class="mx-ty">Stampa A3</span><span class="mx-pz">25 €</span></button></li><li><button type="button" data-mx-go="mx-t3" data-img="/assets/merch-black-and-white.webp"><span class="mx-rn">TAV. III</span><span class="mx-nm">Black and White</span><span class="mx-dots" aria-hidden="true"></span><span class="mx-ty">Stampa A3</span><span class="mx-pz">10 €</span></button></li><li><button type="button" data-mx-go="mx-t4" data-img="/assets/merch-nine-lives.webp"><span class="mx-rn">TAV. IV</span><span class="mx-nm">Nine Lives. Zero Fear.</span><span class="mx-dots" aria-hidden="true"></span><span class="mx-ty">Stampa A3</span><span class="mx-pz">10 €</span></button></li><li><button type="button" data-mx-go="mx-t5" data-img="/assets/merch-midnight-soul.webp"><span class="mx-rn">TAV. V</span><span class="mx-nm">Midnight Soul</span><span class="mx-dots" aria-hidden="true"></span><span class="mx-ty">Stampa A3</span><span class="mx-pz">10 €</span></button></li><li class="mx-soon"><button type="button" data-mx-go="mx-t6"><span class="mx-rn">TAV. VI</span><span class="mx-nm">? ? ?</span><span class="mx-dots" aria-hidden="true"></span><span class="mx-ty">New drop</span><span class="mx-pz">—</span></button></li></ul>
+  </section>
 
-  <!-- WAIT -->
-  <div class="a bg-k" style="--x:20;--y:1127;--w:984;--h:361;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(14 * var(--u))">
-    <p class="t f-druk c-r blink" style="--fs:26;--lh:26">WAIT!</p>
-    <p class="t f-druk c-c" style="--fs:40;--lh:44;--mfs:22;text-align:center">NEW DROP<br>INCOMING.</p>
-    <p class="t f-druk c-r blink" style="--fs:26;--lh:26">WAIT!</p>
-  </div>
+  <article class="mx-tav" id="mx-t1" data-id="TSHIRT SECONDA EDIZIONE" data-name="T-shirt 2a Edizione" data-price="10" data-img="/assets/merch-tshirt-front.webp">
+    <div class="mx-pl">
+      <div class="mx-burst"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon fill="#FF0005" stroke="#FFE1A8" stroke-width="3" points="99.0,50.0 87.3,57.4 95.3,68.8 81.6,71.1 84.6,84.6 71.1,81.6 68.8,95.3 57.4,87.3 50.0,99.0 42.6,87.3 31.2,95.3 28.9,81.6 15.4,84.6 18.4,71.1 4.7,68.8 12.7,57.4 1.0,50.0 12.7,42.6 4.7,31.2 18.4,28.9 15.4,15.4 28.9,18.4 31.2,4.7 42.6,12.7 50.0,1.0 57.4,12.7 68.8,4.7 71.1,18.4 84.6,15.4 81.6,28.9 95.3,31.2 87.3,42.6"/></svg><span>LAST<br>SIZE</span></div><div class="mx-frame"><span class="mx-cm a"></span><span class="mx-cm b"></span>
+        <div class="mx-lens"><img src="/assets/merch-tshirt-front.webp" alt="T-shirt 2a Edizione" loading="lazy" decoding="async" data-main><span class="mx-hint">⌕ passa per ingrandire</span></div>
+      </div><div class="mx-views"><button type="button" class="on" data-v="/assets/merch-tshirt-front.webp" aria-label="Fronte"><img src="/assets/merch-tshirt-front.webp" alt="" loading="lazy"></button><button type="button" data-v="/assets/merch-tshirt-back.webp" aria-label="Retro"><img src="/assets/merch-tshirt-back.webp" alt="" loading="lazy"></button><span>fronte / retro</span></div>
+      <div class="mx-no" aria-hidden="true"><span>TAV. I</span><span>✶</span><span>T-shirt</span></div>
+    </div>
+    <div class="mx-tx">
+      <div class="mx-kick"><span>Tav. I / VI</span><span>T-shirt</span></div>
+      <h2>2a Edizione<em>T-shirt</em></h2>
+      <dl class="mx-specs"><dt>Tipo</dt><dd>T-shirt</dd><dt>Edizione</dt><dd>II</dd><dt>Taglie</dt><dd>XS — XXL</dd></dl>
+      <div class="mx-sz" role="radiogroup" aria-label="Taglia"><button type="button" role="radio" aria-checked="false" class="">XS</button><button type="button" role="radio" aria-checked="false" class="">S</button><button type="button" role="radio" aria-checked="true" class="on">M</button><button type="button" role="radio" aria-checked="false" class="">L</button><button type="button" role="radio" aria-checked="false" class="">XL</button><button type="button" role="radio" aria-checked="false" class="">XXL</button></div><div class="mx-buy"><span class="mx-price">10<small>€</small></span><button type="button" class="mx-add"><span>AGGIUNGI ALLA BOLLA</span><span aria-hidden="true">+</span></button></div>
+    </div>
+  </article>
+  <article class="mx-tav mx-flip" id="mx-t2" data-id="SOUL" data-name="Soul · stampa A3" data-price="25" data-img="/assets/merch-soul.webp">
+    <div class="mx-pl">
+      <div class="mx-burst"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon fill="#FF0005" stroke="#FFE1A8" stroke-width="3" points="99.0,50.0 87.3,57.4 95.3,68.8 81.6,71.1 84.6,84.6 71.1,81.6 68.8,95.3 57.4,87.3 50.0,99.0 42.6,87.3 31.2,95.3 28.9,81.6 15.4,84.6 18.4,71.1 4.7,68.8 12.7,57.4 1.0,50.0 12.7,42.6 4.7,31.2 18.4,28.9 15.4,15.4 28.9,18.4 31.2,4.7 42.6,12.7 50.0,1.0 57.4,12.7 68.8,4.7 71.1,18.4 84.6,15.4 81.6,28.9 95.3,31.2 87.3,42.6"/></svg><span>100<br>COPIE</span></div><div class="mx-frame"><span class="mx-cm a"></span><span class="mx-cm b"></span>
+        <div class="mx-lens"><img src="/assets/merch-soul.webp" alt="Soul · stampa A3" loading="lazy" decoding="async" data-main><span class="mx-hint">⌕ passa per ingrandire</span></div>
+      </div>
+      <div class="mx-no" aria-hidden="true"><span>TAV. II</span><span>✶</span><span>Stampa A3</span></div>
+    </div>
+    <div class="mx-tx">
+      <div class="mx-kick"><span>Tav. II / VI</span><span>Stampa A3</span></div>
+      <h2>Soul<em>Limited edition!</em></h2>
+      <dl class="mx-specs"><dt>Formato</dt><dd>A3</dd><dt>Tiratura</dt><dd>100 copie</dd><dt>Cornice</dt><dd>non inclusa</dd></dl>
+      <div class="mx-buy"><span class="mx-price">25<small>€</small></span><button type="button" class="mx-add"><span>AGGIUNGI ALLA BOLLA</span><span aria-hidden="true">+</span></button></div>
+    </div>
+  </article>
+  <article class="mx-tav" id="mx-t3" data-id="BLACK AND WHITE" data-name="Black and White · stampa A3" data-price="10" data-img="/assets/merch-black-and-white.webp">
+    <div class="mx-pl">
+      <div class="mx-frame"><span class="mx-cm a"></span><span class="mx-cm b"></span>
+        <div class="mx-lens"><img src="/assets/merch-black-and-white.webp" alt="Black and White · stampa A3" loading="lazy" decoding="async" data-main><span class="mx-hint">⌕ passa per ingrandire</span></div>
+      </div>
+      <div class="mx-no" aria-hidden="true"><span>TAV. III</span><span>✶</span><span>Stampa A3</span></div>
+    </div>
+    <div class="mx-tx">
+      <div class="mx-kick"><span>Tav. III / VI</span><span>Stampa A3</span></div>
+      <h2>Black and White</h2>
+      <dl class="mx-specs"><dt>Formato</dt><dd>A3</dd><dt>Cornice</dt><dd>non inclusa</dd></dl>
+      <div class="mx-buy"><span class="mx-price">10<small>€</small></span><button type="button" class="mx-add"><span>AGGIUNGI ALLA BOLLA</span><span aria-hidden="true">+</span></button></div>
+    </div>
+  </article>
+  <article class="mx-tav mx-flip" id="mx-t4" data-id="NINE LIVES ZERO FEAR." data-name="Nine Lives. Zero Fear. · stampa A3" data-price="10" data-img="/assets/merch-nine-lives.webp">
+    <div class="mx-pl">
+      <div class="mx-frame"><span class="mx-cm a"></span><span class="mx-cm b"></span>
+        <div class="mx-lens"><img src="/assets/merch-nine-lives.webp" alt="Nine Lives. Zero Fear. · stampa A3" loading="lazy" decoding="async" data-main><span class="mx-hint">⌕ passa per ingrandire</span></div>
+      </div>
+      <div class="mx-no" aria-hidden="true"><span>TAV. IV</span><span>✶</span><span>Stampa A3</span></div>
+    </div>
+    <div class="mx-tx">
+      <div class="mx-kick"><span>Tav. IV / VI</span><span>Stampa A3</span></div>
+      <h2>Nine Lives. Zero Fear.</h2>
+      <dl class="mx-specs"><dt>Formato</dt><dd>A3</dd><dt>Cornice</dt><dd>non inclusa</dd></dl>
+      <div class="mx-buy"><span class="mx-price">10<small>€</small></span><button type="button" class="mx-add"><span>AGGIUNGI ALLA BOLLA</span><span aria-hidden="true">+</span></button></div>
+    </div>
+  </article>
+  <article class="mx-tav" id="mx-t5" data-id="MIDNIGHT SOUL" data-name="Midnight Soul · stampa A3" data-price="10" data-img="/assets/merch-midnight-soul.webp">
+    <div class="mx-pl">
+      <div class="mx-frame"><span class="mx-cm a"></span><span class="mx-cm b"></span>
+        <div class="mx-lens"><img src="/assets/merch-midnight-soul.webp" alt="Midnight Soul · stampa A3" loading="lazy" decoding="async" data-main><span class="mx-hint">⌕ passa per ingrandire</span></div>
+      </div>
+      <div class="mx-no" aria-hidden="true"><span>TAV. V</span><span>✶</span><span>Stampa A3</span></div>
+    </div>
+    <div class="mx-tx">
+      <div class="mx-kick"><span>Tav. V / VI</span><span>Stampa A3</span></div>
+      <h2>Midnight Soul</h2>
+      <dl class="mx-specs"><dt>Formato</dt><dd>A3</dd><dt>Cornice</dt><dd>non inclusa</dd></dl>
+      <div class="mx-buy"><span class="mx-price">10<small>€</small></span><button type="button" class="mx-add"><span>AGGIUNGI ALLA BOLLA</span><span aria-hidden="true">+</span></button></div>
+    </div>
+  </article>
+  <article class="mx-tav mx-soon-t" id="mx-t6">
+    <div class="mx-pl"><div class="mx-frame mx-q-f"><span class="mx-cm a"></span><span class="mx-cm b"></span><span class="mx-q" aria-hidden="true">?</span></div>
+      <div class="mx-no" aria-hidden="true"><span>TAV. VI</span><span>✶</span><span>New drop</span></div></div>
+    <div class="mx-tx">
+      <div class="mx-kick"><span>Tav. VI</span><span>Wait!</span></div>
+      <h2>New drop<em>incoming.</em></h2>
+      <a class="mx-add mx-wait" href="https://www.instagram.com/suburbiae_unexpected_fest/" target="_blank" rel="noopener"><span>WAIT!</span><span aria-hidden="true">↗</span></a>
+    </div>
+  </article>
+
+  <section class="mx-notes" id="mx-note" aria-label="Come ordinare">
+    <div><h3>Ordine</h3><p class="mx-cap">Scegli, aggiungi al carrello e invia l'ordine: ti ricontattiamo noi per pagamento e consegna.</p></div>
+    <div><h3>Consegna</h3><p>Ritiro al Fest: gratis.<br>Spedizione: costo non incluso.</p></div>
+    <div><h3>Stampe</h3><p>La cornice non è inclusa.<br>Nessun pagamento online.</p></div>
+  </section>
 </div>
+<div class="mx-marq" aria-hidden="true"><div>BE A BLACK CAT ✶ NINE LIVES ✶ ZERO FEAR ☾ OFFICIAL MERCH ✶ SUBURBIÆ UNEXPECTED FEST ✶ BE A BLACK CAT ✶ NINE LIVES ✶ ZERO FEAR ☾ OFFICIAL MERCH ✶ SUBURBIÆ UNEXPECTED FEST ✶ BE A BLACK CAT ✶ NINE LIVES ✶ ZERO FEAR ☾ OFFICIAL MERCH ✶ SUBURBIÆ UNEXPECTED FEST ✶ BE A BLACK CAT ✶ NINE LIVES ✶ ZERO FEAR ☾ OFFICIAL MERCH ✶ SUBURBIÆ UNEXPECTED FEST ✶ BE A BLACK CAT ✶ NINE LIVES ✶ ZERO FEAR ☾ OFFICIAL MERCH ✶ SUBURBIÆ UNEXPECTED FEST ✶ BE A BLACK CAT ✶ NINE LIVES ✶ ZERO FEAR ☾ OFFICIAL MERCH ✶ SUBURBIÆ UNEXPECTED FEST ✶ </div></div>
+<div class="mx-peek" aria-hidden="true"><img alt=""></div>
 </section>
 
 
@@ -952,6 +1019,193 @@ body.mk-lock{overflow:hidden}
   .mk-ico b{width:auto;height:18px;min-width:18px;font-size:10px;top:-6px;right:-6px}
 }
 @media (prefers-reduced-motion:reduce){.mk-p,.mk-bg,.mk-pill{transition:none}}
+</style>
+<style>
+/* ===== MERCH: catalogo delle tavole (2026-11-11) ===== */
+.mx{--m:clamp(16px,2vw,28px);--rl:1px solid rgba(255,225,168,.28);--gap:clamp(10px,1.4vw,20px);position:relative;max-width:1680px;margin:0 auto;padding:0 var(--m);color:var(--cream);font:13px/1.5 var(--mono)}
+#v-merch{position:relative;overflow-x:clip}
+#v-merch:before{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:1;opacity:.12;mix-blend-mode:screen;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .88 0 0 0 0 .66 0 0 0 1.6 -.5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:mxgrain .9s steps(4) infinite}
+@keyframes mxgrain{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-1%,3%)}}
+.mx button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+.mx-dim{opacity:.6}
+/* barra */
+.mx-bar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:22px;margin:0 calc(-1 * var(--m));padding:10px var(--m);background:rgba(0,0,0,.88);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-bottom:var(--rl);font:10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.mx-logo img{display:block;height:15px;width:auto;filter:invert(83%) sepia(30%) saturate(560%) hue-rotate(330deg)}
+.mx-nav{display:flex;gap:22px;margin-left:auto}
+.mx-nav button{letter-spacing:inherit;text-transform:inherit}
+.mx-nav button:hover{color:var(--red)}
+.mx-bolla{display:flex!important;align-items:center;gap:9px;border:1px solid var(--cream)!important;padding:7px 8px 7px 12px!important;border-radius:999px;letter-spacing:inherit;text-transform:inherit;transition:background .25s,color .25s}
+.mx-bolla:hover{background:var(--cream)!important;color:#000!important}
+.mx-bolla svg{width:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round}
+.mx-bolla b{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 5px;border-radius:99px;background:var(--red);color:#000;font:700 11px/1 var(--orbit)}
+.mx-menu{width:40px;height:40px;border-color:var(--cream)!important;background:transparent!important}
+.mx-menu span{width:16px!important;height:12px!important;--lw:1.6px!important;color:var(--cream)!important}
+.mx-menu:hover{background:var(--cream)!important}.mx-menu:hover span{color:#000!important}
+/* testata */
+.mx-mast{position:relative;z-index:2;padding-top:clamp(18px,3vw,40px)}
+.mx-r5{border-top:5px solid var(--cream)}
+.mx-r2{border-top:1px solid var(--cream);padding-top:3px;border-bottom:1px solid var(--cream)}
+.mx-fit{display:flex;justify-content:space-between;gap:10px;padding:8px 0;white-space:nowrap;overflow:hidden;font:10px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.mx-main{display:grid;grid-template-columns:repeat(12,1fr);column-gap:var(--gap);padding:clamp(14px,2vw,26px) 0}
+.mx-ear{grid-column:span 3;display:flex;flex-direction:column;justify-content:space-between;gap:14px;border:var(--rl);padding:14px;font:10px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.mx-ear h3{margin:0;font:italic 400 clamp(20px,1.9vw,30px)/1 var(--goth);letter-spacing:0;text-transform:none}
+.mx-ear ol{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+.mx-ear ol li{display:flex;gap:10px}.mx-ear ol b{color:var(--red);min-width:24px}
+.mx-ear-r{background:var(--red);color:#000;border-color:var(--red)}
+.mx-num{font:900 clamp(60px,6vw,96px)/.8 var(--druk);font-stretch:62%}
+.mx-num small{font-size:.4em}
+.mx-ttl{grid-column:span 6;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.mx-ttl h1{margin:0;font:900 clamp(56px,8.8vw,150px)/.78 var(--druk);font-stretch:125%;letter-spacing:-.01em;color:var(--red)}
+.mx-sub{margin:0;position:relative;z-index:2;font:italic 400 clamp(26px,3.3vw,56px)/1 var(--goth);margin-top:-.04em}
+.mx-sub i{font:400 1em "Bodoni Moda",serif;font-style:normal;color:var(--red)}
+.mx-seal{position:absolute;z-index:3;width:clamp(78px,7.4vw,112px);aspect-ratio:1;right:-3%;top:-24%}
+.mx-seal svg{position:absolute;inset:0;animation:mxspin 26s linear infinite}
+.mx-seal img{position:absolute;inset:22%;width:56%;height:56%;object-fit:contain}
+@keyframes mxspin{to{transform:rotate(360deg)}}
+.mx-lead{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;padding:10px 0 14px}
+.mx-lead p{margin:0;max-width:56ch;font:italic 400 clamp(18px,1.5vw,22px)/1.25 var(--goth)}
+.mx-lead span{color:var(--red);font:10px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+/* indice */
+.mx-idx{position:relative;z-index:2}
+.mx-sec-h{display:flex;align-items:baseline;gap:16px;border-top:var(--rl);padding:12px 0;margin-top:clamp(30px,5vw,70px)}
+.mx-n{font:700 12px var(--mono);color:var(--red)}
+.mx-sec-h h2{margin:0;font:italic 400 clamp(26px,2.6vw,40px)/1 var(--goth)}
+.mx-lab{margin-left:auto;font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.mx-list{list-style:none;margin:0;padding:0}
+.mx-list button{width:100%;display:grid;grid-template-columns:70px auto 1fr auto 90px;align-items:baseline;gap:14px;text-align:left;padding:12px 0!important;border-bottom:var(--rl)!important;font:10px/1.4 var(--mono)!important;letter-spacing:.14em;text-transform:uppercase;transition:color .2s,padding .3s}
+.mx-list button:hover,.mx-list button:focus-visible{color:var(--red)!important;padding-left:12px!important}
+.mx-rn{font-weight:700;color:var(--red)}
+.mx-nm{font:800 clamp(20px,2.3vw,38px)/1 var(--druk);font-stretch:125%;letter-spacing:0}
+.mx-dots{border-bottom:1px dotted currentColor;opacity:.5;transform:translateY(-6px)}
+.mx-ty{opacity:.7}
+.mx-pz{text-align:right;font:800 clamp(18px,1.8vw,28px)/1 var(--druk);font-stretch:62%;letter-spacing:0}
+.mx-soon button{opacity:.45}
+.mx-peek{position:fixed;left:0;top:0;z-index:40;width:220px;aspect-ratio:1;pointer-events:none;opacity:0;border:6px solid var(--cream);box-shadow:8px 8px 0 var(--red);transform:translate(-50%,-115%) rotate(-4deg) scale(.85);transition:opacity .2s,transform .25s}
+.mx-peek.on{opacity:1;transform:translate(-50%,-115%) rotate(-4deg) scale(1)}
+.mx-peek img{display:block;width:100%;height:100%;object-fit:cover}
+/* tavole */
+.mx-tav{position:relative;z-index:2;display:grid;grid-template-columns:repeat(12,1fr);column-gap:var(--gap);row-gap:22px;padding:clamp(26px,4vw,60px) 0;border-bottom:var(--rl);scroll-margin-top:60px}
+.mx-pl{grid-column:1 / span 7;position:relative}
+.mx-tx{grid-column:9 / span 4;align-self:center;display:flex;flex-direction:column;gap:18px}
+.mx-flip .mx-pl{grid-column:6 / span 7;grid-row:1;display:flex;flex-direction:column;align-items:flex-end}
+.mx-flip .mx-tx{grid-column:1 / span 4;grid-row:1}
+.mx-frame{position:relative;width:min(100%,76vh);padding:clamp(14px,2vw,28px);border:var(--rl)}
+.mx-frame:before,.mx-frame:after{content:"";position:absolute;width:18px;height:18px;border:0 solid var(--red)}
+.mx-frame:before{left:-9px;top:-9px;border-width:0 1px 1px 0}
+.mx-frame:after{right:-9px;bottom:-9px;border-width:1px 0 0 1px}
+.mx-cm{position:absolute;width:22px;height:22px;pointer-events:none}
+.mx-cm:before,.mx-cm:after{content:"";position:absolute;background:var(--cream);opacity:.7}
+.mx-cm:before{left:50%;top:0;bottom:0;width:1px}.mx-cm:after{top:50%;left:0;right:0;height:1px}
+.mx-cm.a{right:-11px;top:-11px}.mx-cm.b{left:-11px;bottom:-11px}
+.mx-lens{position:relative;aspect-ratio:1;overflow:hidden;background:#111}
+.mx-lens img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.mx-hint{position:absolute;left:10px;bottom:10px;padding:5px 8px;background:#000;font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase;transition:opacity .3s}
+@media (hover:hover){.mx-lens{cursor:zoom-in}.mx-lens:hover img{transform:scale(1.9)}.mx-lens:hover .mx-hint{opacity:0}}
+@media (hover:none){.mx-hint{display:none}}
+.mx-no{position:absolute;top:0;bottom:0;left:-26px;display:flex;align-items:center;justify-content:space-between;padding:20px 0;writing-mode:vertical-rl;transform:rotate(180deg);font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.mx-no span:nth-child(2){color:var(--red)}
+.mx-flip .mx-no{left:auto;right:-26px}
+.mx-burst{position:absolute;z-index:3;top:-18px;right:-18px;width:clamp(84px,8vw,118px);aspect-ratio:1;display:grid;place-items:center;text-align:center;font:900 13px/1 var(--druk);font-stretch:110%;transform:rotate(12deg)}
+.mx-burst svg{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(5px 5px 0 #000);animation:mxwob 6s ease-in-out infinite}
+.mx-burst span{position:relative}
+.mx-flip .mx-burst{right:auto;left:-18px;transform:rotate(-10deg)}
+@keyframes mxwob{50%{transform:rotate(8deg) scale(1.04)}}
+.mx-views{display:flex;gap:10px;margin-top:12px;width:min(100%,76vh)}
+.mx-views button{width:64px;aspect-ratio:1;border:1px solid transparent!important;opacity:.55;transition:opacity .2s}
+.mx-views button.on{border-color:var(--red)!important;opacity:1}
+.mx-views img{display:block;width:100%;height:100%;object-fit:cover}
+.mx-views span{align-self:flex-end;opacity:.6;font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.mx-kick{display:flex;justify-content:space-between;border-bottom:1px solid var(--cream);padding-bottom:6px;font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.mx-kick span+span{color:var(--red)}
+.mx-tx h2{margin:0;font:900 clamp(40px,4.6vw,84px)/.86 var(--druk);font-stretch:125%;text-transform:uppercase;overflow-wrap:anywhere}
+.mx-tx h2 em{display:block;margin-top:.18em;font:italic 400 .52em/1 var(--goth);text-transform:none;color:var(--red)}
+.mx-specs{margin:0;display:grid;grid-template-columns:auto 1fr;border-top:var(--rl);font:10px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.mx-specs dt,.mx-specs dd{margin:0;padding:8px 0;border-bottom:var(--rl)}
+.mx-specs dd{text-align:right}
+.mx-sz{display:flex;border:1px solid var(--cream)}
+.mx-sz button{flex:1;padding:11px 0!important;border-right:1px solid var(--cream)!important;font:700 12px var(--mono)!important;transition:background .2s,color .2s}
+.mx-sz button:last-child{border-right:0!important}
+.mx-sz button:hover{background:rgba(255,225,168,.12)}
+.mx-sz button.on{background:var(--cream);color:#000}
+.mx-buy{display:flex;align-items:stretch;border:1px solid var(--cream)}
+.mx-price{display:flex;align-items:center;padding:0 16px;border-right:1px solid var(--cream);font:900 clamp(30px,2.8vw,46px)/1 var(--druk);font-stretch:62%}
+.mx-price small{margin-left:4px;font:10px var(--mono)}
+.mx-add{position:relative;overflow:hidden;flex:1;display:flex;justify-content:space-between;align-items:center;padding:16px!important;background:var(--cream)!important;color:#000!important;text-decoration:none;font:800 15px/1 var(--druk)!important;font-stretch:125%!important;letter-spacing:.04em}
+.mx-add:before{content:"";position:absolute;inset:0;background:var(--red);transform:translateY(101%);transition:transform .35s cubic-bezier(.7,0,.2,1)}
+.mx-add:hover:before,.mx-add.ok:before{transform:none}
+.mx-add span{position:relative}
+.mx-wait{flex:none}
+/* tavola VI */
+.mx-q-f{display:grid;place-items:center;aspect-ratio:1;padding:0;background:repeating-linear-gradient(45deg,transparent 0 14px,rgba(255,0,5,.12) 14px 15px)}
+.mx-q{font:400 clamp(160px,22vw,360px)/.8 "Bodoni Moda",serif;color:var(--red);animation:mxflick 4s steps(1) infinite}
+@keyframes mxflick{0%,92%,100%{opacity:1}93%,96%{opacity:.2}}
+/* note */
+.mx-notes{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);column-gap:var(--gap);padding:clamp(30px,4vw,56px) 0;font:11px/1.6 var(--mono);letter-spacing:.06em}
+.mx-notes>div{border-top:1px solid var(--cream);padding-top:12px}
+.mx-notes h3{margin:0 0 8px;font:italic 400 24px/1 var(--goth)}
+.mx-notes p{margin:0;opacity:.8}
+.mx-cap:first-letter{float:left;margin:4px 8px 0 0;font:700 54px/.8 "Bodoni Moda",serif;color:var(--red)}
+.mx-marq{position:relative;z-index:2;overflow:hidden;white-space:nowrap;background:var(--red);color:#000;padding:9px 0}
+.mx-marq div{display:inline-block;animation:mxmq 40s linear infinite;font:900 18px/1 var(--druk);font-stretch:125%}
+@keyframes mxmq{to{transform:translateX(-50%)}}
+.mx-fly{position:fixed;z-index:250;width:70px;height:70px;object-fit:cover;pointer-events:none;border:3px solid var(--cream);transition:transform .7s cubic-bezier(.6,-.2,.3,1),opacity .7s}
+@media (max-width:860px){
+  .mx-nav{display:none}
+  .mx-bolla{margin-left:auto}
+  .mx-fit span:nth-child(n+4){display:none}
+  .mx-ear,.mx-ttl{grid-column:1 / -1}
+  .mx-ttl{order:-1;padding:18px 0 24px}
+  .mx-ear+.mx-ear{border-top:0}
+  .mx-seal{right:0;top:-8%}
+  .mx-pl,.mx-flip .mx-pl,.mx-tx,.mx-flip .mx-tx{grid-column:1 / -1;grid-row:auto}
+  .mx-flip .mx-pl{align-items:stretch}
+  .mx-frame,.mx-views{width:100%}
+  .mx-no{display:none}
+  .mx-burst{right:-6px;top:-14px}.mx-flip .mx-burst{left:-6px}
+  .mx-list button{grid-template-columns:44px 1fr auto}
+  .mx-dots,.mx-ty{display:none}
+  .mx-notes{grid-template-columns:1fr;row-gap:18px}
+}
+@media (max-width:420px){.mx-bolla span{display:none}.mx-add{font-size:13px!important}}
+@media (prefers-reduced-motion:reduce){#v-merch:before,.mx-seal svg,.mx-burst svg,.mx-q{animation:none}.mx-marq div{animation-duration:90s}.mx-fly{display:none}}
+
+/* ===== carrello = Bolla d'ordine (carta crema) ===== */
+#mk .mk-p{background:var(--cream);color:#000;border-left:0}
+#mk .mk-p:before{content:"";position:absolute;left:-10px;top:0;bottom:0;width:10px;background:radial-gradient(circle at 0 10px,transparent 6px,var(--cream) 6.5px) 0 0/10px 20px}
+#mk .mk-h{border-bottom:5px solid #000}
+#mk .mk-h b{font:900 30px/.85 var(--druk);font-stretch:125%;color:#000}
+#mk .mk-x{border-color:#000;color:#000}#mk .mk-x:hover{background:#000;color:var(--cream)}
+#mk .mk-list li{border-bottom:1px dashed #000}
+#mk .mk-list img{border:0;border-radius:0;filter:grayscale(1) contrast(1.15)}
+#mk .mk-list b{font:800 16px/1.05 var(--druk);font-stretch:110%;text-transform:uppercase}
+#mk .mk-qty{border-color:#000;border-radius:0}
+#mk .mk-qty button{color:#000}#mk .mk-qty button:hover{background:#000;color:var(--cream)}
+#mk .mk-li-r strong{font:800 20px/1 var(--druk);font-stretch:62%;color:#000}
+#mk .mk-rm{color:#000}#mk .mk-rm:hover{color:var(--blood)}
+#mk .mk-link{color:var(--blood)}
+#mk .mk-foot{background:var(--cream);border-top:5px solid #000}
+#mk .mk-sum b{font:900 42px/1 var(--druk);font-stretch:62%;color:#000}
+#mk .mk-cta{background:#000;color:var(--cream);border-radius:0}
+#mk .mk-cta:hover{background:var(--red);color:#000}
+#mk .mk-s-co fieldset{border-bottom:1px dashed #000}
+#mk .mk-s-co legend{color:var(--blood)}
+#mk .mk-s-co legend small{color:#000}
+#mk .mk-f input,#mk .mk-f textarea{border:1px solid #000;border-radius:0;color:#000;background:rgba(255,255,255,.25)}
+#mk .mk-f input::placeholder,#mk .mk-f textarea::placeholder{color:rgba(0,0,0,.35)}
+#mk .mk-f input:focus,#mk .mk-f textarea:focus{border-color:var(--blood);box-shadow:0 0 0 1px var(--blood)}
+#mk .mk-f input.bad{border-color:var(--red);box-shadow:0 0 0 1px var(--red)}
+#mk .mk-del span{border:1px solid #000;border-radius:0}
+#mk .mk-del input:checked+span{background:#000;border-color:#000;color:var(--cream)}
+#mk .mk-del input:focus-visible+span,#mk .mk-ck input:focus-visible+i{outline-color:#000}
+#mk .mk-ck i{border-color:#000;border-radius:0}
+#mk .mk-ck input:checked+i{background:#000;border-color:#000}
+#mk .mk-ck input:checked+i::after{color:var(--cream)}
+#mk .mk-ck a,#mk .mk-info a,#mk .mk-info b,#mk .mk-info summary{color:var(--blood)}
+#mk .mk-info{border-color:#000;border-radius:0}
+#mk .mk-err{border-color:var(--blood);color:var(--blood);border-radius:0}
+#mk .mk-ok-t{color:#000}
+#mk .mk-stamp{margin:18px auto 6px;width:130px;aspect-ratio:1;flex:0 0 auto;border:3px double var(--blood);border-radius:50%;display:grid;place-items:center;text-align:center;color:var(--blood);transform:rotate(-14deg);font:800 12px/1.1 var(--druk);font-stretch:110%;opacity:.85}
+.mk-pill{border-radius:999px}
 </style>
 
 <style>
@@ -3003,10 +3257,10 @@ body.mn-lock{overflow:hidden}
 <div class="mk" id="mk" hidden>
   <div class="mk-bg" data-mk-close></div>
   <aside class="mk-p" role="dialog" aria-modal="true" aria-labelledby="mk-t">
-    <header class="mk-h"><b id="mk-t">IL TUO CARRELLO</b><span class="mk-n"></span><button type="button" class="mk-x" data-mk-close aria-label="Chiudi il carrello">×</button></header>
+    <header class="mk-h"><b id="mk-t">BOLLA D'ORDINE</b><span class="mk-n"></span><button type="button" class="mk-x" data-mk-close aria-label="Chiudi il carrello">×</button></header>
     <div class="mk-step mk-s-cart">
       <ul class="mk-list"></ul>
-      <div class="mk-empty"><p>Il carrello è vuoto.</p><button type="button" class="mk-link" data-mk-close>TORNA AL MERCH →</button></div>
+      <div class="mk-empty"><p>La bolla è vuota.</p><button type="button" class="mk-link" data-mk-close>TORNA AL MERCH →</button></div>
       <div class="mk-foot">
         <p class="mk-note">Spedizione non inclusa · La cornice non è inclusa</p>
         <p class="mk-sum"><span>TOTALE</span><b class="mk-tot">0,00 €</b></p>
@@ -3056,10 +3310,11 @@ body.mn-lock{overflow:hidden}
       <p class="mk-ok-t">ORDINE<br>INVIATO ✶</p>
       <p>Grazie! Ti scriviamo a <b class="mk-mail"></b> per pagamento e consegna.</p>
       <button type="button" class="mk-cta" data-mk-close>TORNA AL MERCH <span aria-hidden="true">→</span></button>
+      <div class="mk-stamp" aria-hidden="true">BE A<br>BLACK CAT<br>✶<br>JAY27</div>
     </div>
   </aside>
 </div>
-<button type="button" class="mk-pill mk-open" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>CARRELLO <b class="mk-c">0</b><span class="mk-pt"></span><i aria-hidden="true">→</i></button>
+<button type="button" class="mk-pill mk-open" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>BOLLA <b class="mk-c">0</b><span class="mk-pt"></span><i aria-hidden="true">→</i></button>
 
 
 <!-- ====================================================== POPUP PASS CAMPING -->
@@ -3116,9 +3371,6 @@ article.a>.ph{grid-column:1 / -1}
   
   
   .lk{font-size:14px;min-height:44px}
-  [id^="v-merch"] .a.bg-k[style*="grid-template-columns"]{display:flex!important;flex-direction:column;font-size:12px;padding:16px;gap:14px;aspect-ratio:auto}
-  [id^="v-merch"] .a.bg-k[style*="grid-template-columns"] *{font-size:12px!important}
-  [id^="v-merch"] .a.bg-k[style*="grid-template-columns"] p.f-druk{font-size:24px!important}
   article.a{aspect-ratio:auto}
   article.a .ph{height:auto!important;aspect-ratio:1}
   .a.bg-k[style*="--y:1127"]{aspect-ratio:auto;padding:40px 16px}
@@ -3390,7 +3642,7 @@ article.a>.ph{grid-column:1 / -1}
       mk.querySelector('.mk-list').innerHTML=cart.map(function(i,k){return '<li><img src="'+esc(/^(\/|https?:)/.test(i.img)?i.img:'/'+i.img)+'" alt=""><div><b>'+esc(i.name)+'</b><small>'+(i.taglia?'Taglia '+esc(i.taglia)+' · ':'')+eur(i.prezzo)+' cad.</small><span class="mk-qty"><button type="button" data-q="-1" data-k="'+k+'" aria-label="Togli uno">−</button><span>'+i.qta+'</span><button type="button" data-q="1" data-k="'+k+'" aria-label="Aggiungi uno">+</button></span></div><div class="mk-li-r"><strong>'+eur(i.prezzo*i.qta)+'</strong><button type="button" class="mk-rm" data-rm="'+k+'">rimuovi</button></div></li>'}).join('');
       pillState();save()}
     function pillState(){var on=window.curPage==='merch'&&count()>0&&!mk.classList.contains('on');pill.hidden=!on}
-    function step(name){['cart','co','ok'].forEach(function(x){mk.querySelector('.mk-s-'+x).hidden=x!==name});mk.querySelector('#mk-t').textContent=name==='co'?'CHECKOUT':name==='ok'?'FATTO!':'IL TUO CARRELLO'}
+    function step(name){['cart','co','ok'].forEach(function(x){mk.querySelector('.mk-s-'+x).hidden=x!==name});mk.querySelector('#mk-t').textContent=name==='co'?'I TUOI DATI':name==='ok'?'FATTO!':'BOLLA D\'ORDINE'}
     function open(st){lastFocus=document.activeElement;step(st||'cart');mk.hidden=false;void mk.offsetWidth;mk.classList.add('on');document.body.classList.add('mk-lock');pillState();setTimeout(function(){mk.querySelector('.mk-x').focus()},350)}
     function close(){if(!mk.classList.contains('on'))return;mk.classList.remove('on');document.body.classList.remove('mk-lock');setTimeout(function(){if(!mk.classList.contains('on'))mk.hidden=true;if(mk.querySelector('.mk-s-ok').hidden===false)step('cart')},450);pillState();if(lastFocus&&lastFocus.focus)lastFocus.focus()}
     document.querySelectorAll('.mk-open').forEach(function(b){b.addEventListener('click',function(){open('cart')})});
@@ -3400,9 +3652,14 @@ article.a>.ph{grid-column:1 / -1}
     mk.querySelector('.mk-go').addEventListener('click',function(){if(count())step('co')});
     mk.querySelector('.mk-back').addEventListener('click',function(){step('cart')});
     /* aggiungi dalle schede */
-    document.querySelectorAll('article.mc').forEach(function(a){var b=a.querySelector('.mc-add');b.addEventListener('click',function(){var sel=a.querySelector('.mc-tg select'),tg=sel?sel.value:null,key=a.dataset.id+'|'+(tg||'');
+    document.querySelectorAll('article.mx-tav[data-id]').forEach(function(a){var b=a.querySelector('button.mx-add');if(!b)return;b.addEventListener('click',function(){var sz=a.querySelector('.mx-sz .on'),tg=sz?sz.textContent:null,key=a.dataset.id+'|'+(tg||'');
       var ex=cart.filter(function(i){return i.key===key})[0];if(ex)ex.qta=Math.min(99,ex.qta+1);else cart.push({key:key,id:a.dataset.id,name:a.dataset.name,prezzo:+a.dataset.price,img:a.dataset.img,taglia:tg,qta:1});
-      render(true);b.classList.add('ok');b.firstChild.textContent='AGGIUNTO ✓ ';clearTimeout(b._t);b._t=setTimeout(function(){b.classList.remove('ok');b.firstChild.textContent='AGGIUNGI '},1400)})});
+      var im=a.querySelector('[data-main]'),dst=document.querySelector('#v-merch .mx-bolla .mk-c');
+      if(im&&dst&&!matchMedia('(prefers-reduced-motion:reduce)').matches){var r=im.getBoundingClientRect(),d=dst.getBoundingClientRect(),f=document.createElement('img');f.src=im.currentSrc||im.src;f.alt='';f.className='mx-fly';f.style.left=(r.left+r.width/2-35)+'px';f.style.top=(r.top+r.height/2-35)+'px';document.body.appendChild(f);
+        requestAnimationFrame(function(){requestAnimationFrame(function(){f.style.transform='translate('+(d.left+d.width/2-r.left-r.width/2)+'px,'+(d.top+d.height/2-r.top-r.height/2)+'px) scale(.2) rotate(-25deg)';f.style.opacity='.3'})});
+        setTimeout(function(){f.remove();render(true)},700)}else render(true);
+      save();
+      b.classList.add('ok');b.firstChild.textContent='NELLA BOLLA ✶';clearTimeout(b._t);b._t=setTimeout(function(){b.classList.remove('ok');b.firstChild.textContent='AGGIUNGI ALLA BOLLA'},1400)})});
     /* checkout */
     function addr(){var r=co.querySelector('input[name=_delivery]:checked'),sp=!!(r&&r.value==='spedizione');co.querySelector('.mk-addr').hidden=!sp;['indirizzo_via','indirizzo_cap','indirizzo_citta'].forEach(function(n){co.elements[n].required=sp})}
     co.querySelectorAll('input[name=_delivery]').forEach(function(r){r.addEventListener('change',addr)});
@@ -3550,29 +3807,6 @@ article.a>.ph{grid-column:1 / -1}
   .pressh{font:700 10px/1 var(--mono)!important;letter-spacing:.18em!important;color:#000!important}
   #v-home .c-c.right{text-align:center!important;font:11px/1.4 var(--mono)!important;letter-spacing:.06em;padding-top:16px;border-top:1px solid #000}
 
-  /* =============================== MERCH =============================== */
-  #v-merch .mhead{justify-content:flex-end!important;gap:8px!important}
-  #v-merch .mhead>.a{width:44px!important;height:44px!important;flex:0 0 44px!important;aspect-ratio:auto!important}
-  #v-merch .mk-ico{position:relative!important;display:grid!important;place-items:center}
-  #v-merch .mk-ico b{position:absolute;top:-7px;right:-7px;font-size:10px!important;min-width:18px;height:18px}
-  .mk-top{display:flex!important;flex-direction:column;gap:16px!important;padding:24px var(--m)!important}
-  .mk-steps{display:none!important}
-  .mk-top-l p{font-size:13px!important;line-height:1.5!important}
-  .mk-top-l p:first-child{font-size:40px!important;line-height:.95!important}
-  .mk-top-r{display:grid!important;grid-template-columns:1fr 1fr;gap:8px!important}
-  .mk-top-r>span.btn{display:flex!important;align-items:center;justify-content:center;min-height:44px;padding:6px 8px!important;font-size:10px!important;line-height:1.2!important;text-align:center;letter-spacing:.06em}
-  .mk-big{grid-column:1 / -1;min-height:48px;font-size:14px!important;padding:0 16px!important}
-  #v-merch .a.bg-k:has(.blink){min-height:0!important;padding:32px var(--m)!important;gap:8px!important}
-  #v-merch .a.bg-k:has(.blink) .blink{font-size:18px!important;line-height:1!important}
-  article.mc .mc-buy{flex-direction:row!important;gap:6px!important;margin-top:8px!important}
-  article.mc .mc-buy>*{height:44px!important;flex:1 1 auto!important}
-  article.mc .mc-tg{flex:0 0 52px!important}
-  article.mc .mc-tg+.mc-add{justify-content:center}
-  article.mc .mc-tg+.mc-add span{display:none}
-  article.mc .mc-buy{min-width:0}
-  .mc-add{padding:0 8px!important;min-width:0!important;font-size:12px!important}
-  article.mc .mc-tg select{padding:0 18px 0 8px!important}
-
   /* =============================== GALLERY =============================== */
   .gl-pitch em{display:none}
   .gl-lab{font-size:10px!important}
@@ -3651,4 +3885,19 @@ article.a>.ph{grid-column:1 / -1}
   /* =============================== UNDERSUB: sigillo nella hero, centrato =============================== */
 }
 </style>
+<script>
+/* merch: catalogo delle tavole */
+(function(){var v=document.getElementById('v-merch');if(!v)return;
+  v.addEventListener('click',function(e){
+    var g=e.target.closest('[data-mx-go]');if(g){var t=document.getElementById(g.dataset.mxGo);if(t){var bar=v.querySelector('.mx-bar'),y=t.getBoundingClientRect().top+scrollY-(bar?bar.offsetHeight:0)-8;scrollTo({top:y,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'})}return}
+    var w=e.target.closest('[data-v]');if(w){var pl=w.closest('.mx-pl');pl.querySelector('[data-main]').src=w.dataset.v;pl.querySelectorAll('[data-v]').forEach(function(b){b.classList.toggle('on',b===w)});return}
+    var z=e.target.closest('.mx-sz button');if(z){z.parentNode.querySelectorAll('button').forEach(function(b){var on=b===z;b.classList.toggle('on',on);b.setAttribute('aria-checked',on?'true':'false')})}
+  });
+  if(!matchMedia('(hover:hover)').matches)return;
+  var pk=v.querySelector('.mx-peek'),pi=pk.querySelector('img');
+  v.querySelectorAll('.mx-list [data-img]').forEach(function(b){b.addEventListener('mouseenter',function(){pi.src=b.dataset.img;pk.classList.add('on')});b.addEventListener('mouseleave',function(){pk.classList.remove('on')})});
+  v.addEventListener('mousemove',function(e){pk.style.left=e.clientX+'px';pk.style.top=e.clientY+'px'});
+  v.querySelectorAll('.mx-lens').forEach(function(l){var im=l.querySelector('img');l.addEventListener('mousemove',function(e){var r=l.getBoundingClientRect();im.style.transformOrigin=((e.clientX-r.left)/r.width*100)+'% '+((e.clientY-r.top)/r.height*100)+'%'})});
+})();
+</script>
 </body></html>
