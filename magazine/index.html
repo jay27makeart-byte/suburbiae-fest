@@ -213,6 +213,10 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:899;o
 .tl.call.solid{cursor:pointer;transition:filter .2s}.tl.call.solid:hover{filter:brightness(1.12)}.tl.call.solid .bt{transition:.2s}.tl.call.solid:hover .bt{background:#fff}
 .row.last{cursor:default;border-style:dashed}.row.last:hover{background:none;color:inherit}
 .rd .tx p.todo{font-family:var(--mono);font-size:12px;line-height:18px;text-transform:uppercase;color:var(--red);border:1px dashed var(--red);padding:10px 12px}
+.rd .tx figure{margin:28px 0 30px;max-width:62ch}
+.rd .tx figure img{display:block;width:100%;height:auto;border:1px solid rgba(255,225,168,.25)}
+.rd .tx figcaption{font-family:var(--mono);font-size:11px;line-height:16px;text-transform:uppercase;opacity:.6;margin-top:8px}
+.rd .tx p.by{font-family:var(--mono);font-size:12px;line-height:18px;text-transform:uppercase;color:var(--red);margin-bottom:26px}
 .rd .tx p.src{font-family:var(--mono);font-size:11px;line-height:17px;text-transform:uppercase;opacity:.6;margin-top:30px}
 /* pop-up delle tre forme */
 .fm{position:fixed;inset:0;z-index:305;background:var(--ink);overflow-y:auto;transform:translateY(100%);transition:transform .5s cubic-bezier(.7,0,.2,1);visibility:hidden}
@@ -543,6 +547,7 @@ const AR=[
  ['s4','sub','Cassette, fanzine e fotocopie','La scena che si passa a mano.','gal/ed3/live-a17.webp','50% 40%',6,'cassette fanzine fotocopie'],
  ['s5','sub','Il pogo spiegato a mia nonna','Regole non scritte del pit.','gal/ed3/live-a19.webp','50% 40%',4,'pogo pit live'],
  ['s6','sub','Sotto il ponte, in skate','Quattro spot di Teramo.','gal/ed3/live-a05.webp','50% 40%',5,'skate spot teramo'],
+ ['s7','sub','Post-punk dall\'Est: da Minsk a Bishkek','Dai Kino ai Vtoroi Ka: quarant\'anni di chitarre fredde, cantate in russo.','magazine/est-vtoroi-ka.webp','50% 22%',9,'post-punk est russia bielorussia kirghizistan vtoroi ka molchat doma shortparis kino'],
  ['b1','band','Atom Lux','Dall\'Undersub al palco grande.','ed3/atom-lux.jpg','50% 30%',8,'undersub intervista'],
  ['b2','band','Inerdzia','Titolo dell\'intervista.','ed3/inerdzia.jpg','50% 30%',7,'intervista punk'],
  ['b3','band','Rupe','Titolo dell\'intervista.','ed3/rupe.jpg','50% 40%',6,'intervista montagna'],
@@ -558,9 +563,29 @@ const AR=[
 ];
 const BY=Object.fromEntries(AR.map((a,i)=>[a[0],i]));
 /* articoli che esistono davvero: gli altri sono "?" in attesa di materiale */
-const READY=new Set(['s3']);
+const READY=new Set(['s7','s3']);
 const ORD=AR.filter(a=>READY.has(a[0]));
 const ART={
+ s7:{st:'Dai Kino ai Vtoroi Ka: quarant\'anni di chitarre fredde, cantate in russo.',body:`
+  <p class="by">Testo e illustrazioni di Lorenzo Di Gioacchino</p>
+  <p>Chi ha passato un po' di tempo su TikTok nel 2020 probabilmente ha sentito «Sudno» dei Molchat Doma senza sapere chi fossero: chitarra fredda, drum machine, una voce bassa in russo. Dietro quel pezzo c'è una scena che va da Minsk a San Pietroburgo e arriva fino a Bishkek, in Kirghizistan. Che non è Europa, ma la lingua e le radici sono le stesse.</p>
+  <h5>Prima vennero i Kino</h5>
+  <figure><img src="/assets/magazine/est-kino.webp" alt="Kino, illustrazione di Lorenzo Di Gioacchino" loading="lazy" width="1086" height="1448"><figcaption>Kino ✶ illustrazione di Lorenzo Di Gioacchino</figcaption></figure>
+  <p>Le radici stanno a Leningrado. I Kino nascono lì nel 1981, guidati da Viktor Tsoi, che scrive musica e testi di quasi tutte le canzoni. Nello stesso anno in città nasce il Leningrad Rock Club, il primo posto dove si poteva suonare rock legalmente, con il Komsomol e il KGB a controllare. I Kino ci salgono sul palco dalla primavera del 1982. Tsoi muore in un incidente d'auto in Lettonia il 15 agosto 1990. Da allora è il nome che quasi tutti, da quelle parti, citano tra le influenze.</p>
+  <h5>Minsk: Molchat Doma</h5>
+  <figure><img src="/assets/magazine/est-molchat-doma.webp" alt="Molchat Doma, illustrazione di Lorenzo Di Gioacchino" loading="lazy" width="1086" height="1448"><figcaption>Molchat Doma ✶ illustrazione di Lorenzo Di Gioacchino</figcaption></figure>
+  <p>I Molchat Doma sono di Minsk, in Bielorussia, e si formano nel 2017: Egor Shkutko canta, Roman Komogortsev suona chitarra e synth, Pavel Kozlov il basso. La batteria è una drum machine. Il primo disco, «S krysh nashikh domov», se lo pubblicano da soli nel 2017; poi lo ristampa l'etichetta tedesca Detriti, che nel 2018 fa uscire anche «Etazhi». Lì dentro c'è «Sudno (Boris Ryzhy)», il pezzo che nel 2020 gira su TikTok e arriva al secondo posto della Viral 50 mondiale di Spotify. A gennaio di quell'anno firmano con l'americana Sacred Bones, che pubblica «Monument» (2020) e «Belaya Polosa» (2024). Sempre in russo.</p>
+  <h5>San Pietroburgo: Shortparis</h5>
+  <figure><img src="/assets/magazine/est-shortparis.webp" alt="Shortparis, illustrazione di Lorenzo Di Gioacchino" loading="lazy" width="1086" height="1448"><figcaption>Shortparis ✶ illustrazione di Lorenzo Di Gioacchino</figcaption></figure>
+  <p>Gli Shortparis si formano nel 2011 a San Pietroburgo, ma Nikolai Komyagin, Alexander Ionin e Pavel Lesnikov si erano conosciuti prima, a Novokuznetsk, in Siberia, la città da cui vengono. In discografia: «Docheri» (2013), «Paskha» (2017), «Tak zakalyalas stal» (2019), «Yablonny sad» (2021). A febbraio 2026 Komyagin muore all'improvviso, a 39 anni. Il 9 ottobre esce «Iliada», il primo disco senza di lui. Meduza scrive che parla di morte, silenzio e dubbio.</p>
+  <h5>Bishkek: Vtoroi Ka</h5>
+  <p>Vtoroi Ka si scrive Второй Ка e vuol dire più o meno "seconda K": è la sezione della classe in cui Ilya Semenov e Sultan Botobaev si sono conosciuti, a scuola, ad Asanbay, quartiere nel sud di Bishkek. Partono dal rap, con il mixtape «Iz okna» a fine 2017. Poi passano al post-punk: «Den' zavisimosti» ("Dependence Day", 2020), «Serial», e «Svinaya poputka» ("Piggy Ride", 2024), il disco che li fa conoscere fuori. Il pezzo più ascoltato resta «Teni ot palm», del 2022.</p>
+  <p>Cantano in russo, ma nel russo che si parla in Kirghizistan, e nei testi ci sono gangster, gente in fuga, piccoli affari, sempre qualcuno in movimento. Novastan li definisce autoironici e "inconfondibilmente kirghisi". Con l'EP «PO GUBE», a marzo 2025, si spostano verso la dance. A ottobre dello stesso anno parte il primo tour europeo: Istanbul, Belgrado, Budapest, Vienna, Praga, due date a Berlino, Amburgo, Parigi, Bruxelles e l'Iceland Airwaves a Reykjavík il 7 novembre.</p>
+  <div class="pq">«Se i Vtoroi Ka fossero comparsi nel 1994, sarebbe stata una rivoluzione musicale.»</div>
+  <p>Lo ha scritto il critico Oleg Karmunin.</p>
+  <h5>Perché ne parliamo qui</h5>
+  <p>Perché sono band partite dal loro quartiere, che cantano nella loro lingua e sono arrivate lontano lo stesso. È quello che proviamo a fare anche a Teramo.</p>
+  <p class="src">Fonti: Wikipedia (Kino, Leningrad Rock Club, Molchat Doma, Shortparis, Второй Ка), Meduza, Novastan, Kaltblut Magazine.<br>Testo e illustrazioni: Lorenzo Di Gioacchino.</p>`},
  s3:{st:'Inside Tattoo, Donna Mayla e più di vent\'anni di inchiostro a due passi dal mare.',body:`
   <p>Si chiama Inside Tattoo Shop, sta ad Alba Adriatica, in provincia di Teramo, a ottocento metri dal mare, e ha aperto il 26 aprile 2004. Dietro c'è Donna Mayla.</p>
   <h5>Da Teramo a Bologna e ritorno</h5>
@@ -575,7 +600,7 @@ const ART={
 };
 const P=[];
 /* mosaico: colonne, righe, tipo, id */
-const T=[['1/7','1/7','art','s1','hero'],['7/10','1/4','art','d1'],['10/13','1/4','art','b1'],['7/10','4/7','q'],['10/13','4/7','art','s3'],['1/4','7/10','art','d2'],['4/7','7/10','art','b3'],['7/13','7/10','gal'],['1/7','10/13','call'],['7/10','10/13','art','s2'],['10/13','10/13','art','b4']];
+const T=[['1/7','1/7','art','s1','hero'],['7/10','1/4','art','d1'],['10/13','1/4','art','b1'],['7/10','4/7','q'],['10/13','4/7','art','s3'],['1/4','7/10','art','d2'],['4/7','7/10','art','b3'],['7/13','7/10','gal'],['1/7','10/13','call'],['7/10','10/13','art','s7'],['10/13','10/13','art','b4']];
 const GAL=['live-a02','live-a07','live-a16','live-a19','live-a12','live-a10','live-a03','live-b03','live-a05','live-a13','live-a17','live-a20'];
 const BURST=(()=>{const p=[];for(let i=0;i<24;i++){const a=i/24*Math.PI*2,r=i%2?36:47;p.push((r*Math.cos(a)).toFixed(1)+','+(r*Math.sin(a)).toFixed(1))}return `<svg viewBox="-50 -50 100 100"><polygon points="${p.join(' ')}" fill="#FF0005" stroke="#FFE1A8" stroke-width="3.2" stroke-linejoin="round"/><text y="23" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="74" fill="#FFE1A8" style="font-stretch:62%">?</text></svg>`})();
 let ri=0;
